@@ -180,6 +180,21 @@
               }
             }
           }
+        } ,
+        {
+          "title": "dreamescarousel item",
+          "id": "dreamescarousel-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "dreamescarousel-item",
+                  "model": "dreamescarousel-item"
+                }
+              }
+            }
+          }
         }
       ]
     }
