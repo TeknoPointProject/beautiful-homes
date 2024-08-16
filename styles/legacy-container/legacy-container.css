@@ -1,0 +1,95 @@
+.section.legacy-container {
+    max-width: 1148px;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+main .legacy-container h1 {
+    font-family: BioRhyme;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 49px;
+    color: #323232;
+    margin: 0;
+}
+
+main .legacy-container p {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #323232;
+    padding: 20px 62px 0 62px;
+    margin: 0;
+}
+
+main .legacy-container .default-content-wrapper {
+    padding-bottom: 30px;
+}
+
+main .sleek-legacy-container{
+    max-width: 1280px;
+    margin: auto;
+    padding: 0;
+}
+
+main .sleek-legacy-container .cards-wrapper{
+    max-width: unset;
+    margin: 0;
+}
+
+main .sleek-legacy-container ul {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    grid-gap: 0;
+}
+
+main .sleek-legacy-container ul li {
+    width: 16%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 44px;
+    border: unset;
+    background-color: unset;
+}
+
+main .sleek-legacy-container picture img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+main .sleek-legacy-container picture, main .sleek-legacy-container source{
+    display: block;
+}
+
+main .sleek-legacy-container .cards-card-body{
+    margin: 0;
+    text-align: center;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #1d1d1f;
+}
+
+main .sleek-legacy-container .cards-card-body p{
+    padding: 0 10px;
+    margin: 0;
+}
+
+/* main .legacy picture,
+main .legacy picture source {
+    display: block;
+} */
+/* 
+main .legacy picture img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+} */
