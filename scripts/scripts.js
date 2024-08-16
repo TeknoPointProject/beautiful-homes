@@ -148,7 +148,19 @@ function loadDelayed() {
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  await loadingCustomCss();
   loadDelayed();
+}
+
+
+async function loadingCustomCss() {
+  // load custom css files
+  var loadCssArray = [
+    `${window.hlx.codeBasePath}/styles/legacy-container/legacy-container.css`
+  ];
+  loadCssArray.forEach(async (eachCss) => {
+    await loadCSS(eachCss);
+  });
 }
 
 loadPage();
