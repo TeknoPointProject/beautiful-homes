@@ -44,5 +44,12 @@
     "components": [
       "dreamescarousel-item"
     ]
+  },
+  {
+    "id": "carousel-wrapper",
+    "components": [
+      "carousel-item",
+      "button"
+    ]
   }
 ]
