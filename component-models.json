@@ -258,7 +258,7 @@
         "valueType": "string",
         "name": "title",
         "value": "",
-        "label": "Title"
+        "label": "Button name"
       }
     ]
   }
