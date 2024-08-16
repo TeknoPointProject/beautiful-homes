@@ -145,14 +145,6 @@ function loadDelayed() {
   import('./sidekick.js').then(({ initSidekick }) => initSidekick());
 }
 
-async function loadPage() {
-  await loadEager(document);
-  await loadLazy(document);
-  await loadingCustomCss();
-  loadDelayed();
-}
-
-
 async function loadingCustomCss() {
   // load custom css files
   var loadCssArray = [
@@ -161,6 +153,13 @@ async function loadingCustomCss() {
   loadCssArray.forEach(async (eachCss) => {
     await loadCSS(eachCss);
   });
+}
+
+async function loadPage() {
+  await loadEager(document);
+  await loadLazy(document);
+  await loadingCustomCss();
+  loadDelayed();
 }
 
 loadPage();
