@@ -38,5 +38,11 @@
     "components": [
       "card"
     ]
+  },
+  {
+    "id": "carousel-wrapper",
+    "components": [
+      "carousel-item"
+    ]
   }
 ]
