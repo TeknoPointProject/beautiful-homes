@@ -206,10 +206,11 @@
         "label": "Image",
         "multi": false
       },
+    
       {
         "component": "text",
         "valueType": "string",
-        "name": "jcr:title",
+        "name": "dreamescarouseltitle",
         "value": "",
         "label": "Text"
       },
@@ -245,23 +246,33 @@
             "value": "h6"
           }
         ]
-      },
+      }, 
       {
         "component": "richtext",
         "name": "text",
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+      ,
+   
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "btn_href",
+        "value": "",
+        "label": "Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "href",
+        "name": "btn_hrefText",
         "value": "",
-        "label": "Link"
+        "label": "Link Text"
       }
+     
     ]
-  },
+  } ,
   {
     "id": "carousel-item",
     "fields": [
