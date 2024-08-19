@@ -322,14 +322,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "carouselbtnhref",
+        "name": "href",
         "value": "",
         "label": "Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "carouselbtntext",
+        "name": "text",
         "value": "",
         "label": "Button"
       }
