@@ -2,6 +2,36 @@ main .design-gallery {
     padding: 0;
 }
 
+.design-gallery .default-content-wrapper {
+    max-width: unset;
+    padding: 0 0 0 80px;
+}
+
+.design-gallery .default-content-wrapper h2 {
+    color: #323232;
+    font-family: BioRhyme;
+    letter-spacing: 2px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42.192px;
+    padding-top: 75px;
+    margin-bottom: 16px;
+    text-align: center;
+    padding-right: 80px;
+}
+
+.design-gallery .default-content-wrapper p {
+    color: #696969;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    padding-right: 80px;
+    padding-bottom: 53px;
+    margin: 0;
+}
+
 .design-gallery .carousel-wrapper-wrapper {
     max-width: unset;
     /* margin: 0; */
@@ -96,10 +126,23 @@ main .design-gallery {
 }
 
 .carousel-wrapper .slick-next {
-    right: 0;
+    right: 60px;
+    top: unset;
 }
 
 .carousel-wrapper .slick-next:before {
-    display: block;
-    content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png)
+    color: black;
+    /* display: block;
+    content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png) */
+}
+
+.carousel-wrapper .slick-prev:before {
+    color: black;
+}
+
+.carousel-wrapper .slick-prev {
+    right: 100px;
+    bottom: -52px;
+    top: unset;
+    left: unset;
 }
