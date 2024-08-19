@@ -322,16 +322,16 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "miniteaser_href",
+        "name": "btncarousel_href",
         "value": "",
         "label": "Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "miniteaser_hrefText",
+        "name": "btncarousel_Text",
         "value": "",
-        "label": "Link Text"
+        "label": "Button Text"
       }
     ]
   }
