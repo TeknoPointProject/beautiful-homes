@@ -329,9 +329,9 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "btncarousel_Text",
+        "name": "btncarousel_hrefText",
         "value": "",
-        "label": "Button Text"
+        "label": "Link Text"
       }
     ]
   }
