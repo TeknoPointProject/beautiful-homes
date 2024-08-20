@@ -28,7 +28,13 @@ if (screen.width <= 786) {
   document.addEventListener('touchstart', function () {
     if (scroll == false) {
       scroll = true;
-      $('.carousel-wrapper').slick({
+      $('.design-gallery .carousel-wrapper').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1
+      });
+      $('.fullhome .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
@@ -41,7 +47,13 @@ else {
   document.addEventListener('mousemove', function () {
     if (scroll == false) {
       scroll = true;
-      $('.carousel-wrapper').slick({
+      $('.design-gallery .carousel-wrapper').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1
+      });
+      $('.fullhome .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
@@ -52,7 +64,13 @@ else {
   document.addEventListener('scroll', function () {
     if (scroll == false) {
       scroll = true;
-      $('.carousel-wrapper').slick({
+      $('.design-gallery .carousel-wrapper').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1
+      });
+      $('.fullhome .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
@@ -61,12 +79,3 @@ else {
     }
   })
 };
-
-// setTimeout(function () {
-//   $('.carousel-wrapper').slick({
-//     infinite: false,
-//     arrows: true,
-//     slidesToShow: 3.14,
-//     slidesToScroll: 1
-//   });
-// }, 1000);
