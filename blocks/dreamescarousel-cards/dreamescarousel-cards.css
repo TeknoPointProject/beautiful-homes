@@ -37,6 +37,9 @@
     padding-left: 60px;
 
 }
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p{
+    font-family: BioRhyme;
+}
 
 .dreamescarousel-cards .slick-next{
     
@@ -69,4 +72,9 @@
     line-height: 27px;
     padding: 16px 32px;
     
+}
+
+#sleek-signature-studios-across-india{
+    font-family: BioRhyme;
+    text-align: center;
 }
