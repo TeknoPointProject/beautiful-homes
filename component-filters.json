@@ -31,7 +31,8 @@
       "fragment",
       "carousel-wrapper",
       "dreamescarousel-cards",
-      "simple-cards"
+      "visual-cards-wrapper",
+      "embed"
     ]
   },
   {
@@ -53,9 +54,9 @@
     ]
   },
   {
-    "id": "simple-cards",
+    "id": "visual-cards-wrapper",
     "components": [
-      "outer-card"
+      "visual-cards"
     ]
   }
 ]
