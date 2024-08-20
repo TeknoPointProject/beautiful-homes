@@ -20,7 +20,7 @@ main .design-gallery {
     padding-top: 0px;
     margin-bottom: 16px;
     text-align: center;
-    padding-right: 80px;   
+    padding-right: 80px;
 }
 
 .design-gallery .default-content-wrapper p {
@@ -38,22 +38,23 @@ main .design-gallery {
     max-width: unset;
     margin: 0;
     padding: 0 0 0 80px;
+    padding-bottom: 50px;
 }
 
-.carousel-wrapper>div img {
+.design-gallery .carousel-wrapper>div img {
     height: 312px;
     border-radius: 10px 10px 0 0;
     object-fit: cover;
     margin-bottom: 30px;
 }
 
-.carousel-wrapper picture,
-.carousel-wrapper source {
+.design-gallery .carousel-wrapper picture,
+.design-gallery .carousel-wrapper source {
     display: block;
     line-height: 0;
 }
 
-.carousel-wrapper h2 {
+.design-gallery .carousel-wrapper h2 {
     color: #323232;
     font-family: Lato;
     font-size: 18px;
@@ -64,7 +65,7 @@ main .design-gallery {
     margin-bottom: 20px;
 }
 
-.carousel-wrapper .button-container {
+.design-gallery .carousel-wrapper .button-container {
     padding: 12px 39px;
     margin-left: 30px;
     margin-bottom: 42px;
@@ -78,7 +79,7 @@ main .design-gallery {
     line-height: 0;
 }
 
-.carousel-wrapper .button-container a {
+.design-gallery .carousel-wrapper .button-container a {
     font-family: Lato;
     font-size: 18px;
     font-weight: 700;
@@ -92,30 +93,66 @@ main .design-gallery {
     background-color: unset;
 }
 
-.carousel-wrapper .slick-slide {
+.design-gallery .carousel-wrapper .slick-slide {
     background-color: #f5f4ef;
     border-radius: 10px;
     margin-right: 20px;
 }
 
-.carousel-wrapper .slick-next {
-    right: 60px;
+.design-gallery .carousel-wrapper .slick-next {
+    right: 70px;
     top: unset;
+    height: unset;
+    width: unset;
+    margin: 0;
+    bottom: -75px;
 }
 
-.carousel-wrapper .slick-next:before {
+.design-gallery .carousel-wrapper .slick-next:before,
+.design-gallery .carousel-wrapper .slick-prev:before {
+    line-height: 0;
+}
+
+
+.design-gallery .carousel-wrapper .slick-next:before , .design-gallery .carousel-wrapper .slick-prev:before {
+    /* color: black; */
+    display: block;
+    content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png)
+}
+
+.design-gallery .carousel-wrapper .slick-prev:before {
     color: black;
-    /* display: block;
-    content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png) */
 }
 
-.carousel-wrapper .slick-prev:before {
-    color: black;
-}
-
-.carousel-wrapper .slick-prev {
-    right: 100px;
-    bottom: -52px;
+.design-gallery .carousel-wrapper .slick-prev {
+    right: 120px;
+    bottom: -71px;
     top: unset;
     left: unset;
+    width: unset;
+    height: unset;
+    transform: rotate(182deg);
+}
+
+/* Sleek journey */
+
+.section.fullhome {
+    padding: 0;
+}
+
+.fullhome .default-content-wrapper {
+    max-width: unset;
+    margin: 0;
+}
+
+.fullhome .default-content-wrapper h2 {
+    text-align: center;
+    color: #323232;
+    font-family: BioRhyme;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42.192px;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    margin-inline: 72px;
 }
