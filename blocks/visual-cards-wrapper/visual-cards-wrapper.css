@@ -1,4 +1,4 @@
-.visual-cards-wrapper > ul {
+.visual-cards-wrapper>ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -7,57 +7,71 @@
   grid-gap: 16px;
 }
 
-.visual-cards-wrapper > ul:nth-child(1)::before {
-  content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-1.png);
-}
-
-.visual-cards-wrapper > ul::before{
+.visual-cards-wrapper>li::before {
   position: absolute;
   right: -55%;
   top: 90px;
   z-index: -1;
 }
 
-.section.visual-cards-wrapper-container{
+.visual-cards-wrapper li:nth-child(1)::before {
+  content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-1.png);
+}
+
+.section.visual-cards-wrapper-container {
   padding: 0;
 }
 
-.visual-cards-wrapper-wrapper{
-  max-width: 1220px;
-  margin: 34px auto;
+.visual-cards-wrapper-wrapper {
+  max-width: 1220px !important;
 }
 
-.visual-cards-wrapper > ul {
+.visual-cards-wrapper>ul {
   display: flex;
   gap: 35px;
   justify-content: space-between;
-  max-width: 1220px;
-  margin: 34px auto;
+  margin: 34px auto !important;
 }
 
-.visual-cards-wrapper > ul {
-
+.visual-cards-wrapper li {
+  max-width: 186px;
 }
 
-.visual-cards-wrapper > ul > li {
+.visual-cards-wrapper li source,
+.visual-cards-wrapper li picture {
+  display: block;
+}
+
+.visual-cards-wrapper li img {
+  height: 165px;
+  width: 165px;
+}
+
+.visual-cards-wrapper>li {
   border: 1px solid var(--dark-color);
   background-color: var(--background-color);
   position: relative;
 }
 
-.visual-cards-wrapper .visual-cards-wrapper-card-body {
-  margin: 16px;
+.visual-cards-wrapper .visual-cards-wrapper-card-body p{
+  color: #323232;
+  text-align: center;
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28.6px;
+  margin-bottom: 16px;
 }
 
 .visual-cards-wrapper .visual-cards-wrapper-card-image {
   line-height: 0;
 }
 
-.visual-cards-wrapper .visual-cards-wrapper-card-body > *:first-child {
+.visual-cards-wrapper .visual-cards-wrapper-card-body>*:first-child {
   margin-top: 0;
 }
 
-.visual-cards-wrapper > ul > li img {
+.visual-cards-wrapper>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
