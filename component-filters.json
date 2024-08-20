@@ -30,7 +30,8 @@
       "columns",
       "fragment",
       "carousel-wrapper",
-      "dreamescarousel-cards"
+      "dreamescarousel-cards",
+      "simple-cards"
     ]
   },
   {
@@ -49,6 +50,12 @@
     "id": "carousel-wrapper",
     "components": [
       "carousel-item"
+    ]
+  },
+  {
+    "id": "simple-cards",
+    "components": [
+      "outer-card"
     ]
   }
 ]

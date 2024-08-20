@@ -1,0 +1,30 @@
+.simple-outer .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0 36px 0;
+    width: 80%;
+    margin: auto;
+}
+
+.simple-outer .default-content-wrapper p {
+    color: #323232;
+    font-family: Lato;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 42.9px;
+    padding-right: 24px;
+    margin-right: 24px;
+    border-right: 1px solid #323232;
+    padding-top: 0;
+}
+
+.simple-outer .default-content-wrapper h1 {
+    color: #323232;
+    font-family: BioRhyme;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 49.224px;
+    margin: 0;
+    padding-top: 0;
+}

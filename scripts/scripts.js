@@ -149,7 +149,8 @@ async function loadingCustomCss() {
   // load custom css files
   var loadCssArray = [
     `${window.hlx.codeBasePath}/styles/legacy-container/legacy-container.css`,
-    `${window.hlx.codeBasePath}/styles/design-gallery/design-gallery.css`
+    `${window.hlx.codeBasePath}/styles/design-gallery/design-gallery.css`,
+    `${window.hlx.codeBasePath}/styles/simple-outer/simple-outer.css`
   ];
   loadCssArray.forEach(async (eachCss) => {
     await loadCSS(eachCss);
