@@ -347,7 +347,7 @@
     ]
   },
   {
-    "id": "outer-card",
+    "id": "visual-cards",
     "fields": [
       {
         "component": "reference",
