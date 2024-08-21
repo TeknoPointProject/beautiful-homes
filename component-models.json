@@ -273,7 +273,7 @@
      ,
      {
       "component": "text",
-      "name": "style",
+      "name": "dreamcarousel-style",
       "value": "",
       "label": "Style",
       "valueType": "string"
