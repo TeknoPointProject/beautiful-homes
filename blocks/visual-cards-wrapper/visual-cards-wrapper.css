@@ -1,21 +1,30 @@
-.visual-cards-wrapper>ul {
+.visual-cards-wrapper ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-  grid-gap: 16px;
+  display: flex;
+  gap: 35px;
+  justify-content: space-between;
+  margin: 34px auto !important;
 }
 
-.visual-cards-wrapper>li::before {
+.visual-cards-wrapper li::before {
   position: absolute;
   right: -55%;
-  top: 90px;
+  top: 83px;
   z-index: -1;
 }
 
 .visual-cards-wrapper li:nth-child(1)::before {
   content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-1.png);
+}
+.visual-cards-wrapper li:nth-child(2)::before {
+  content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-2.png);
+}
+.visual-cards-wrapper li:nth-child(3)::before {
+  content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-3.png);
+}
+.visual-cards-wrapper li:nth-child(4)::before {
+  content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-4.png);
 }
 
 .section.visual-cards-wrapper-container {
@@ -26,15 +35,9 @@
   max-width: 1220px !important;
 }
 
-.visual-cards-wrapper>ul {
-  display: flex;
-  gap: 35px;
-  justify-content: space-between;
-  margin: 34px auto !important;
-}
-
 .visual-cards-wrapper li {
   max-width: 186px;
+  position: relative;
 }
 
 .visual-cards-wrapper li source,
@@ -47,13 +50,7 @@
   width: 165px;
 }
 
-.visual-cards-wrapper>li {
-  border: 1px solid var(--dark-color);
-  background-color: var(--background-color);
-  position: relative;
-}
-
-.visual-cards-wrapper .visual-cards-wrapper-card-body p{
+.visual-cards-wrapper .visual-cards-wrapper-card-body h5 {
   color: #323232;
   text-align: center;
   font-family: Lato;
@@ -61,6 +58,16 @@
   font-weight: 700;
   line-height: 28.6px;
   margin-bottom: 16px;
+}
+
+.visual-cards-wrapper .visual-cards-wrapper-card-body p {
+  color: #323232;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  margin: 0;
 }
 
 .visual-cards-wrapper .visual-cards-wrapper-card-image {
@@ -71,8 +78,8 @@
   margin-top: 0;
 }
 
-.visual-cards-wrapper>ul>li img {
+/* .visual-cards-wrapper>ul>li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-}
+} */

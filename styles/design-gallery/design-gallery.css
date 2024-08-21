@@ -1,26 +1,39 @@
-main .design-gallery {
+main .design-gallery,
+.section.fullhome {
     padding: 0;
 }
 
 .design-gallery .default-content-wrapper {
-    max-width: unset;
-    padding: 0 0 0 80px;
-    padding-bottom: 53px;
+    padding: 0 0 53px 80px;
 }
 
-.design-gallery .default-content-wrapper h2 {
+.design-gallery .default-content-wrapper,
+.fullhome .default-content-wrapper {
+    max-width: unset;
+}
+
+.design-gallery .default-content-wrapper h2,
+.fullhome .default-content-wrapper h2 {
     color: #323232;
     font-family: BioRhyme;
     font-size: 36px;
-    letter-spacing: 2px;
-    font-style: normal;
+    text-align: center;
     font-weight: 700;
     line-height: 42.192px;
     margin: 0;
-    padding-top: 0px;
     margin-bottom: 16px;
-    text-align: center;
+}
+
+.design-gallery .default-content-wrapper h2 {
+    letter-spacing: 2px;
+    font-style: normal;
+    padding-top: 0px;
     padding-right: 80px;
+}
+
+.fullhome .default-content-wrapper h2 {
+    margin-top: 20px;
+    margin-inline: 72px;
 }
 
 .design-gallery .default-content-wrapper p {
@@ -34,35 +47,68 @@ main .design-gallery {
     margin: 0;
 }
 
-.design-gallery .carousel-wrapper-wrapper {
+.design-gallery .carousel-wrapper-wrapper,
+.fullhome .carousel-wrapper-wrapper {
     max-width: unset;
     margin: 0;
-    padding: 0 0 0 80px;
-    padding-bottom: 50px;
+    padding: 0 0 50px 80px;
 }
 
 .design-gallery .carousel-wrapper>div img {
     height: 312px;
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
     margin-bottom: 30px;
 }
 
+.fullhome .carousel-wrapper>div img {
+    margin-bottom: 24px;
+}
+
+.design-gallery .carousel-wrapper>div img,
+.fullhome .carousel-wrapper>div img {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+
+}
+
 .design-gallery .carousel-wrapper picture,
-.design-gallery .carousel-wrapper source {
+.design-gallery .carousel-wrapper source,
+.fullhome .carousel-wrapper picture,
+.fullhome .carousel-wrapper source {
     display: block;
     line-height: 0;
 }
 
-.design-gallery .carousel-wrapper h2 {
+.design-gallery .carousel-wrapper h2,
+.fullhome .carousel-wrapper h2 {
     color: #323232;
     font-family: Lato;
-    font-size: 18px;
     font-weight: 700;
+}
+
+.design-gallery .carousel-wrapper h2 {
+    font-size: 18px;
     line-height: 23.4px;
     padding: 0 30px;
     margin: 0;
     margin-bottom: 20px;
+}
+
+.fullhome .carousel-wrapper h2 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 28.6px;
+    margin-bottom: 15px;
+    padding: 0 32px;
+}
+
+.fullhome .carousel-wrapper p {
+    color: #323232;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.8px;
+    margin: 0;
+    padding: 0 30px 20px;
 }
 
 .design-gallery .carousel-wrapper .button-container {
@@ -93,13 +139,19 @@ main .design-gallery {
     background-color: unset;
 }
 
-.design-gallery .carousel-wrapper .slick-slide {
+.design-gallery .carousel-wrapper .slick-slide,
+.fullhome .carousel-wrapper .slick-slide {
     background-color: #f5f4ef;
     border-radius: 10px;
     margin-right: 20px;
 }
 
-.design-gallery .carousel-wrapper .slick-next {
+.fullhome .carousel-wrapper .slick-slide {
+    min-height: 510px;
+}
+
+.design-gallery .carousel-wrapper .slick-next,
+.fullhome .carousel-wrapper .slick-next {
     right: 70px;
     top: unset;
     height: unset;
@@ -109,22 +161,24 @@ main .design-gallery {
 }
 
 .design-gallery .carousel-wrapper .slick-next:before,
-.design-gallery .carousel-wrapper .slick-prev:before {
+.design-gallery .carousel-wrapper .slick-prev:before,
+.fullhome .carousel-wrapper .slick-next:before,
+.fullhome .carousel-wrapper .slick-prev:before {
     line-height: 0;
 }
 
 
-.design-gallery .carousel-wrapper .slick-next:before , .design-gallery .carousel-wrapper .slick-prev:before {
+.design-gallery .carousel-wrapper .slick-next:before,
+.design-gallery .carousel-wrapper .slick-prev:before,
+.fullhome .carousel-wrapper .slick-next:before,
+.fullhome .carousel-wrapper .slick-prev:before {
     /* color: black; */
     display: block;
     content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png)
 }
 
-.design-gallery .carousel-wrapper .slick-prev:before {
-    color: black;
-}
-
-.design-gallery .carousel-wrapper .slick-prev {
+.design-gallery .carousel-wrapper .slick-prev,
+.fullhome .carousel-wrapper .slick-prev {
     right: 120px;
     bottom: -71px;
     top: unset;
@@ -132,27 +186,4 @@ main .design-gallery {
     width: unset;
     height: unset;
     transform: rotate(182deg);
-}
-
-/* Sleek journey */
-
-.section.fullhome {
-    padding: 0;
-}
-
-.fullhome .default-content-wrapper {
-    max-width: unset;
-    margin: 0;
-}
-
-.fullhome .default-content-wrapper h2 {
-    text-align: center;
-    color: #323232;
-    font-family: BioRhyme;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 42.192px;
-    margin-bottom: 16px;
-    margin-top: 20px;
-    margin-inline: 72px;
 }

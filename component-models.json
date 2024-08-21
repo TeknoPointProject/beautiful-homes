@@ -270,7 +270,14 @@
         "value": "",
         "label": "Link Text"
       }
-     
+     ,
+     {
+      "component": "text",
+      "name": "dreamcarousel-style",
+      "value": "",
+      "label": "Style",
+      "valueType": "string"
+    }
     ]
   } ,
   {
