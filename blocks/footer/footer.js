@@ -14,7 +14,44 @@ export default async function decorate(block) {
   // decorate footer DOM
   block.textContent = '';
   const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
-
-  block.append(footer);
+  async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+  
+      const html = await response.text();
+  
+      // Create a temporary DOM element to parse the HTML
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+  
+        // Find the element with class="cmp-container"
+        const cmpContainer = doc.querySelector('.cmp-container');
+  
+      // Check if the element exists and append it
+      if (cmpContainer) {
+        console.log("Found element:", cmpContainer.outerHTML);
+        
+        // Use innerHTML to properly render the HTML
+        footer.innerHTML = cmpContainer.outerHTML;
+        block.append(footer);
+        return cmpContainer.outerHTML;
+      } else {
+        console.log("Element with class 'cmp-container' not found.");
+        return null;
+      }
+    } catch (error) {
+      console.error('Fetch error: ', error);
+    }
+  }
+  
+  fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/new-footer-xf/master.html");
+  
 }
+ 
+
+
+
+
