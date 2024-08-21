@@ -273,7 +273,7 @@
      ,
      {
       "component": "text",
-      "name": "styles",
+      "name": "style",
       "value": "",
       "label": "Style",
       "valueType": "string"
