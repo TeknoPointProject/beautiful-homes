@@ -284,13 +284,6 @@
     "id": "carousel-item",
     "fields": [
       {
-        "component": "text",
-        "name": "carouselitem-style",
-        "value": "",
-        "label": "Style",
-        "valueType": "string"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
