@@ -270,7 +270,14 @@
         "value": "",
         "label": "Link Text"
       }
-     
+     ,
+     {
+      "component": "text",
+      "name": "styles",
+      "value": "",
+      "label": "Style",
+      "valueType": "string"
+    }
     ]
   } ,
   {
