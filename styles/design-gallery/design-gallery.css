@@ -60,7 +60,6 @@ main .design-gallery,
 }
 
 .fullhome .carousel-wrapper>div img {
-    height: 425px;
     margin-bottom: 24px;
 }
 
@@ -148,7 +147,7 @@ main .design-gallery,
 }
 
 .fullhome .carousel-wrapper .slick-slide {
-    min-height: 554px;
+    min-height: 510px;
 }
 
 .design-gallery .carousel-wrapper .slick-next,
