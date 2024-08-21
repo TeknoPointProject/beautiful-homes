@@ -285,7 +285,7 @@
     "fields": [
       {
         "component": "text",
-        "name": "carousel-itemstyle",
+        "name": "carousel-item-style",
         "value": "",
         "label": "Style",
         "valueType": "string"
