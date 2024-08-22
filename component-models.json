@@ -549,14 +549,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "bannerform-href",
+        "name": "bannerformhref",
         "value": "",
         "label": "Link"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "bannerform-hreftext",
+        "name": "bannerformhreftext",
         "value": "",
         "label": "Text"
       }
