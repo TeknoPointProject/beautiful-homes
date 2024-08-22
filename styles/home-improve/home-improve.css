@@ -40,11 +40,16 @@
     flex: unset!important;
  }
 
- .home-improve-container .columns-wrapper .columns-2-cols .button-container a.button:any-link, button {
+.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button:any-link, button {
     font-family: Lato, BioRhyme, sans-serif;
     font-size: 18px;
     background-color: #7345b2;
     border-color: #7345b2;
+    padding: 16px 32px;
+}
+
+.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button::after{
+    content:url(/content/dam/beautiful-homes/icons/right-arrow.png);
 }
 
 .home-improve-container .columns-wrapper .columns-2-cols .button-container p::after [class^=icon-]{
