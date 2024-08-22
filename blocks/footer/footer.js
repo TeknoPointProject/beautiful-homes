@@ -37,6 +37,8 @@ export default async function decorate(block) {
         // Use innerHTML to properly render the HTML
         footer.innerHTML = cmpContainer.outerHTML;
         block.append(footer);
+        
+        footers()
         return cmpContainer.outerHTML;
       } else {
         console.log("Element with class 'cmp-container' not found.");
@@ -55,23 +57,7 @@ export default async function decorate(block) {
 
 
 
-  document.querySelectorAll(".footer__category__main .cmp-contentfragment").forEach(function(a) {
-      var b = a.querySelector(".cmp-contentfragment__title");
-      a.querySelector(".footer__category__main .cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value");
-      a.querySelectorAll(".footer__category__main .cmp-contentfragment__element--categoryLink .cmp-contentfragment__element-value ul");
-      768 > window.innerWidth && b.addEventListener("click", function() {
-          $(this).hasClass("active") ? ($(this).removeClass("active"),
-          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
-          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none")) : ($(".cmp-contentfragment__title").removeClass("active"),
-          $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
-          $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none"),
-          $(this).addClass("active"),
-          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").addClass("active"),
-          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "block"));
-          var c = $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").eq(1);
-          c && $(c).css("display", "none")
-      })
-  })
+
 var footer = {
   el: $(".footer"),
   init: function() {
@@ -247,3 +233,24 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   })
 })
+
+
+function footers(){
+  document.querySelectorAll(".footer__category__main .cmp-contentfragment").forEach(function(a) {
+    var b = a.querySelector(".cmp-contentfragment__title");
+    a.querySelector(".footer__category__main .cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value");
+    a.querySelectorAll(".footer__category__main .cmp-contentfragment__element--categoryLink .cmp-contentfragment__element-value ul");
+    768 > window.innerWidth && b.addEventListener("click", function() {
+        $(this).hasClass("active") ? ($(this).removeClass("active"),
+        $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
+        $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none")) : ($(".cmp-contentfragment__title").removeClass("active"),
+        $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
+        $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none"),
+        $(this).addClass("active"),
+        $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").addClass("active"),
+        $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "block"));
+        var c = $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").eq(1);
+        c && $(c).css("display", "none")
+    })
+})
+}
