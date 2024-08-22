@@ -17,7 +17,8 @@
       "button",
       "title",
       "carousel-wrapper",
-      "forms"
+      "forms",
+      "bannerform"
     ]
   },
   {
@@ -36,7 +37,8 @@
       "visual-cards-wrapper",
       "embed",
       "sleek-moduler-wrapper",
-      "forms"
+      "forms",
+      "bannerform"
     ]
   },
   {
