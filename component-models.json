@@ -544,7 +544,7 @@
     ]
   },
   {
-    "id": "bannerform",
+    "id": "form",
     "fields": [
       {
         "component": "text",
