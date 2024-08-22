@@ -520,7 +520,7 @@
           },
           {
             "component": "richtext",
-            "name": "sleektext",
+            "name": "text",
             "value": "",
             "label": "Text",
             "valueType": "string"
