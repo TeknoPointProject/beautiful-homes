@@ -1,7 +1,7 @@
-main .design-gallery,
+/* main .design-gallery,
 .section.fullhome {
     margin-top: 20px;
-}
+} */
 
 .design-gallery .default-content-wrapper {
     padding: 0 0 53px 80px;
@@ -182,6 +182,7 @@ main .design-gallery,
 /* center slider CAROUSEL*/
 main .center-slider {
     position: relative;
+    margin-bottom:120px;
 }
 
 .center-slider .default-content-wrapper {

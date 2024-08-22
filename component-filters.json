@@ -15,7 +15,9 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "carousel-wrapper",
+      "bannerform"
     ]
   },
   {
@@ -32,7 +34,9 @@
       "carousel-wrapper",
       "dreamescarousel-cards",
       "visual-cards-wrapper",
-      "embed"
+      "embed",
+      "sleek-moduler-wrapper",
+      "bannerform"
     ]
   },
   {
@@ -40,7 +44,7 @@
     "components": [
       "card"
     ]
-  } ,
+  },
   {
     "id": "dreamescarousel-cards",
     "components": [
@@ -58,6 +62,12 @@
     "id": "visual-cards-wrapper",
     "components": [
       "visual-cards"
+    ]
+  },
+  {
+    "id": "sleek-moduler-wrapper",
+    "components": [
+      "sleek-moduler-wrapper-item"
     ]
   }
 ]
