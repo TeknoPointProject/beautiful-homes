@@ -46,7 +46,7 @@ if (screen.width <= 786) {
         slidesToShow: 1,
         focusOnSelect: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         cssEase: 'linear',
         speed: 1800,
         arrows: true
@@ -76,7 +76,7 @@ else {
         slidesToShow: 1,
         focusOnSelect: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         cssEase: 'linear',
         speed: 1800,
         arrows: true
@@ -104,7 +104,7 @@ else {
         slidesToShow: 1,
         focusOnSelect: true,
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         cssEase: 'linear',
         speed: 1800,
         arrows: true
@@ -119,6 +119,6 @@ else {
 //   centerPadding: '280px',
 //   slidesToShow: 1,
 //   infinite: true,
-//   autoplay: false,
+//   autoplay: true,
 //   speed: 100000,
 //   arrows: true});

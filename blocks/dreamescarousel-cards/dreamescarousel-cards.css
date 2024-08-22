@@ -1,25 +1,25 @@
-.dreamescarousel-cards-wrapper{
+.dreamescarousel-cards-wrapper {
     max-width: none !important;
 }
 
-.dreamescarousel-cards-container{
+.dreamescarousel-cards-container {
     padding: 0 !important;
 }
 
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2){
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) {
     position: absolute;
-   top: 100px;
-   
-   color: white;
-   font-weight: 600;
-   font-size: 40px;
-   padding-left: 60px;
+    top: 100px;
+
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    padding-left: 60px;
 }
 
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p{
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p {
     position: absolute;
     top: 185px;
-    
+
     color: white;
     font-weight: 200;
     font-size: 16px;
@@ -27,54 +27,61 @@
 
 }
 
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) p{
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) p {
     position: absolute;
     top: 220px;
-    
+
     color: white;
     font-weight: 200;
     font-size: 16px;
     padding-left: 60px;
 
 }
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p{
+
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p {
     font-family: BioRhyme;
 }
 
-.dreamescarousel-cards .slick-next{
-    
-        right: 8% !important;
-        top: 78% !important; 
-        width: 66px;
-        height: 66px;
-        background-color: #fff;
-        border-radius: 50%;
-        
+.dreamescarousel-cards .slick-next {
+
+    right: 8% !important;
+    top: 78% !important;
+    width: 66px;
+    height: 66px;
+    background-color: #fff;
+    border-radius: 50%;
+
 }
 
-.slick-next:before, .slick-prev:before{
+.slick-next:before,
+.slick-prev:before {
     color: black !important;
 }
 
-.dreamescarousel-cards .slick-prev{
+.dreamescarousel-cards .slick-prev {
     z-index: 1;
     left: 93%;
-    top: 78% !important; 
+    top: 78% !important;
     width: 66px;
     height: 66px;
     background-color: #fff;
     border-radius: 50%;
 }
 
-.dreamescarousel-cards a.button:any-link{
+.dreamescarousel-cards a.button:any-link {
     background-color: #7345b2 !important;
     font-size: 18px;
     line-height: 27px;
     padding: 16px 32px;
-    
+
 }
 
-#sleek-signature-studios-across-india{
+#sleek-signature-studios-across-india {
     font-family: BioRhyme;
     text-align: center;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 49px;
+    margin-bottom: 41px;
+    color: #323232;
 }
