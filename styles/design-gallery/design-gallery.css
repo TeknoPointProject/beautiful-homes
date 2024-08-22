@@ -1,6 +1,5 @@
 main .design-gallery,
 .section.fullhome {
-    padding: 0;
     margin-top: 20px;
 }
 
@@ -69,16 +68,6 @@ main .design-gallery,
     border-radius: 10px 10px 0 0;
     object-fit: cover;
 
-}
-
-.design-gallery .carousel-wrapper picture,
-.design-gallery .carousel-wrapper source,
-.fullhome .carousel-wrapper picture,
-.fullhome .carousel-wrapper source,
-.center-slider .carousel-wrapper picture,
-.center-slider .carousel-wrapper source {
-    display: block;
-    line-height: 0;
 }
 
 .design-gallery .carousel-wrapper h2,
@@ -192,7 +181,6 @@ main .design-gallery,
 
 /* center slider CAROUSEL*/
 main .center-slider {
-    padding: 0;
     position: relative;
 }
 

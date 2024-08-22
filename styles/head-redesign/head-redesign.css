@@ -1,6 +1,26 @@
 main .head-redesign-container {
     margin-bottom: 120px;
 }
+
+.head-redesign-container .columns-wrapper {
+    max-width: unset;
+    margin: 0;
+}
+
+.head-redesign-container .columns>div {
+    /* min-height: 563px;
+    align-items: unset;*/
+    gap: unset;
+    width: 100%;
+}
+
+.head-redesign-container .columns-img-col {
+    width: 62.90%;
+    max-height: 563px;
+    flex: unset;
+    /*height: 100%;*/
+}
+
 .head-redesign-container .columns-wrapper .columns-2-cols .columns-img-col picture {
     position: relative;
 }

@@ -224,3 +224,7 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+picture,source{
+  display: block;
+  line-height: 0;
+}
