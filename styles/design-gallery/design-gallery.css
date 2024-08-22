@@ -1,6 +1,7 @@
 main .design-gallery,
 .section.fullhome {
     padding: 0;
+    margin-top: 20px;
 }
 
 .design-gallery .default-content-wrapper {
