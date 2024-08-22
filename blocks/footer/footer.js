@@ -53,40 +53,104 @@ export default async function decorate(block) {
  
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  var categoryContentFragment = document.querySelectorAll('.footer__category__main .cmp-contentfragment');
-  categoryContentFragment.forEach(function (item) {
-    var categoryTitles = item.querySelector('.cmp-contentfragment__title');
-    var categoryValues = item.querySelector('.footer__category__main .cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value');
-    var categoryList = item.querySelectorAll('.footer__category__main .cmp-contentfragment__element--categoryLink .cmp-contentfragment__element-value ul');
-    if (window.innerWidth < 768) {
-      categoryTitles.addEventListener('click', function () {
-        if ($(this).hasClass('active')) {
-          $(this).removeClass('active');
-          $(this).parents('.cmp-contentfragment').find('.cmp-contentfragment__element-value ul').removeClass('active');
-          $(this).parents('.cmp-contentfragment').find('.cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value').css('display', 'none');
-        }
-        else {
-          $('.cmp-contentfragment__title').removeClass('active');
-          $('.cmp-contentfragment__title').parents('.cmp-contentfragment').find('.cmp-contentfragment__element-value ul').removeClass('active');
-          $('.cmp-contentfragment__title').parents('.cmp-contentfragment').find('.cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value').css('display', 'none');
-          $(this).addClass('active');
-          $(this).parents('.cmp-contentfragment').find('.cmp-contentfragment__element-value ul').addClass('active');
-          $(this).parents('.cmp-contentfragment').find('.cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value').css('display', 'block');
 
-        }
 
-        // Add condition to hide the second ul
-        var secondUl = $(this).parents('.cmp-contentfragment').find('.cmp-contentfragment__element-value ul').eq(1);
-        if (secondUl) {
-          $(secondUl).css('display', 'none');
-        }
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".footer__category__main .cmp-contentfragment").forEach(function(a) {
+      var b = a.querySelector(".cmp-contentfragment__title");
+      a.querySelector(".footer__category__main .cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value");
+      a.querySelectorAll(".footer__category__main .cmp-contentfragment__element--categoryLink .cmp-contentfragment__element-value ul");
+      768 > window.innerWidth && b.addEventListener("click", function() {
+          $(this).hasClass("active") ? ($(this).removeClass("active"),
+          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
+          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none")) : ($(".cmp-contentfragment__title").removeClass("active"),
+          $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").removeClass("active"),
+          $(".cmp-contentfragment__title").parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "none"),
+          $(this).addClass("active"),
+          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").addClass("active"),
+          $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value").css("display", "block"));
+          var c = $(this).parents(".cmp-contentfragment").find(".cmp-contentfragment__element-value ul").eq(1);
+          c && $(c).css("display", "none")
       })
-    }
   })
-
-
-})
+});
+var footer = {
+  el: $(".footer"),
+  init: function() {
+      this.dropdown.init();
+      this.gotop.init();
+      this.newsletter.init()
+  },
+  dropdown: {
+      init: function() {
+          this.events.click()
+      },
+      events: {
+          click: function() {
+              footer.el.find("[data-target$\x3d'-dropdown']").on("click", function(a) {
+                  a = $(a.currentTarget);
+                  var b = a.data("target");
+                  a.toggleClass("active");
+                  a.find("[class^\x3d'icon-']").toggleClass("icon-plus-o icon-minus-o");
+                  $("#".concat(b)).toggleClass("collapse")
+              })
+          }
+      }
+  },
+  gotop: {
+      el: $(".js-footer-gotop"),
+      init: function() {
+          this.event.on.init()
+      },
+      event: {
+          on: {
+              init: function() {
+                  this.click()
+              },
+              click: function() {
+                  var a = footer.gotop;
+                  a.el.on("click", a.event.func.gotop)
+              }
+          },
+          func: {
+              gotop: function() {
+                  $("html, body").animate({
+                      scrollTop: 0
+                  }, 500)
+              }
+          }
+      }
+  },
+  newsletter: {
+      el: $(".footer__newsletter"),
+      init: function() {
+          this.events.click()
+      },
+      events: {
+          click: function() {
+              var a = footer.newsletter.el;
+              a.find(".btn").on("click", function(b) {
+                  b.preventDefault();
+                  b = a.find("input").val();
+                  validateEmail(b) && (a.find("input").val(""),
+                  $(".footer__newsletter-success").show())
+              })
+          }
+      }
+  }
+};
+footer.el.length && footer.init();
+document.addEventListener("DOMContentLoaded", function() {
+  $(".footer .cmp-contentfragmentlist:first li a").on("click", function() {
+      try {
+          var a = $(this).text().trim()
+            , b = $(this).closest("ul").prev().is("h3") ? $(this).closest("ul").prev().text() : $(this).closest(".cmp-contentfragment__elements").siblings("h3").text().trim();
+          menuInteraction(a, b, "footer")
+      } catch (c) {
+          console.log(c)
+      }
+  })
+});
 
 var footer = {
   el: $('.footer'),
@@ -124,8 +188,8 @@ var footer = {
         },
         click: function click() {
           var _footer$gotop = footer.gotop,
-            el = _footer$gotop.el,
-            event = _footer$gotop.event;
+              el = _footer$gotop.el,
+              event = _footer$gotop.event;
           el.on('click', event.func.gotop);
         }
       },
@@ -163,18 +227,25 @@ var footer = {
 if (footer.el.length) {
   footer.init();
 }
+const stickyBookConsultation = document.querySelector(".sticky-book-consultation");
+  stickyBookConsultation && stickyBookConsultation.addEventListener('click',function (e) {
+          e.preventDefault();
+          $("#dialog-personal-info").css({ "display": "block" });
+          $("#field_email").removeAttr('disabled');
+          if (document.querySelector("#dialog-personal-info").style.display == "block") {
+          $('body').css("overflow","hidden")
+          }
+      });
 
-//menuinteraction footer changes
-document.addEventListener("DOMContentLoaded", function () {
-  $('.footer .cmp-contentfragmentlist:first li a').on("click", function () {
+//Footer Analytics Call
+window.addEventListener('DOMContentLoaded', function () {
+  $('.footer__nav-item a').on('click', function () {
+    var menuText = $(this).text().trim();
+    var menuTitle =  $(this).closest('.footer__nav').siblings('.footer__nav-title').text().trim()
     try {
-      var footerLinkText = $(this).text().trim();
-      var footerLinkTitle = $(this).closest('ul').prev().is('h3') ?
-        $(this).closest('ul').prev().text() : $(this).closest(".cmp-contentfragment__elements").siblings("h3").text().trim()
-      menuInteraction(footerLinkText, footerLinkTitle, "footer")
-    } catch (c) {
-      console.log(c)
+      menuInteraction(menuText, menuTitle, "footer")
+    } catch (error) {
+      console.log(error)
     }
   })
 })
-
