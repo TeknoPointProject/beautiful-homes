@@ -1,4 +1,5 @@
 main .head-redesign-container {
+    margin-top: 70px;
     margin-bottom: 120px;
 }
 
@@ -8,19 +9,23 @@ main .head-redesign-container {
 }
 
 .head-redesign-container .columns>div {
-    /* min-height: 563px;
-    align-items: unset;*/
+    align-items: unset;
     gap: unset;
     width: 100%;
 }
 
 .head-redesign-container .columns-img-col {
     width: 62.90%;
-    max-height: 563px;
+    min-height: 563px;
+    position: relative;
     flex: unset;
-    /*height: 100%;*/
+    height: 100%;
+}
+.head-redesign-container .columns-img-col img {
+    height: 100%;
+    position: absolute;
 }
 
-.head-redesign-container .columns-wrapper .columns-2-cols .columns-img-col picture {
+/* .head-redesign-container .columns-wrapper .columns-2-cols .columns-img-col picture {
     position: relative;
-}
+} */
