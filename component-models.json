@@ -270,7 +270,6 @@
         "value": "",
         "label": "Link Text"
       }
-     
     ]
   } ,
   {
@@ -281,13 +280,6 @@
         "valueType": "string",
         "name": "image",
         "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image2",
-        "label": "Image2",
         "multi": false
       },
       {
