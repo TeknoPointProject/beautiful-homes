@@ -16,7 +16,8 @@
       "image",
       "button",
       "title",
-      "carousel-wrapper"
+      "carousel-wrapper",
+      "bannerform"
     ]
   },
   {
@@ -33,7 +34,8 @@
       "carousel-wrapper",
       "dreamescarousel-cards",
       "visual-cards-wrapper",
-      "embed"
+      "embed",
+      "bannerform"
     ]
   },
   {
