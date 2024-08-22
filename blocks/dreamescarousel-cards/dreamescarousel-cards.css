@@ -38,6 +38,10 @@
 
 }
 
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide{
+    margin-bottom: 120px;
+}
+
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p {
     font-family: BioRhyme;
 }

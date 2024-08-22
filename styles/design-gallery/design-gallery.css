@@ -1,3 +1,8 @@
+main .design-gallery,
+.section.fullhome {
+    margin-top: 20px;
+}
+
 .design-gallery .default-content-wrapper {
     padding: 0 0 53px 80px;
 }
