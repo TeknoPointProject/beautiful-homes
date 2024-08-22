@@ -28,13 +28,12 @@ main .legacy-container .default-content-wrapper {
     padding-bottom: 30px;
 }
 
-main .sleek-legacy-container{
+main .sleek-legacy-container {
     max-width: 1280px;
     margin: auto;
-    padding: 0;
 }
 
-main .sleek-legacy-container .cards-wrapper{
+main .sleek-legacy-container .cards-wrapper {
     max-width: unset;
     margin: 0;
 }
@@ -64,11 +63,12 @@ main .sleek-legacy-container picture img {
     object-fit: contain;
 }
 
-main .sleek-legacy-container picture, main .sleek-legacy-container source{
+/* main .sleek-legacy-container picture,
+main .sleek-legacy-container source {
     display: block;
-}
+} */
 
-main .sleek-legacy-container .cards-card-body{
+main .sleek-legacy-container .cards-card-body {
     margin: 0;
     text-align: center;
     font-family: Lato;
@@ -78,18 +78,7 @@ main .sleek-legacy-container .cards-card-body{
     color: #1d1d1f;
 }
 
-main .sleek-legacy-container .cards-card-body p{
+main .sleek-legacy-container .cards-card-body p {
     padding: 0 10px;
     margin: 0;
 }
-
-/* main .legacy picture,
-main .legacy picture source {
-    display: block;
-} */
-/* 
-main .legacy picture img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-} */
