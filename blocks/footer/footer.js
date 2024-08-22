@@ -55,7 +55,6 @@ export default async function decorate(block) {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll(".footer__category__main .cmp-contentfragment").forEach(function(a) {
       var b = a.querySelector(".cmp-contentfragment__title");
       a.querySelector(".footer__category__main .cmp-contentfragment__element--categoryLinks .cmp-contentfragment__element-value");
@@ -73,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
           c && $(c).css("display", "none")
       })
   })
-});
 var footer = {
   el: $(".footer"),
   init: function() {
