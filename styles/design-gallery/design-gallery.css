@@ -70,16 +70,6 @@ main .design-gallery,
 
 }
 
-/* .design-gallery .carousel-wrapper picture,
-.design-gallery .carousel-wrapper source,
-.fullhome .carousel-wrapper picture,
-.fullhome .carousel-wrapper source,
-.center-slider .carousel-wrapper picture,
-.center-slider .carousel-wrapper source {
-    display: block;
-    line-height: 0;
-} */
-
 .design-gallery .carousel-wrapper h2,
 .fullhome .carousel-wrapper h2 {
     color: #323232;

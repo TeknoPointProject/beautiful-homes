@@ -63,11 +63,6 @@ main .sleek-legacy-container picture img {
     object-fit: contain;
 }
 
-/* main .sleek-legacy-container picture,
-main .sleek-legacy-container source {
-    display: block;
-} */
-
 main .sleek-legacy-container .cards-card-body {
     margin: 0;
     text-align: center;
