@@ -1,3 +1,6 @@
+main .head-redesign-container {
+    margin-bottom: 120px;
+}
 .head-redesign-container .columns-wrapper .columns-2-cols .columns-img-col picture {
     position: relative;
 }
