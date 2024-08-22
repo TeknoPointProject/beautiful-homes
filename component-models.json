@@ -460,34 +460,34 @@
           {
             "component": "reference",
             "valueType": "string",
-            "name": "image",
+            "name": "sleekimage",
             "label": "Image",
             "multi": false
           },
           {
             "component": "text",
             "valueType": "string",
-            "name": "imageAlt",
+            "name": "sleekimageAlt",
             "label": "Alt",
             "value": ""
           },
           {
             "component": "reference",
             "valueType": "string",
-            "name": "image2",
+            "name": "sleekimage2",
             "label": "Image2",
             "multi": false
           },
           {
             "component": "text",
             "valueType": "string",
-            "name": "carousel_title",
+            "name": "sleekcarousel_title",
             "value": "",
             "label": "Title"
           },
           {
             "component": "select",
-            "name": "carousel_titleType",
+            "name": "sleekcarousel_titleType",
             "value": "h1",
             "label": "Type",
             "valueType": "string",
@@ -520,7 +520,7 @@
           },
           {
             "component": "richtext",
-            "name": "text",
+            "name": "sleektext",
             "value": "",
             "label": "Text",
             "valueType": "string"
@@ -528,37 +528,18 @@
           {
             "component": "text",
             "valueType": "string",
-            "name": "btncarousel_href",
+            "name": "sleekbtncarousel_href",
             "value": "",
             "label": "Link"
           },
           {
             "component": "text",
             "valueType": "string",
-            "name": "btncarousel_hrefText",
+            "name": "sleekbtncarousel_hrefText",
             "value": "",
             "label": "Link Text"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "bannerform",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formbannerhref",
-        "value": "",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formbannerhreftext",
-        "value": "",
-        "label": "Text"
       }
     ]
   }
