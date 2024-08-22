@@ -1,0 +1,41 @@
+main .testimonials-container {
+    background-color: #f5f4ef;
+}
+
+.testimonials-container .carousel-wrapper .slick-slide {
+    background-color: #f5f4ef;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+main .testimonials-container picture img {
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.testimonials-container .carousel-wrapper .slick-prev,
+.fullhome .carousel-wrapper .slick-prev {
+    right: 120px;
+    bottom: -55px;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    transform: rotate(182deg);
+}
+
+.testimonials-container .default-content-wrapper #dreams-to-reality-our-happy-customer-stories {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-inline: unset;
+    padding-top: 57px;
+    padding-bottom: 55px;
+    text-align: center;
+    color: #323232;
+    font-family: BioRhyme;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 42.192px;
+}

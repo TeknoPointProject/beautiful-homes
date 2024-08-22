@@ -81,6 +81,12 @@ else {
         speed: 1800,
         arrows: true
       });
+      $('.testimonials-container .carousel-wrapper').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1
+      });
     }
   })
   document.addEventListener('scroll', function () {
@@ -108,6 +114,12 @@ else {
         cssEase: 'linear',
         speed: 1800,
         arrows: true
+      });
+      $('.testimonials-container .carousel-wrapper').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1
       });
     }
   })

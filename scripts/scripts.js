@@ -152,7 +152,9 @@ async function loadingCustomCss() {
     `${window.hlx.codeBasePath}/styles/design-gallery/design-gallery.css`,
     `${window.hlx.codeBasePath}/styles/simple-outer/simple-outer.css`,
     `${window.hlx.codeBasePath}/styles/home-improve/home-improve.css`,
-    `${window.hlx.codeBasePath}/styles/head-redesign/head-redesign.css`
+    `${window.hlx.codeBasePath}/styles/head-redesign/head-redesign.css`,
+    `${window.hlx.codeBasePath}/styles/testimonial-wrapper/testimonial-wrapper.css`
+
   ];
   loadCssArray.forEach(async (eachCss) => {
     await loadCSS(eachCss);
