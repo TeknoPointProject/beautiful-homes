@@ -453,6 +453,93 @@
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"
+      } , 
+      {
+        "id": "sleek-moduler-wrapper-item",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "imageAlt",
+            "label": "Alt",
+            "value": ""
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image2",
+            "label": "Image2",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "carousel_title",
+            "value": "",
+            "label": "Title"
+          },
+          {
+            "component": "select",
+            "name": "carousel_titleType",
+            "value": "h1",
+            "label": "Type",
+            "valueType": "string",
+            "options": [
+              {
+                "name": "h1",
+                "value": "h1"
+              },
+              {
+                "name": "h2",
+                "value": "h2"
+              },
+              {
+                "name": "h3",
+                "value": "h3"
+              },
+              {
+                "name": "h4",
+                "value": "h4"
+              },
+              {
+                "name": "h5",
+                "value": "h5"
+              },
+              {
+                "name": "h6",
+                "value": "h6"
+              }
+            ]
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "btncarousel_href",
+            "value": "",
+            "label": "Link"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "btncarousel_hrefText",
+            "value": "",
+            "label": "Link Text"
+          }
+        ]
       }
     ]
   }
