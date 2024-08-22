@@ -544,7 +544,7 @@
     ]
   },
   {
-    "id": "form",
+    "id": "forms",
     "fields": [
       {
         "component": "text",
