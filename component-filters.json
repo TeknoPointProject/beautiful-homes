@@ -33,7 +33,8 @@
       "carousel-wrapper",
       "dreamescarousel-cards",
       "visual-cards-wrapper",
-      "embed"
+      "embed" , 
+      "sleek-moduler-wrapper"
     ]
   },
   {
@@ -59,6 +60,13 @@
     "id": "visual-cards-wrapper",
     "components": [
       "visual-cards"
+    ]
+  } ,
+  {
+    "id": "sleek-moduler-wrapper",
+    "components": [
+      "sleek-moduler-wrapper-item"
+      
     ]
   }
 ]
