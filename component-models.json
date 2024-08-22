@@ -361,7 +361,7 @@
     ]
   },
   {
-    "id": "outer-card",
+    "id": "visual-cards",
     "fields": [
       {
         "component": "reference",
@@ -373,9 +373,42 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "title",
+        "name": "visual_title",
         "value": "",
         "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "visual_titleType",
+        "value": "h1",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "h1",
+            "value": "h1"
+          },
+          {
+            "name": "h2",
+            "value": "h2"
+          },
+          {
+            "name": "h3",
+            "value": "h3"
+          },
+          {
+            "name": "h4",
+            "value": "h4"
+          },
+          {
+            "name": "h5",
+            "value": "h5"
+          },
+          {
+            "name": "h6",
+            "value": "h6"
+          }
+        ]
       },
       {
         "component": "richtext",
@@ -383,6 +416,23 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  } ,
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videourl",
+        "label": "videourl"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "thumbnail",
+        "label": "thumbnail"
       }
     ]
   }
