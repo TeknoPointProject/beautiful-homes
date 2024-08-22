@@ -50,7 +50,6 @@
   {
     "id": "carousel-wrapper",
     "components": [
-      "text",
       "carousel-item",
       "carousel-video"
     ]
