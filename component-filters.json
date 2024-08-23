@@ -58,12 +58,6 @@
     ]
   },
   {
-    "id": "form",
-    "components": [
-      "form-wrapper"
-    ]
-  },
-  {
     "id": "visual-cards-wrapper",
     "components": [
       "visual-cards"

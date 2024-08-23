@@ -542,17 +542,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "form-wrapper",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formurl",
-        "value": "",
-        "label": "Form Url"
-      }
-    ]
   }
 ]
