@@ -16,7 +16,8 @@
       "image",
       "button",
       "title",
-      "carousel-wrapper"
+      "carousel-wrapper",
+      "form"
     ]
   },
   {
@@ -34,8 +35,7 @@
       "dreamescarousel-cards",
       "visual-cards-wrapper",
       "embed",
-      "sleek-moduler-wrapper",
-      "form"
+      "sleek-moduler-wrapper"
     ]
   },
   {
