@@ -38,7 +38,7 @@
 
 }
 
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide{
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide {
     margin-bottom: 120px;
 }
 
@@ -86,7 +86,7 @@
     background-color: #ab8fd1;
 }
 
-.slick-dots li{
+.slick-dots li {
     width: 8px;
     height: 8px;
     background-color: #fff;
@@ -100,6 +100,7 @@
     -moz-transition: .2s all ease-in-out;
     transition: .2s all ease-in-out;
 }
+
 .dreamescarousel-cards a.button:any-link {
     background-color: #7345b2 !important;
     font-size: 18px;
@@ -116,4 +117,18 @@
     line-height: 49px;
     margin-bottom: 41px;
     color: #323232;
+}
+
+@media screen and (max-width: 992px) {
+    .slick-dots {
+        bottom: -4%;
+        left: -35px;
+        justify-content: flex-end;
+    }
+
+    .slick-dots li {
+        border-radius: 50px;
+        background-color: #7345b2;
+        margin: 0 3px;
+    }
 }
