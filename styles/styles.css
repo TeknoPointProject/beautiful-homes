@@ -228,3 +228,9 @@ picture,source{
   display: block;
   line-height: 0;
 }
+
+@media screen and (max-width: 768px) {
+  .legacy-container .sleek-legacy-container .home-improve-container .center-slide .design-gallery .simple-outer .visual-cards-wrapper-container .sleek-modular-expertise-tabs-section .dreams-to-reality .fullhome .embed-container .testimonials-container .sleek-moduler-wrapper-container {
+    display: none;
+  }
+}
