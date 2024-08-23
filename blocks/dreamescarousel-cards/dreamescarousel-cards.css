@@ -71,7 +71,8 @@
     display: flex;
     align-items: center;
     bottom: 30%;
-    left: 3%;
+    left: 0%;
+    margin-left: 60px;
 }
 
 .dreamescarousel-cards .slick-dots .slick-active {
@@ -122,6 +123,7 @@
     .design-gallery .slick-dots {
         bottom: -4%;
         left: -35px;
+        display: flex;
         justify-content: flex-end;
     }
 
