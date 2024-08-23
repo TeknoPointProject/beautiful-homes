@@ -1,6 +1,7 @@
 {
   "mappings": [
     "/content/beautiful-homes/:/",
-    "/content/aem-boilerplate/configuration:/.helix/config.json"
+    "/content/aem-boilerplate/configuration:/.helix/config.json",
+    "/content/beautiful-homes/form:/form.json"
   ]
 }
