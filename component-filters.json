@@ -10,6 +10,10 @@
     "components": []
   },
   {
+    "id": "tab-items",
+    "components": []
+  },
+  {
     "id": "column",
     "components": [
       "text",
@@ -37,7 +41,7 @@
       "sleek-moduler-wrapper",
       "form",
       "tabs",
-      "tab-item"
+      "tab-items"
     ]
   },
   {
