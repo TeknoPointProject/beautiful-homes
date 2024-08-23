@@ -65,7 +65,7 @@
   {
     "id": "sleek-moduler-wrapper",
     "components": [
-      "sleek-moduler-wrapper-item"
+      "carousel-item"
     ]
   }
 ]
