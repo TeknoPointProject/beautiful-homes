@@ -1,4 +1,3 @@
-
 .home-improve-container .default-content-wrapper h2 {
     font-family: BioRhyme;
     font-size: 42px;
@@ -10,7 +9,7 @@
     margin-bottom: 9px;
 }
 
-.home-improve-container .default-content-wrapper p{
+.home-improve-container .default-content-wrapper p {
     font-family: Lato;
     font-size: 20px;
     font-weight: 400;
@@ -21,42 +20,65 @@
     margin-bottom: 30px;
 }
 
-.home-improve-container .columns-wrapper .columns-2-cols > div {
+.home-improve-container .columns-wrapper .columns-2-cols>div {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .home-improve-container .columns-wrapper .columns-2-cols > div > p > a .button{
-   display: flex;
-   align-items: center;
-  }
+    gap: 15px;
+}
 
 .home-improve-container .columns-wrapper .columns-2-cols .button-container {
-    font-size: 18px;
     line-height: 27px;
 }
 
- .home-improve-container .columns > div > div{
-    flex: unset!important;
- }
+.home-improve-container .columns>div>div {
+    flex: unset !important;
+}
 
-.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button:any-link, button {
+.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button {
     font-family: Lato, BioRhyme, sans-serif;
     font-size: 18px;
     background-color: #7345b2;
-    border-color: #7345b2;
     padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: 0;
+    font-weight: 700;
 }
 
-.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button::after{
-    content:url(/content/dam/beautiful-homes/icons/right-arrow.png);
+.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button:hover {
+    background-color: #472b6f;
+    color: white;
 }
 
-.home-improve-container .columns-wrapper .columns-2-cols .button-container p::after [class^=icon-]{
+.home-improve-container .columns-2-cols .button.primary::after {
+    background-image: url(/content/dam/beautiful-homes/icons/right-arrow.png);
+    background-size: 13px 20px;
+    width: 12px;
+    height: 20px;
+    content: "";
+    background-repeat: no-repeat;
     margin-left: 12px;
 }
 
-.home-improve-container .columns-wrapper .columns-2-cols .button-container a.button::after{
-    
+.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary {
+    background-color: #fff;
+    border: 1px solid black;
+    border-color: #7345b2;
+    color: #7345b2;
+    padding: 16px 75px;
+}
+
+.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary::after{
+    background-image: url(/content/dam/beautiful-homes/icons/youtube-icon.png);
+    background-size: 19px 15px;
+    width: 19px;
+    height: 15px;
+    content: "";
+    background-repeat: no-repeat;
+    margin-left: 12px;
+}
+.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary:hover::after{
+    background-image: url(/content/dam/beautiful-homes/icons/youtube-icon-white.png);
 }
