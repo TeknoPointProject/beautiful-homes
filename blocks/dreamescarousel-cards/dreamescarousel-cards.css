@@ -48,8 +48,8 @@
 
 .dreamescarousel-cards .slick-next {
 
-    right: 8% !important;
-    top: 78% !important;
+    right: 3% !important;
+    top: 68% !important;
     width: 66px;
     height: 66px;
     background-color: #fff;
@@ -64,14 +64,42 @@
 
 .dreamescarousel-cards .slick-prev {
     z-index: 1;
-    left: 93%;
-    top: 78% !important;
+    left: 87%;
+    top: 68% !important;
     width: 66px;
     height: 66px;
     background-color: #fff;
     border-radius: 50%;
 }
 
+.slick-dots {
+    display: flex;
+    align-items: center;
+    bottom: 30%;
+    left: 3%;
+}
+
+.slick-dots .slick-active {
+    height: 8px;
+    width: 32px;
+    border-radius: 10px;
+    background-color: #ab8fd1;
+}
+
+.slick-dots li{
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 12px;
+    cursor: pointer;
+    -webkit-transition: .2s all ease-in-out;
+    -o-transition: .2s all ease-in-out;
+    -moz-transition: .2s all ease-in-out;
+    transition: .2s all ease-in-out;
+}
 .dreamescarousel-cards a.button:any-link {
     background-color: #7345b2 !important;
     font-size: 18px;
