@@ -315,6 +315,21 @@
               }
             }
           }
+        },
+        {
+          "title": "Form Wrapper",
+          "id": "formr-wrapper",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "formr-wrapper",
+                  "filter": "formr-wrapper"
+                }
+              }
+            }
+          }
         }
       ]
     }

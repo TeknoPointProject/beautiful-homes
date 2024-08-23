@@ -544,7 +544,7 @@
     ]
   },
   {
-    "id": "form",
+    "id": "form-wrapper",
     "fields": [
       {
         "component": "text",

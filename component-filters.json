@@ -16,8 +16,7 @@
       "image",
       "button",
       "title",
-      "carousel-wrapper",
-      "form"
+      "carousel-wrapper"
     ]
   },
   {
@@ -55,6 +54,12 @@
     "components": [
       "carousel-item",
       "carousel-video"
+    ]
+  },
+  {
+    "id": "form",
+    "components": [
+      "form-wrapper"
     ]
   },
   {
