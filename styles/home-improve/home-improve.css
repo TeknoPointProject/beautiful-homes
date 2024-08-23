@@ -1,3 +1,7 @@
+main .home-improve-container {
+    padding-bottom: 15px;
+}
+
 .home-improve-container .default-content-wrapper h2 {
     font-family: BioRhyme;
     font-size: 42px;
@@ -70,7 +74,7 @@
     padding: 16px 75px;
 }
 
-.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary::after{
+.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary::after {
     background-image: url(/content/dam/beautiful-homes/icons/youtube-icon.png);
     background-size: 19px 15px;
     width: 19px;
@@ -79,6 +83,7 @@
     background-repeat: no-repeat;
     margin-left: 12px;
 }
-.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary:hover::after{
+
+.home-improve-container .columns-wrapper .columns-2-cols .button-container .button.secondary:hover::after {
     background-image: url(/content/dam/beautiful-homes/icons/youtube-icon-white.png);
 }
