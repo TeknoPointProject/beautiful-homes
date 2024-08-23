@@ -32,7 +32,17 @@ if (screen.width <= 786) {
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+              breakpoint: 992,
+              settings: {
+                  arrows: false,
+                  dots: true,
+                  slidesToShow: 1.03,
+              }
+          }
+      ]
       });
       $('.fullhome .carousel-wrapper').slick({
         infinite: false,
