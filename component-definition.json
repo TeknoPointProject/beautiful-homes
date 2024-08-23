@@ -315,6 +315,24 @@
               }
             }
           }
+        },
+        {
+          "title": "tab-item",
+          "id": "tab-item",
+          "components": [
+            {
+              "title": "tab-item",
+              "id": "tab-item",
+              "plugins": {
+                "xwalk": {
+                  "page": {
+                    "resourceType": "core/franklin/components/section/v1/section",
+                    "template": {}
+                  }
+                }
+              }
+            }
+          ]
         }
       ]
     }

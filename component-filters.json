@@ -36,7 +36,8 @@
       "embed",
       "sleek-moduler-wrapper",
       "form",
-      "tabs"
+      "tabs",
+      "tab-item"
     ]
   },
   {

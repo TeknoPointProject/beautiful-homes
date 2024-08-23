@@ -540,6 +540,18 @@
             "label": "Link Text"
           }
         ]
+      },
+      {
+        "id": "tab-item",
+        "fields": [
+          {
+            "component": "text",
+            "name": "tabstyle",
+            "value": "",
+            "label": "Style",
+            "valueType": "string"
+          }
+        ]
       }
     ]
   }
