@@ -112,6 +112,12 @@ main .sleek-legacy-container .cards-card-body p {
         row-gap: 18px;
     }
 
+    .sleek-legacy-container ul li:nth-last-child(3),
+    .sleek-legacy-container ul li:nth-last-child(2),
+    .sleek-legacy-container ul li:last-child {
+        margin-bottom: 0;
+    }
+
     main .sleek-legacy-container picture img {
         width: 37px;
         height: 37px;
