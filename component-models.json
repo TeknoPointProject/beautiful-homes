@@ -130,25 +130,6 @@
     ]
   },
   {
-    "id": "tab-items",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "tabcolumns",
-        "value": "",
-        "label": "Columns"
-      },
-      {
-        "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
-      }
-    ]
-  },
-  {
     "id": "card",
     "fields": [
       {

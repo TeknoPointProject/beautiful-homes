@@ -315,21 +315,6 @@
               }
             }
           }
-        },
-        {
-          "title": "tab-items",
-          "id": "tab-items",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
-                }
-              }
-            }
-          }
         }
       ]
     }
