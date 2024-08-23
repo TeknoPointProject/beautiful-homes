@@ -542,24 +542,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "forms",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formbannerhref",
-        "value": "",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "formbannerhreftext",
-        "value": "",
-        "label": "Text"
-      }
-    ]
   }
 ]
