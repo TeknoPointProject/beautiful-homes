@@ -57,11 +57,6 @@
 
 }
 
-.slick-next:before,
-.slick-prev:before {
-    color: black !important;
-}
-
 .dreamescarousel-cards .slick-prev {
     z-index: 1;
     left: 87%;
@@ -72,21 +67,21 @@
     border-radius: 50%;
 }
 
-.slick-dots {
+.dreamescarousel-cards .slick-dots {
     display: flex;
     align-items: center;
     bottom: 30%;
     left: 3%;
 }
 
-.slick-dots .slick-active {
+.dreamescarousel-cards .slick-dots .slick-active {
     height: 8px;
     width: 32px;
     border-radius: 10px;
     background-color: #ab8fd1;
 }
 
-.slick-dots li {
+.dreamescarousel-cards .slick-dots li {
     width: 8px;
     height: 8px;
     background-color: #fff;
@@ -120,13 +115,13 @@
 }
 
 @media screen and (max-width: 992px) {
-    .slick-dots {
+    .design-gallery .slick-dots {
         bottom: -4%;
         left: -35px;
         justify-content: flex-end;
     }
 
-    .slick-dots li {
+    .design-gallery .slick-dots li {
         border-radius: 50px;
         background-color: #7345b2;
         margin: 0 3px;

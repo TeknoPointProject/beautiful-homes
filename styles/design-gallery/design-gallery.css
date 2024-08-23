@@ -293,6 +293,11 @@ main .center-slider {
     z-index: 99
 }
 
+.center-slider .slick-next:before,
+.center-slider .slick-prev:before {
+    color: black ;
+}
+
 @media screen and (max-width: 992px) {
     .design-gallery .default-content-wrapper {
         padding-left: 20px;
