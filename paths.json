@@ -2,6 +2,7 @@
   "mappings": [
     "/content/beautiful-homes/:/",
     "/content/aem-boilerplate/configuration:/.helix/config.json",
-    "/content/beautiful-homes/form:/form.json"
+    "/content/beautiful-homes/form:/form.json",
+    "/content/beautiful-homes/abc:/abc.json"
   ]
 }
