@@ -21,6 +21,7 @@ main .head-redesign-container {
     flex: unset;
     height: 100%;
 }
+
 .head-redesign-container .columns-img-col img {
     height: 100%;
     position: absolute;
@@ -29,3 +30,14 @@ main .head-redesign-container {
 /* .head-redesign-container .columns-wrapper .columns-2-cols .columns-img-col picture {
     position: relative;
 } */
+
+@media screen and (max-width: 768px) {
+    .head-redesign-container .columns-img-col {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .head-redesign-container .columns-img-col img {
+        height: 400px;
+    }
+}
