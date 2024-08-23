@@ -292,3 +292,37 @@ main .center-slider {
     width: 64px;
     z-index: 99
 }
+
+@media screen and (max-width: 992px) {
+    .design-gallery .default-content-wrapper {
+        padding-left: 20px;
+        /* padding-left: 20px;
+        padding-bottom: 53px; */
+    }
+
+    .design-gallery .default-content-wrapper h2 {
+        letter-spacing: normal;
+        color: #202020;
+        font-size: 22px;
+        line-height: 30.8px;
+        margin-bottom: 8px;
+        padding-right: 20px;
+    }
+
+    .design-gallery .default-content-wrapper p {
+        font-size: 16px;
+        line-height: 20.8px;
+        padding-right: 20px;
+    }
+    .design-ideas-comp .container {
+        /* max-width: max-content; */
+        padding: 0 0 0 20px;
+    }
+
+    .design-gallery .carousel-wrapper-wrapper {
+        max-width: unset;
+        margin: 0;
+        padding: 0 0 0 40px;
+    }
+
+}
