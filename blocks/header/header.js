@@ -166,7 +166,7 @@ export default async function decorate(block) {
   
       // Check if the element exists and append it
       if (cmpContainer) {
-        console.log("Found element:", cmpContainer.outerHTML);
+        // console.log("Found element:", cmpContainer.outerHTML);
         
         // Use innerHTML to properly render the HTML
         navWrapper.innerHTML = cmpContainer.outerHTML;
@@ -1250,23 +1250,7 @@ for (var i = 0; i < tabclick.length; i += 1)
         e.currentTarget.parentElement.children[1].parentElement.classList.add("collapse");
         $(".header-m__nav-middle").addClass("collapse-outer")
     });
-document.getElementsByTagName("body")[0].addEventListener("click", function(event) {
-    if (event.target.classList.contains("field-search") == false) {
-        if (document.getElementById("field-search1").value != "")
-            document.getElementById("field-search1").value = "";
-        if (document.getElementById("field-search__m").value != "")
-            document.getElementById("field-search__m").value = "";
-        if (document.querySelector(".header").classList.contains("search--expanded")) {
-            document.querySelector(".header").classList.remove("search--expanded");
-            if (document.querySelector(".searchresult").style.display == "block")
-                document.querySelector(".searchresult").style.display = "none";
-            if (document.querySelector(".searchdynamic").style.display == "block") {
-                document.querySelector(".searchdynamic").style.display = "none";
-                document.querySelector(".searchdynamic").parentElement.parentElement.style.display = "none"
-            }
-        }
-    }
-});
+
 
 var iconSearch = document.querySelector(".header-m__search-trigger .icon-search");
 var headerMSidebarClose = document.querySelector(".header-m__sidebar-close");
@@ -1277,3 +1261,103 @@ iconSearch && iconSearch.addEventListener("click", function() {
 headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() {
     bottonNavIconWrapper.style.zIndex = "9999"
 });
+function getform(url) {
+    console.log(`Fetching data from ${url}`);
+    fetch(url, {
+        method: 'GET', 
+        headers: {
+            'Content-Type': 'application/json',
+         
+        }
+    })
+    .then(response => {
+        console.log('Response received');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Data:', data);
+
+    
+        const fields = data.data; 
+
+        if (!Array.isArray(fields)) {
+            console.error('Expected an array but got:', fields);
+            return;
+        }
+
+       
+        const div = document.createElement("div");
+        
+      
+        const form = document.createElement("form");
+        form.id = "dynamicForm";
+        
+        
+        fields.forEach(field => {
+            let inputElement;
+            
+            switch (field.Type) {
+                case "text-field":
+                    inputElement = document.createElement("input");
+                    inputElement.type = "text";
+                    inputElement.placeholder = field.Placeholder || "";
+                    inputElement.name = field.Field; 
+                    break;
+                
+                case "select":
+                    inputElement = document.createElement("select");
+                    // Handle options if present
+                    if (field.Options) {
+                        const options = field.Options.split(", ");
+                        options.forEach(option => {
+                            const optionElement = document.createElement("option");
+                            optionElement.value = option;
+                            optionElement.textContent = option;
+                            inputElement.appendChild(optionElement);
+                        });
+                    }
+                    inputElement.name = field.Field; 
+                    break;
+                
+                case "submit":
+                    inputElement = document.createElement("button");
+                    inputElement.type = "submit";
+                    inputElement.textContent = field.Label || "Submit";
+                    inputElement.formAction = field.Extra; 
+                    break;
+                
+                default:
+                    
+                    break;
+            }
+
+            if (inputElement) {
+                const label = document.createElement("label");
+                label.textContent = field.Label || field.Field;
+                form.appendChild(label);
+                form.appendChild(inputElement);
+                form.appendChild(document.createElement("br")); 
+            }
+        });
+        var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div" );
+        console.log("this is " , divss)
+     
+        divss.appendChild(form);
+
+        document.body.appendChild(div);
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+    });
+}
+
+// Example URL for fetching data
+const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const targetUrl = 'https://main--idfcfirstbank--teknopointproject.hlx.page/email-form.json?nocache=1724407666946';
+getform(proxyUrl + encodeURIComponent(targetUrl));
+
+
+
