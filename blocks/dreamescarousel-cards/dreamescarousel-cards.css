@@ -113,6 +113,10 @@
     margin-bottom: 41px;
     color: #323232;
 }
+.dreamescarousel-cards .slick-next:before,
+.dreamescarousel-cards .slick-prev:before {
+    color: black ;
+}
 
 @media screen and (max-width: 992px) {
     .design-gallery .slick-dots {
