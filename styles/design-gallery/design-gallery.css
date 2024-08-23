@@ -314,6 +314,7 @@ main .center-slider {
         line-height: 20.8px;
         padding-right: 20px;
     }
+
     .design-ideas-comp .container {
         /* max-width: max-content; */
         padding: 0 0 0 20px;
@@ -325,4 +326,42 @@ main .center-slider {
         padding: 0 0 0 25px;
     }
 
+}
+
+@media (max-width: 575.98px) {
+    .center-slider .slick-slide {
+        margin: 0 15px;
+    }
+
+    .center-slider .slick-slide img {
+        height: 335px;
+    }
+
+    .center-slider .slick-current.slick-active.slick-center img {
+        height: 370px;
+    }
+
+    .center-slider .carousel-wrapper-wrapper .slick-arrow.slick-prev {
+        left: 5%;
+    }
+
+    .center-slider .carousel-wrapper-wrapper .slick-arrow.slick-next {
+        right: 5%;
+    }
+
+    .center-slider .carousel-wrapper-wrapper .slick-next,
+    .center-slider .carousel-wrapper-wrapper .slick-prev {
+        top: 50%;
+    }
+
+    .center-slider h2 {
+        font-size: 14px;
+        line-height: 14px;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+
+    .center-slider .default-content-wrapper {
+        height: 76%;
+    }
 }

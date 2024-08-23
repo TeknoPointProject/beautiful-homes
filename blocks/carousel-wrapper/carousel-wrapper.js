@@ -35,14 +35,14 @@ if (screen.width <= 786) {
         slidesToScroll: 1,
         responsive: [
           {
-              breakpoint: 992,
-              settings: {
-                  arrows: false,
-                  dots: true,
-                  slidesToShow: 1.03,
-              }
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1.03,
+            }
           }
-      ]
+        ]
       });
       $('.fullhome .carousel-wrapper').slick({
         infinite: false,
@@ -59,7 +59,29 @@ if (screen.width <= 786) {
         autoplay: true,
         cssEase: 'linear',
         speed: 1800,
-        arrows: true
+        arrows: true,
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            centerMode: !0,
+            centerPadding: "60px",
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            centerMode: !0,
+            centerPadding: "40px",
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            centerMode: !0,
+            centerPadding: "30px",
+            slidesToShow: 1
+          }
+        }]
       });
     }
   })
@@ -123,7 +145,29 @@ else {
         autoplay: true,
         cssEase: 'linear',
         speed: 1800,
-        arrows: true
+        arrows: true,
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            centerMode: !0,
+            centerPadding: "60px",
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 768,
+          settings: {
+            centerMode: !0,
+            centerPadding: "40px",
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+            centerMode: !0,
+            centerPadding: "30px",
+            slidesToShow: 1
+          }
+        }]
       });
       // $('.testimonials-container .carousel-wrapper').slick({
       //   infinite: false,
