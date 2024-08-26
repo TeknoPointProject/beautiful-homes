@@ -125,12 +125,6 @@ else {
         speed: 1800,
         arrows: true
       });
-      // $('.testimonials-container .carousel-wrapper').slick({
-      //   infinite: false,
-      //   arrows: true,
-      //   slidesToShow: 3.14,
-      //   slidesToScroll: 1
-      // });
     }
   })
   document.addEventListener('scroll', function () {
@@ -193,23 +187,6 @@ else {
           }
         }]
       });
-      // $('.testimonials-container .carousel-wrapper').slick({
-      //   infinite: false,
-      //   arrows: true,
-      //   slidesToShow: 3.14,
-      //   slidesToScroll: 1
-      // });
     }
   })
 };
-
-
-// $('.center-slider-wrapper.center-slider').slick({
-//   centerMode: true,
-//   centerPadding: '280px',
-//   slidesToShow: 1,
-//   infinite: true,
-//   autoplay: true,
-//   speed: 100000,
-//   arrows: true});
-
