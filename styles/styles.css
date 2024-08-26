@@ -248,6 +248,10 @@ source {
   line-height: 0;
 }
 
+.testimonials-container {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .sleek-modular-expertise-tabs-section,
   .testimonials-container {
