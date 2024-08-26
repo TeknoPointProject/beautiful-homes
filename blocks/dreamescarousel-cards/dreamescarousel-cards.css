@@ -9,7 +9,6 @@
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) {
     position: absolute;
     top: 100px;
-
     color: white;
     font-weight: 600;
     font-size: 40px;
@@ -19,7 +18,6 @@
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p {
     position: absolute;
     top: 185px;
-
     color: white;
     font-weight: 200;
     font-size: 16px;
@@ -30,7 +28,6 @@
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) p {
     position: absolute;
     top: 220px;
-
     color: white;
     font-weight: 200;
     font-size: 16px;
@@ -47,14 +44,12 @@
 }
 
 .dreamescarousel-cards .slick-next {
-
     right: 3% !important;
     top: 68% !important;
     width: 66px;
     height: 66px;
     background-color: #fff;
     border-radius: 50%;
-
 }
 
 .dreamescarousel-cards .slick-prev {
@@ -91,9 +86,6 @@
     border-radius: 50%;
     margin-right: 12px;
     cursor: pointer;
-    -webkit-transition: .2s all ease-in-out;
-    -o-transition: .2s all ease-in-out;
-    -moz-transition: .2s all ease-in-out;
     transition: .2s all ease-in-out;
 }
 
@@ -114,25 +106,13 @@
     margin-bottom: 41px;
     color: #323232;
 }
+
 .dreamescarousel-cards .slick-next:before,
 .dreamescarousel-cards .slick-prev:before {
-    color: black ;
+    color: black;
 }
 
 @media screen and (max-width: 992px) {
-    .design-gallery .slick-dots {
-        bottom: -4%;
-        left: -35px;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .design-gallery .slick-dots li {
-        border-radius: 50px;
-        background-color: #7345b2;
-        margin: 0 3px;
-    }
-
     .dream-to-reality .design-gallery .slick-dots {
         bottom: -4%;
         left: -35px;
@@ -154,7 +134,7 @@
         color: #fff;
     }
 
-    .dreamescarousel-cards-wrapper .slick-slide .slick-current .slick-active::before {
+    /* .dreamescarousel-cards-wrapper .slick-slide .slick-current .slick-active::before {
         background: -webkit-gradient(linear, right top, left top, color-stop(40.66%, rgba(38, 40, 43, .4)), to(#26282b));
         background: -webkit-linear-gradient(right, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
         background: -moz-linear-gradient(right, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
@@ -167,7 +147,7 @@
         position: absolute;
         top: 0;
         width: 100%;
-    }
+    } */
 }
 
 .dream-to-reality .dreamescarousel-cards .slick-dots {
@@ -178,6 +158,7 @@
     width: 0;
     margin-left: 60px;
 }
+
 .dream-to-reality .dreamescarousel-cards .slick-dots .slick-active {
     height: 8px;
     width: 32px;
@@ -202,8 +183,8 @@
 
 
 @media screen and (max-width: 768px) {
-    
-    .dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards{
+
+    .dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards {
         display: none;
     }
 

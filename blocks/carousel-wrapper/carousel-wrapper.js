@@ -48,7 +48,19 @@ if (screen.width <= 786) {
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1.03,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              arrows: false,
+            }
+          }
+        ]
       });
       $('.center-slider .carousel-wrapper').slick({
         centerMode: true,
@@ -113,12 +125,6 @@ else {
         speed: 1800,
         arrows: true
       });
-      // $('.testimonials-container .carousel-wrapper').slick({
-      //   infinite: false,
-      //   arrows: true,
-      //   slidesToShow: 3.14,
-      //   slidesToScroll: 1
-      // });
     }
   })
   document.addEventListener('scroll', function () {
@@ -134,7 +140,19 @@ else {
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1.03,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              arrows: false,
+            }
+          }
+        ]
       });
       $('.center-slider .carousel-wrapper').slick({
         centerMode: true,
@@ -169,23 +187,6 @@ else {
           }
         }]
       });
-      // $('.testimonials-container .carousel-wrapper').slick({
-      //   infinite: false,
-      //   arrows: true,
-      //   slidesToShow: 3.14,
-      //   slidesToScroll: 1
-      // });
     }
   })
 };
-
-
-// $('.center-slider-wrapper.center-slider').slick({
-//   centerMode: true,
-//   centerPadding: '280px',
-//   slidesToShow: 1,
-//   infinite: true,
-//   autoplay: true,
-//   speed: 100000,
-//   arrows: true});
-

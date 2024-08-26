@@ -1,6 +1,5 @@
-
-$(document).ready(function() {
- var $carouselContainer = $('.dreamescarousel-cards');
+$(document).ready(function () {
+  var $carouselContainer = $('.dreamescarousel-cards');
   // Initialize Slick carousel
   $carouselContainer.slick({
     infinite: true,
