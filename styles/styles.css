@@ -249,11 +249,7 @@ source {
 }
 
 @media screen and (max-width: 768px) {
-  .simple-outer,
-  .visual-cards-wrapper-container,
   .sleek-modular-expertise-tabs-section,
-  .fullhome,
-  .embed-container,
   .testimonials-container {
     display: none;
   }

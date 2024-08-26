@@ -415,7 +415,7 @@ main .center-slider {
 
     .fullhome .slick-dots li.slick-active {
         width: 30px;
-        height: 6px;
+        height: 8px;
     }
 
     .design-gallery .slick-dots {
@@ -434,5 +434,13 @@ main .center-slider {
 
     .fullhome .slick-dots {
         bottom: -35px;
+    }
+    
+    .design-gallery .carousel-wrapper h2 {
+        text-align: center;
+    }
+    .design-gallery .carousel-wrapper .slick-slide div div div:last-child {
+        display: flex;
+        justify-content: center;
     }
 }
