@@ -4,7 +4,7 @@
   display: flex;
   gap: 35px;
   justify-content: space-between;
-  margin: 34px auto !important;
+  margin: 34px auto;
 }
 
 .visual-cards-wrapper li::before {
@@ -17,12 +17,15 @@
 .visual-cards-wrapper li:nth-child(1)::before {
   content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-1.png);
 }
+
 .visual-cards-wrapper li:nth-child(2)::before {
   content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-2.png);
 }
+
 .visual-cards-wrapper li:nth-child(3)::before {
   content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-3.png);
 }
+
 .visual-cards-wrapper li:nth-child(4)::before {
   content: url(/content/dam/beautiful-homes/icons/yellow-icons/process-4.png);
 }
@@ -78,8 +81,53 @@
   margin-top: 0;
 }
 
-/* .visual-cards-wrapper>ul>li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-} */
+
+@media screen and (max-width: 992px) {
+  .visual-cards-wrapper ul {
+    padding: 20px;
+    flex-direction: column;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  .visual-cards-wrapper li {
+    padding-bottom: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: max-content;
+  }
+
+  .visual-cards-wrapper li img {
+    height: 120px;
+    width: 120px;
+  }
+
+  .visual-cards-wrapper .visual-cards-wrapper-card-image {
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    margin-right: auto;
+  }
+
+  .visual-cards-wrapper .visual-cards-wrapper-card-body {
+    max-width: calc(100% - 140px);
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .visual-cards-wrapper .visual-cards-wrapper-card-body>*:first-child {
+    text-align: left;
+  }
+
+  .visual-cards-wrapper li::before {
+    right: auto;
+    left: -10px;
+    top: 160px;
+    transform: rotate(90deg);
+  }
+
+  .section.visual-cards-wrapper-container {
+    margin-bottom: 80px;
+  }
+}

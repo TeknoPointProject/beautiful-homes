@@ -118,18 +118,3 @@
 .dreamescarousel-cards .slick-prev:before {
     color: black ;
 }
-
-@media screen and (max-width: 992px) {
-    .design-gallery .slick-dots {
-        bottom: -4%;
-        left: -35px;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .design-gallery .slick-dots li {
-        border-radius: 50px;
-        background-color: #7345b2;
-        margin: 0 3px;
-    }
-}

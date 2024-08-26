@@ -52,3 +52,29 @@
 } */
 
 /* .visual-cards-wrapper>ul {} */
+
+@media screen and (max-width: 992px) {
+    .simple-outer .default-content-wrapper {
+        padding: 60px 0 36px;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .simple-outer .default-content-wrapper p {
+        color: #696969;
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        margin-bottom: 8px;
+    }
+
+    .simple-outer .default-content-wrapper h1 {
+        font-size: 26px;
+        line-height: 33.8px;
+    }
+}

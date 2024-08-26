@@ -48,7 +48,19 @@ if (screen.width <= 786) {
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1.03,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              arrows: false,
+            }
+          }
+        ]
       });
       $('.center-slider .carousel-wrapper').slick({
         centerMode: true,
@@ -134,7 +146,19 @@ else {
         infinite: false,
         arrows: true,
         slidesToShow: 3.14,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 1.03,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              arrows: false,
+            }
+          }
+        ]
       });
       $('.center-slider .carousel-wrapper').slick({
         centerMode: true,
