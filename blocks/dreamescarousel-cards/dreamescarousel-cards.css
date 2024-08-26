@@ -1,9 +1,9 @@
-.dreamescarousel-cards-wrapper {
-    max-width: none !important;
+.dreams-to-reality .dreamescarousel-cards-wrapper {
+    max-width: unset;
 }
 
-.dreamescarousel-cards-container {
-    padding: 0 !important;
+.dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards {
+    margin-bottom: 120px;
 }
 
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) {
@@ -13,6 +13,7 @@
     font-weight: 600;
     font-size: 40px;
     padding-left: 60px;
+    font-family: BioRhyme;
 }
 
 .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p {
@@ -35,17 +36,9 @@
 
 }
 
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide {
-    margin-bottom: 120px;
-}
-
-.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p {
-    font-family: BioRhyme;
-}
-
 .dreamescarousel-cards .slick-next {
-    right: 3% !important;
-    top: 68% !important;
+    right: 3%;
+    top: 68%;
     width: 66px;
     height: 66px;
     background-color: #fff;
@@ -55,7 +48,7 @@
 .dreamescarousel-cards .slick-prev {
     z-index: 1;
     left: 87%;
-    top: 68% !important;
+    top: 68%;
     width: 66px;
     height: 66px;
     background-color: #fff;
@@ -68,29 +61,46 @@
     bottom: 30%;
     left: 0%;
     margin-left: 60px;
-}
-
-.dreamescarousel-cards .slick-dots .slick-active {
-    height: 8px;
-    width: 32px;
-    border-radius: 10px;
-    background-color: #ab8fd1;
+    width: unset;
 }
 
 .dreamescarousel-cards .slick-dots li {
     width: 8px;
     height: 8px;
     background-color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
     margin-right: 12px;
     cursor: pointer;
     transition: .2s all ease-in-out;
 }
 
+.dreamescarousel-cards .slick-dots .slick-active {
+    width: 32px;
+    border-radius: 10px;
+    background-color: #ab8fd1;
+}
+
+.dream-to-reality {
+    display: none;
+}
+
+.dreams-to-reality .dreamescarousel-cards-wrapper .slick-slide {
+    position: relative;
+}
+
+.dreams-to-reality .dreamescarousel-cards-wrapper .slick-slide.slick-current.slick-active:before {
+    background: linear-gradient(270deg, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 .dreamescarousel-cards a.button:any-link {
-    background-color: #7345b2 !important;
+    background-color: #7345b2;
     font-size: 18px;
     line-height: 27px;
     padding: 16px 32px;
@@ -113,6 +123,14 @@
 }
 
 @media screen and (max-width: 992px) {
+    .dreams-to-reality {
+        display: none;
+    }
+
+    .dream-to-reality {
+        display: block;
+    }
+
     .dream-to-reality .design-gallery .slick-dots {
         bottom: -4%;
         left: -35px;
@@ -126,19 +144,11 @@
         margin: 0 3px;
     }
 
-    .dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p {
-        font-family: BioRhyme;
-        font-size: 36px;
-        line-height: 44px;
-        margin-bottom: 4px;
-        color: #fff;
+    .dream-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide {
+        position: relative;
     }
 
-    /* .dreamescarousel-cards-wrapper .slick-slide .slick-current .slick-active::before {
-        background: -webkit-gradient(linear, right top, left top, color-stop(40.66%, rgba(38, 40, 43, .4)), to(#26282b));
-        background: -webkit-linear-gradient(right, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
-        background: -moz-linear-gradient(right, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
-        background: -o-linear-gradient(right, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
+    .dream-to-reality .dreamescarousel-cards-wrapper .slick-slide.slick-current.slick-active:before {
         background: linear-gradient(270deg, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
         content: '';
         height: 100%;
@@ -147,43 +157,21 @@
         position: absolute;
         top: 0;
         width: 100%;
-    } */
-}
+    }
 
-.dream-to-reality .dreamescarousel-cards .slick-dots {
-    display: flex;
-    align-items: center;
-    bottom: 30%;
-    left: 0%;
-    width: 0;
-    margin-left: 60px;
+    .dreams-to-reality .dreamescarousel-cards-wrapper .slick-slide.slick-current.slick-active:before {
+        background: linear-gradient(270deg, rgba(38, 40, 43, .4) 40.66%, #26282b 100%);
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: .6;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 }
-
-.dream-to-reality .dreamescarousel-cards .slick-dots .slick-active {
-    height: 8px;
-    width: 32px;
-    border-radius: 10px;
-    background-color: #ab8fd1;
-}
-
-.dream-to-reality .dreamescarousel-cards .slick-dots li {
-    width: 8px;
-    height: 8px;
-    background-color: #fff;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    margin-right: 12px;
-    cursor: pointer;
-    -webkit-transition: .2s all ease-in-out;
-    -o-transition: .2s all ease-in-out;
-    -moz-transition: .2s all ease-in-out;
-    transition: .2s all ease-in-out;
-}
-
 
 @media screen and (max-width: 768px) {
-
     .dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards {
         display: none;
     }
@@ -195,11 +183,62 @@
         line-height: 34px;
     }
 
-    .dreams-to-reality .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) p {
-        font-family: BioRhyme;
+    .dream-to-reality .dreamescarousel-cards .slick-dots .slick-active {
+        width: 32px;
+        border-radius: 10px;
+        background-color: #ab8fd1;
+    }
+
+    .dream-to-reality .dreamescarousel-cards .slick-dots li {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-right: 12px;
+        cursor: pointer;
+        transition: .2s all ease-in-out;
+    }
+
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2) {
+        top: 8%;
         font-size: 36px;
         line-height: 44px;
         margin-bottom: 4px;
-        color: #fff;
+    }
+
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) {
+        top: 14%;
+    }
+
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) {
+        top: 18%;
+    }
+
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(2),
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p,
+    .dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) p {
+        padding: 0 20px;
+    }
+
+    .dreamescarousel-cards a.button:any-link {
+        min-width: 180px;
+        margin-right: 15px;
+        font-size: 16px;
+        line-height: 19px;
+        padding: 12px 20px;
+    }
+
+    .dreamescarousel-cards .slick-prev {
+        left: 70%;
+    }
+
+    .dreamescarousel-cards .slick-prev,
+    .dreamescarousel-cards .slick-next {
+        top: 95%;
+    }
+
+    .dreamescarousel-cards .slick-dots {
+        bottom: 4%;
+        margin-left: 20px;
     }
 }
