@@ -252,11 +252,9 @@ source {
   .simple-outer,
   .visual-cards-wrapper-container,
   .sleek-modular-expertise-tabs-section,
-  .dreams-to-reality,
   .fullhome,
   .embed-container,
-  .testimonials-container,
-  .sleek-moduler-wrapper-container {
+  .testimonials-container {
     display: none;
   }
 }
