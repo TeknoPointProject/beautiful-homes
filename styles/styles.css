@@ -572,3 +572,8 @@ header.primary_new_header_mobile.header-m{
   position: relative;
   z-index: 1000;
 }
+.head-redesign-container .columns-wrapper {
+  position: relative;
+    z-index: -1;
+
+}
