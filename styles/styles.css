@@ -561,6 +561,8 @@ label.check-container{
   .head-redesign-container .columns-wrapper .columns div .columns-img-col {
     background: unset;
     width: 100.31%;
+    position: relative;
+    z-index: -1;
 }
 
 label.check-container{
