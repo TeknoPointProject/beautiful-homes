@@ -585,3 +585,7 @@ main .center-slider {
   
     z-index: -1;
 }
+.visual-cards-wrapper-wrapper {
+  position : relative;
+z-index : -1
+}
