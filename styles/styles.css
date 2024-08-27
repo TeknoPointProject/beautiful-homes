@@ -557,3 +557,9 @@ span.checkmark {
 label.check-container{
   width: 438px;
 }
+@media (width >= 900px) {
+  .head-redesign-container .columns-wrapper .columns div .columns-img-col {
+    background: unset;
+    width: 100.31%;
+}
+}
