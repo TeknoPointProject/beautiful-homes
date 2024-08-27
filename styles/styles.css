@@ -454,8 +454,6 @@ span.error{
 
 .form_container{
   height: 563px;
-  position: relative;
-  z-index: -1;
 
 }
 .form-checkbox{
@@ -569,8 +567,6 @@ label.check-container{
   .head-redesign-container .columns-wrapper .columns div .columns-img-col {
     background: unset;
     width: 100.31%;
-    position: relative;
-    z-index: -1;
 }
 
 label.check-container{
