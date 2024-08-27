@@ -579,3 +579,9 @@ header.primary_new_header_mobile.header-m{
     z-index: -1;
 
 }
+main .center-slider {
+    position: relative;
+    margin-bottom: 120px;
+  
+    z-index: -1;
+}
