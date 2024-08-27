@@ -48,7 +48,7 @@
   src: local('Arial');
 }
 
-@media (width >= 900px) {
+@media (width >=900px) {
   :root {
     --heading-font-size-xxl: 60px;
     --heading-font-size-xl: 48px;
@@ -91,12 +91,29 @@ h6 {
   scroll-margin: calc(var(--nav-height) + 1em);
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1 {
+  font-size: var(--heading-font-size-xxl);
+}
+
+h2 {
+  font-size: var(--heading-font-size-xl);
+}
+
+h3 {
+  font-size: var(--heading-font-size-l);
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+}
 
 p,
 dl,
@@ -203,18 +220,21 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 0;
 }
 
-@media (width >= 600px) {
+@media (width >=600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 0;
   }
 }
-.form-checkbox{
-  margin-bottom: 10px !important;
-}
 
+@media (width >=900px) {
+  .section>div {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
 
 /* section metadata */
 main .section.light,
@@ -222,44 +242,19 @@ main .section.highlight {
   background-color: var(--light-color);
 }
 
-@media (max-width: 575.98px) {
-  .sleek-kitchen-legacy.ic__details-copy.paragraph h1, .sleek-kitchen-legacy.ic__details-copy.paragraph h2, .sleek-kitchen-legacy.ic__details-copy.paragraph h3, .sleek-kitchen-legacy.ic__details-copy.paragraph h4, .sleek-kitchen-legacy.ic__details-copy.paragraph h5, .sleek-kitchen-legacy.ic__details-copy.paragraph h6 {
+picture,
+source {
+  display: block;
+  line-height: 0;
+}
 
+@media screen and (max-width: 768px) {
+  .sleek-modular-expertise-tabs-section,
+  .testimonials-container {
+    display: none;
   }
 }
 
-.flexclass {
-
-}
-.legacy-container .default-content-wrapper .sleek-a-legacy-of-craftsmanship--commitment{
-  margin-right: auto !important;
-  margin-left: auto !important;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.legacy-container .default-content-wrapper {
-
-}
-
-h1#sleek-a-legacy-of-craftsmanship--commitment{
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 34px;
-  text-align: center;
-}
-
-@media (width < 767px) {
-  main .legacy-container p {
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
-    color: #323232;
-    padding: 12px 0 0 0;
-}
-  
-}
 .head-redesign-container{
   padding: 0 !important;
   margin-top: 73px;
@@ -562,7 +557,6 @@ span.checkmark {
 label.check-container{
   width: 438px;
 }
-
 @media (width < 767px) {
   .head-redesign-container .columns-wrapper .columns div .columns-img-col {
     background: unset;
