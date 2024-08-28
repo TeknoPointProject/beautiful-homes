@@ -1953,3 +1953,9 @@ html {
   max-width: none !important;
   margin: 0 !important;
 }
+
+.header--sticky .black_header, .header--sticky .offer_header{
+  display:none;
+}
+
+
