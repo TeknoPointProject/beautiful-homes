@@ -657,7 +657,7 @@ header nav .nav-tools {
 .header__shop-info:last-child{margin-right:0}
 .header__logo{width:142px;position:relative;margin:0 20px}
 .header__logo img.white{display:none}
-.header--sticky{position:fixed;left:0;right:0;top:-7px}
+.header--sticky{position:fixed;left:0;right:0;top:-7}
 .header--sticky ~ .main-content{margin-top:130.41px}
 .header--sticky__container{padding-top:25px;padding-bottom:25px}
 .header--sticky .header__form{border-color:#26282b;color:#26282b}
@@ -1807,7 +1807,7 @@ html {
 @media (min-width: 992px) {
   .head-redesign-help-right {
       display: block;
-      /* padding-right: 40px; */
+      padding-right: 40px;
   }
 }
 .new_ids_form .head-redesign-help-right .frm__group {
@@ -1947,18 +1947,9 @@ html {
 
 .head-redesign-container{
   padding: 0 !important;
-} 
+}
 
- .head-redesign-container .columns-wrapper{
+.head-redesign-container .columns-wrapper{
   max-width: none !important;
   margin: 0 !important;
 }
-@media (min-width: 767px) {
-  .header--sticky {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: -14px;
-  }
-}
-
