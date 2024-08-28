@@ -69,5 +69,11 @@
     "components": [
       "carousel-item"
     ]
+  },
+  {
+    "id": "video",
+    "components": [
+      "text"
+    ]
   }
 ]
