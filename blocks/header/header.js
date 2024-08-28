@@ -1450,4 +1450,4 @@ bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", fun
         itemWrap.classList.remove("showItem")
     })
 });
-  }, 500);
+  }, 1000);
