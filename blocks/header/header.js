@@ -656,62 +656,7 @@ document.addEventListener("DOMContentLoaded", function() {
         headerClick(getStartedVal, "header")
     })
 });
-var bottomNavigationItems = document.querySelectorAll(".bottom_navigation__items");
-var bottomNavIcon = document.querySelectorAll(".bottom_nav__icon");
-var bottomNavigationOverlay = document.querySelector(".bottom_navigation_overlay");
-var navGreyLine = document.querySelectorAll(".nav_grey_line");
-bottomNavIcon.forEach(function(ele) {
-    ele.addEventListener("click", function() {
-        var currentIconDataSet = ele.dataset.navicon;
-        bottomNavigationItems.forEach(function(itemWrap) {
-            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
-            if (currentIconDataSet !== itemWrapperDataSet)
-                itemWrap.classList.remove("showItem")
-        });
-        bottomNavIcon.forEach(function(navicon) {
-            var navIcondSet = navicon.dataset.navicon;
-            if (navIcondSet !== currentIconDataSet)
-                navicon.classList.remove("active")
-        });
-        bottomNavigationItems.forEach(function(itemWrap) {
-            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
-            if (currentIconDataSet == itemWrapperDataSet) {
-                itemWrap.classList.toggle("showItem");
-                ele.classList.toggle("active")
-            }
-        });
-        if (ele.classList.contains("active")) {
-            bottomNavigationOverlay.style.display = "block";
-            document.body.classList.add("hide_overflow")
-        } else {
-            bottomNavigationOverlay.style.display = "none";
-            document.body.classList.remove("hide_overflow")
-        }
-    })
-});
-navGreyLine.forEach(function(ele) {
-    ele.addEventListener("click", function(e) {
-        e.stopPropagation();
-        bottomNavigationOverlay.style.display = "none";
-        document.body.classList.remove("hide_overflow");
-        bottomNavIcon.forEach(function(navicon) {
-            navicon.classList.remove("active")
-        });
-        bottomNavigationItems.forEach(function(itemWrap) {
-            itemWrap.classList.remove("showItem")
-        })
-    })
-});
-bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", function() {
-    bottomNavigationOverlay.style.display = "none";
-    document.body.classList.remove("hide_overflow");
-    bottomNavIcon.forEach(function(navicon) {
-        navicon.classList.remove("active")
-    });
-    bottomNavigationItems.forEach(function(itemWrap) {
-        itemWrap.classList.remove("showItem")
-    })
-});
+
 window.addEventListener("DOMContentLoaded", function() {
     $(".bottomNav-track--event").on("click", function() {
         try {
@@ -1448,3 +1393,61 @@ setTimeout(() => {
   
   }, 500);
  
+  setTimeout(() => {
+    var bottomNavigationItems = document.querySelectorAll(".bottom_navigation__items");
+var bottomNavIcon = document.querySelectorAll(".bottom_nav__icon");
+var bottomNavigationOverlay = document.querySelector(".bottom_navigation_overlay");
+var navGreyLine = document.querySelectorAll(".nav_grey_line");
+bottomNavIcon.forEach(function(ele) {
+    ele.addEventListener("click", function() {
+        var currentIconDataSet = ele.dataset.navicon;
+        bottomNavigationItems.forEach(function(itemWrap) {
+            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
+            if (currentIconDataSet !== itemWrapperDataSet)
+                itemWrap.classList.remove("showItem")
+        });
+        bottomNavIcon.forEach(function(navicon) {
+            var navIcondSet = navicon.dataset.navicon;
+            if (navIcondSet !== currentIconDataSet)
+                navicon.classList.remove("active")
+        });
+        bottomNavigationItems.forEach(function(itemWrap) {
+            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
+            if (currentIconDataSet == itemWrapperDataSet) {
+                itemWrap.classList.toggle("showItem");
+                ele.classList.toggle("active")
+            }
+        });
+        if (ele.classList.contains("active")) {
+            bottomNavigationOverlay.style.display = "block";
+            document.body.classList.add("hide_overflow")
+        } else {
+            bottomNavigationOverlay.style.display = "none";
+            document.body.classList.remove("hide_overflow")
+        }
+    })
+});
+navGreyLine.forEach(function(ele) {
+    ele.addEventListener("click", function(e) {
+        e.stopPropagation();
+        bottomNavigationOverlay.style.display = "none";
+        document.body.classList.remove("hide_overflow");
+        bottomNavIcon.forEach(function(navicon) {
+            navicon.classList.remove("active")
+        });
+        bottomNavigationItems.forEach(function(itemWrap) {
+            itemWrap.classList.remove("showItem")
+        })
+    })
+});
+bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", function() {
+    bottomNavigationOverlay.style.display = "none";
+    document.body.classList.remove("hide_overflow");
+    bottomNavIcon.forEach(function(navicon) {
+        navicon.classList.remove("active")
+    });
+    bottomNavigationItems.forEach(function(itemWrap) {
+        itemWrap.classList.remove("showItem")
+    })
+});
+  }, 1000);

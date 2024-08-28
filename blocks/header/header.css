@@ -573,7 +573,7 @@ header nav .nav-tools {
 .page-home .header-m.header--sticky .header-m__logo--color{opacity:1}
 .page-home .header-m.header--sticky .header-m__logo--white{opacity:0}
 @media(min-width:1212px){.header-m{display:none}
-.header{background-color:#fff;display:block;position:relative;width:100%;top:0;-webkit-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;transition:all .1s ease-in-out;z-index:1001}
+.header{background-color:#fff;display:block;position:relative;width:100%;top:0;-webkit-transition:all .1s ease-in-out;-o-transition:all .1s ease-in-out;-moz-transition:all .1s ease-in-out;transition:all .1s ease-in-out;z-index:1001 ; height:60px}
 .header__container{padding:0;position:relative;z-index:500}
 .header__row{width:100%}
 .header__row.middle{position:relative}
@@ -1958,4 +1958,8 @@ html {
   display:none;
 }
 
+header.header-wrapper{
+position : relative;
+z-index : 999
+}
 
