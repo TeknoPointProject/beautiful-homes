@@ -95,9 +95,11 @@ main .sleek-legacy-container .cards-card-body p {
 }
 
 @media screen and (max-width: 768px) {
+    
 
     main .sleek-legacy-container {
         padding: 0 20px;
+        margin-bottom: 80px;
     }
 
     main .sleek-legacy-container ul {
