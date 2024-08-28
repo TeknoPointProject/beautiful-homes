@@ -1,71 +1,125 @@
 .video {
-    text-align: center;
-    max-width: 900px;
-    margin: 24px auto;
-  }
-  
-  .video[data-embed-loaded='false']:not(.placeholder) {
-    /* reserve an approximate space to avoid extensive layout shifts */
-    aspect-ratio: 16 / 9;
-  }
-  
-  .video > div {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .video video {
-    max-width: 100%;
-  }
-  
-  .video .video-placeholder {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    position: relative;
-  }
-  
-  .video .video-placeholder > * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    inset: 0;
-  }
-  
-  .video[data-embed-loaded='true'] .video-placeholder,
-  .video[data-embed-loaded='false'] .video-placeholder + * {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-  }
-  
-  .video .video-placeholder picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .video .video-placeholder-play button {
-    position: relative;
-    display: block;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    outline: 2px solid;
-    padding: 0;
-  }
-  
-  .video .video-placeholder-play button::before {
-    content: '';
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    width: 0;
-    height: 24px;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-left: 18px solid;
-    top: 50%;
-    left: calc(50% + 2px);
-    transform: translate(-50%, -50%);
-  }
+  text-align: center;
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.video[data-embed-loaded='false']:not(.placeholder) {
+  /* reserve an approximate space to avoid extensive layout shifts */
+  aspect-ratio: 16 / 9;
+}
+
+.video>div {
+  display: flex;
+  justify-content: center;
+}
+
+.video video {
+  max-width: 100%;
+}
+
+.video .video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.video .video-placeholder>* {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+}
+
+.video[data-embed-loaded='true'] .video-placeholder,
+.video[data-embed-loaded='false'] .video-placeholder+* {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.video .video-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video .video-placeholder-play button {
+  position: relative;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  outline: 2px solid;
+  padding: 0;
+}
+
+.video .video-placeholder-play button::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 0;
+  height: 24px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid;
+  top: 50%;
+  left: calc(50% + 2px);
+  transform: translate(-50%, -50%);
+}
+
+.section.video-container .slick-slide {
+  margin: 34px 0;
+  width: 413px;
+  margin-right: 20px;
+}
+
+.section.video-container .slick-slide .video-wrapper {
+  height: 497px;
+}
+
+.section.video-container .slick-slide .video-wrapper .video {
+  margin: 0;
+}
+
+.section.video-container .slick-slide .video-wrapper .video.block,
+.section.video-container .slick-slide .video-wrapper .video.block .video-placeholder {
+  height: 100%;
+}
+
+.video .video-placeholder picture img {
+  border-radius: 10px;
+}
+
+.video-container .slick-slide .placeholder video {
+  height: 100%;
+  object-fit: contain;
+  background: black;
+  border-radius: 10px;
+}
+.video .video-placeholder-play button{
+  position: unset;
+  width: unset;
+  height: unset;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+
+}
+
+.video .video-placeholder-play button::before {
+  background-image: url(/content/dam/beautiful-homes/icons/youtube-icon-white.png);
+  background-size: 68px 54px;
+  content: "";
+  background-repeat: no-repeat;
+  border-top: unset;
+  border-bottom: unset;
+  border-left: unset;
+  top: 68%;
+  left: 11%;
+  transform: unset;
+  width: 70px;
+  height: 60px;
+}
