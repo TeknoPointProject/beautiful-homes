@@ -364,7 +364,7 @@
     ]
   },
   {
-    "id": "Video",
+    "id": "video",
     "fields": [
       {
         "component": "text",
