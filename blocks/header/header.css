@@ -525,7 +525,7 @@ header nav .nav-tools {
 .header-m .icon-search::before{font-size:22px}
 .header-m .icon-login::before{font-size:24px}
 .header-m .icon-bag::before{font-size:24px}
-.header-m.header--sticky{position:fixed;left:0;right:0;top:-10}
+.header-m.header--sticky{position:fixed;left:0;right:0;top:0}
 .header-m__shop{display:none}
 .collapse .header-m__shop{display:block}
 .header-m__subnav{position:fixed;overflow:hidden;height:100vh;top:0;right:0;width:0;background:#f1efe8;border-top:4px solid #7345b2;z-index:105;-webkit-transition:width .4s ease-in-out;-o-transition:width .4s ease-in-out;-moz-transition:width .4s ease-in-out;transition:width .4s ease-in-out}
