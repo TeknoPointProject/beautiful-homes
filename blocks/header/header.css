@@ -1807,7 +1807,7 @@ html {
 @media (min-width: 992px) {
   .head-redesign-help-right {
       display: block;
-      padding-right: 40px;
+      /* padding-right: 40px; */
   }
 }
 .new_ids_form .head-redesign-help-right .frm__group {
@@ -1945,11 +1945,11 @@ html {
   margin-left: 12px;
 }
 
-.head-redesign-container{
+/* .head-redesign-container{
   padding: 0 !important;
-}
+} */
 
-.head-redesign-container .columns-wrapper{
+/* .head-redesign-container .columns-wrapper{
   max-width: none !important;
   margin: 0 !important;
-}
+} */

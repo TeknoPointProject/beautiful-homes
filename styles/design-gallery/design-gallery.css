@@ -294,6 +294,21 @@ main .center-slider {
 }
 
 @media screen and (max-width: 992px) {
+    .section.design-gallery{
+        margin-bottom: 80px;
+    }
+    .design-gallery .carousel-wrapper .slick-slide,
+    .fullhome .carousel-wrapper .slick-slide {
+        margin-right: 10px;
+        min-height: 505px;
+    }
+    .design-gallery .carousel-wrapper .slick-slide div div div:last-child {
+        display: flex;
+        justify-content: center;
+    }
+    .design-gallery .carousel-wrapper>div img{
+        height: 271px;
+    }
     .design-gallery .default-content-wrapper {
         padding-left: 20px;
     }
@@ -435,10 +450,11 @@ main .center-slider {
     .fullhome .slick-dots {
         bottom: -35px;
     }
-    
+
     .design-gallery .carousel-wrapper h2 {
         text-align: center;
     }
+
     .design-gallery .carousel-wrapper .slick-slide div div div:last-child {
         display: flex;
         justify-content: center;

@@ -115,6 +115,10 @@
     margin-left: auto;
   }
 
+  .visual-cards-wrapper-container .visual-cards-wrapper .visual-cards-wrapper-card-body h5{
+    margin-top: 25px;
+  }
+
   .visual-cards-wrapper .visual-cards-wrapper-card-body>*:first-child {
     text-align: left;
   }

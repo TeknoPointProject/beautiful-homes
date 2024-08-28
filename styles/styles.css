@@ -223,18 +223,18 @@ main .section {
   padding: 0;
 }
 
-@media (width >=600px) {
+/* @media (width >=600px) {
   main .section {
     padding: 0;
   }
-}
+} */
 
-@media (width >=900px) {
+/* @media (width >=900px) {
   .section>div {
     max-width: 1200px;
     margin: auto;
   }
-}
+} */
 
 /* section metadata */
 main .section.light,
@@ -255,25 +255,35 @@ source {
   }
 }
 
+/* HEAD REDESIGN CONTAINER */
 .head-redesign-container{
-  padding: 0 !important;
-  margin-top: 73px;
+  margin-top: 70px;
+  margin-bottom: 120px;
+}
+.head-redesign-container .columns-img-col{
+  min-height: 563px;
+  width: 62.90%;
+  flex: unset;
 }
 
-.head-redesign-container .columns-wrapper .columns  div{
+/* .head-redesign-container .columns-wrapper .columns  div{
   max-width: none !important;
   margin: 0 ;
   gap: 0;
   flex: unset !important;
   align-items: flex-start;
-  /* background: unset;
-  width: 62.31%; */
+  background: unset;
+  width: 62.31%;
+} */
 
+.head-redesign-container .columns-wrapper .columns-img-col + div {
+  width: 37.10%;
+  flex: unset;
 }
 
-.head-redesign-container .columns-wrapper .columns  div:nth-child(2){
-  width: 100% !important;
-  flex: unset;
+.head-redesign-container .columns-img-col img {
+  height: 100%;
+  width: 100%;
 }
 /* .head-redesign-container .columns-wrapper .columns  div{
   height: unset !important;
@@ -310,11 +320,10 @@ source {
   width: 100%;
   padding-right: unset !important;
 }
-.head-redesign-container .columns-wrapper .columns div .columns-img-col{
+/* .head-redesign-container .columns-wrapper .columns div .columns-img-col{
   background: unset;
   width: 161.31%;
-
-}
+} */
 
 .new_ids_form .head-redesign-help-right .frm__group {
   position: relative;
@@ -574,11 +583,11 @@ header.primary_new_header_mobile.header-m{
   position: relative;
   z-index: 1000;
 }
-.head-redesign-container .columns-wrapper {
+/* .head-redesign-container .columns-wrapper {
   position: relative;
     z-index: -1;
 
-}
+} */
 main .center-slider {
     position: relative;
     margin-bottom: 120px;
