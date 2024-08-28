@@ -313,7 +313,7 @@ header nav .nav-tools {
 @media screen and (min-width :769px){.black-header-wrapper .black-header-content-wrapper{position:relative}
 .black-header-wrapper .ap-bh-logo-wrapper{position:absolute;top:0;left:50%;transform:translateX(-50%)}
 }
-.primary_new_header_wrapper{background:#fff;position:relative;border:0;box-shadow:0 0px 16px 0 #0000001A}
+.primary_new_header_wrapper{background:#fff;position:relative;border:0;box-shadow:0 4px 16px 0 #0000001A}
 .primary_new_header_wrapper .primary_new_header_content{width:100%;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:60px;box-shadow:0 4px 16px 0 #0000001A}
 .primary_new_header_wrapper .primary_new_header_logo{width:135px;height:40px;cursor:pointer;flex:1 1 33.33%}
 .primary_new_header_wrapper .primary_new_header_logo a{width:135px;display:inline-block}
