@@ -379,18 +379,18 @@
         "label": "video thumbnail"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "carousel_title",
-        "value": "",
-        "label": "Title"
-      },
-      {
         "component": "reference",
         "valueType": "string",
         "name": "image",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "carousel_title",
+        "value": "",
+        "label": "Title"
       },
       {
         "component": "select",
