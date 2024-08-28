@@ -1962,4 +1962,6 @@ header.header-wrapper{
 position : relative;
 z-index : 999
 }
-
+.head-redesign-help__form{
+  padding: 30px 20px 50px !important;
+}
