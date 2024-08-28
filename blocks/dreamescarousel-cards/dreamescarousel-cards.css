@@ -242,3 +242,17 @@
         margin-left: 20px;
     }
 }
+@media screen and (max-width: 768px) {
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(4) p{
+    top: 200px;
+}
+.dreamescarousel-cards-wrapper .dreamescarousel-cards .slick-list .slick-track .slick-slide :nth-child(5) p{
+    top: 250px
+}
+.dreamescarousel-cards .slick-prev{
+    left: 61%;
+}
+.dreamescarousel-cards .slick-prev, .dreamescarousel-cards .slick-next{
+    top: 93%;
+}
+}
