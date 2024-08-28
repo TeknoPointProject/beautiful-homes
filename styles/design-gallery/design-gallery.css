@@ -408,9 +408,12 @@ main .center-slider {
         margin-bottom: 12px;
     }
 
-    .section.video-container,
     .fullhome .carousel-wrapper-wrapper {
         padding: 0;
+        padding-left: 20px;
+    }
+
+    .section.video-container{
         padding-left: 20px;
     }
 
@@ -454,7 +457,7 @@ main .center-slider {
     }
 
     .video-container .slick-dots {
-        bottom: 15%;
+        bottom: 8%;
     }
 
     .design-gallery .slick-dots li,
