@@ -28,6 +28,22 @@ if (screen.width <= 786) {
   document.addEventListener('touchstart', function () {
     if (scroll == false) {
       scroll = true;
+      $('.video-container').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1.03,
+            }
+          }
+        ]
+      });
       $('.design-gallery .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
@@ -102,6 +118,22 @@ else {
   document.addEventListener('mousemove', function () {
     if (scroll == false) {
       scroll = true;
+      $('.video-container').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1.03,
+            }
+          }
+        ]
+      });
       $('.design-gallery .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
@@ -130,6 +162,22 @@ else {
   document.addEventListener('scroll', function () {
     if (scroll == false) {
       scroll = true;
+      $('.video-container').slick({
+        infinite: false,
+        arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1.03,
+            }
+          }
+        ]
+      });
       $('.design-gallery .carousel-wrapper').slick({
         infinite: false,
         arrows: true,
