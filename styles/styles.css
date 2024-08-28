@@ -285,6 +285,13 @@ source {
   height: 100%;
   width: 100%;
 }
+
+@media screen and (max-width: 575.98px) {
+  .head-redesign-container .columns-wrapper .columns-img-col+div {
+    width: 100%;
+    min-height:563px ;
+  }
+}
 /* .head-redesign-container .columns-wrapper .columns  div{
   height: unset !important;
   min-height: 563px !important;
