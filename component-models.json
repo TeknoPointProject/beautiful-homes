@@ -436,7 +436,7 @@
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"
-      } , 
+      },
       {
         "id": "sleek-moduler-wrapper-item",
         "fields": [
