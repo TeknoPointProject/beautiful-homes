@@ -55,7 +55,8 @@
   {
     "id": "carousel-wrapper",
     "components": [
-      "carousel-item"
+      "carousel-item",
+      "video"
     ]
   },
   {
