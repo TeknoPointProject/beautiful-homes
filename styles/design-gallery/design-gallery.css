@@ -178,6 +178,8 @@
 main .center-slider {
     position: relative;
     margin-bottom: 120px;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .center-slider .default-content-wrapper {
