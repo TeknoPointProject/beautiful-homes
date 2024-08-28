@@ -1945,14 +1945,14 @@ html {
   margin-left: 12px;
 }
 
-/* .head-redesign-container{
+.head-redesign-container{
   padding: 0 !important;
-} */
+} 
 
-/* .head-redesign-container .columns-wrapper{
+ .head-redesign-container .columns-wrapper{
   max-width: none !important;
   margin: 0 !important;
-} */
+}
 @media (min-width: 767px) {
   .header--sticky {
       position: fixed;
