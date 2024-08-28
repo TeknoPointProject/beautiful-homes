@@ -537,5 +537,22 @@
         ]
       }
     ]
+  },
+  {
+    "id": "video",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videohref",
+        "label": "video url"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "videothumbnail",
+        "label": "video thumbnail"
+      }
+    ]
   }
 ]
