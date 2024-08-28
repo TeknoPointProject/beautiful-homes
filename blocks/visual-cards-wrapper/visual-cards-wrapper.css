@@ -31,6 +31,8 @@
 }
 
 .section.visual-cards-wrapper-container {
+  max-width: 1220px;
+  margin: auto;
   padding: 0;
 }
 
