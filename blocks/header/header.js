@@ -1261,103 +1261,190 @@ iconSearch && iconSearch.addEventListener("click", function() {
 headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() {
     bottonNavIconWrapper.style.zIndex = "9999"
 });
-function getform(url) {
-    console.log(`Fetching data from ${url}`);
-    fetch(url, {
-        method: 'GET', 
-        headers: {
-            'Content-Type': 'application/json',
+// function getform(url) {
+//     console.log(`Fetching data from ${url}`);
+//     fetch(url, {
+//         method: 'GET', 
+//         headers: {
+//             'Content-Type': 'application/json',
          
-        }
-    })
-    .then(response => {
-        console.log('Response received');
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log('Data:', data);
+//         }
+//     })
+//     .then(response => {
+//         console.log('Response received');
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok ' + response.statusText);
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log('Data:', data);
 
     
-        const fields = data.data; 
+//         const fields = data.data; 
 
-        if (!Array.isArray(fields)) {
-            console.error('Expected an array but got:', fields);
-            return;
-        }
+//         if (!Array.isArray(fields)) {
+//             console.error('Expected an array but got:', fields);
+//             return;
+//         }
 
        
         const div = document.createElement("div");
         
       
-        const form = document.createElement("form");
-        form.id = "dynamicForm";
+        // const form = document.createElement("form");
+        // form.id = "dynamicForm";
         
         
-        fields.forEach(field => {
-            let inputElement;
+        // fields.forEach(field => {
+        //     let inputElement;
             
-            switch (field.Type) {
-                case "text-field":
-                    inputElement = document.createElement("input");
-                    inputElement.type = "text";
-                    inputElement.placeholder = field.Placeholder || "";
-                    inputElement.name = field.Field; 
-                    break;
+        //     switch (field.Type) {
+        //         case "text-field":
+        //             inputElement = document.createElement("input");
+        //             inputElement.type = "text";
+        //             inputElement.placeholder = field.Placeholder || "";
+        //             inputElement.name = field.Field; 
+        //             break;
                 
-                case "select":
-                    inputElement = document.createElement("select");
-                    // Handle options if present
-                    if (field.Options) {
-                        const options = field.Options.split(", ");
-                        options.forEach(option => {
-                            const optionElement = document.createElement("option");
-                            optionElement.value = option;
-                            optionElement.textContent = option;
-                            inputElement.appendChild(optionElement);
-                        });
-                    }
-                    inputElement.name = field.Field; 
-                    break;
+        //         case "select":
+        //             inputElement = document.createElement("select");
+        //             // Handle options if present
+        //             if (field.Options) {
+        //                 const options = field.Options.split(", ");
+        //                 options.forEach(option => {
+        //                     const optionElement = document.createElement("option");
+        //                     optionElement.value = option;
+        //                     optionElement.textContent = option;
+        //                     inputElement.appendChild(optionElement);
+        //                 });
+        //             }
+        //             inputElement.name = field.Field; 
+        //             break;
                 
-                case "submit":
-                    inputElement = document.createElement("button");
-                    inputElement.type = "submit";
-                    inputElement.textContent = field.Label || "Submit";
-                    inputElement.formAction = field.Extra; 
-                    break;
+        //         case "submit":
+        //             inputElement = document.createElement("button");
+        //             inputElement.type = "submit";
+        //             inputElement.textContent = field.Label || "Submit";
+        //             inputElement.formAction = field.Extra; 
+        //             break;
                 
-                default:
+        //         default:
                     
-                    break;
-            }
+        //             break;
+        //     }
 
-            if (inputElement) {
-                const label = document.createElement("label");
-                label.textContent = field.Label || field.Field;
-                form.appendChild(label);
-                form.appendChild(inputElement);
-                form.appendChild(document.createElement("br")); 
-            }
-        });
-        var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div" );
-        console.log("this is " , divss)
-     
-        divss.appendChild(form);
+        //     if (inputElement) {
+        //         const label = document.createElement("label");
+        //         label.textContent = field.Label || field.Field;
+        //         form.appendChild(label);
+        //         form.appendChild(inputElement);
+        //         form.appendChild(document.createElement("br")); 
+        //     }
+        // });
 
-        document.body.appendChild(div);
-    })
-    .catch(error => {
-        console.error('Error:', error.message);
-    });
-}
+//     })
+//     .catch(error => {
+//         console.error('Error:', error.message);
+//     });
+// }
 
 // Example URL for fetching data
-const proxyUrl = 'https://api.allorigins.win/raw?url=';
-const targetUrl = 'https://main--idfcfirstbank--teknopointproject.hlx.page/email-form.json?nocache=1724407666946';
-getform(proxyUrl + encodeURIComponent(targetUrl));
+// const proxyUrl = 'https://api.allorigins.win/raw?url=';
+// const targetUrl = 'https://main--idfcfirstbank--teknopointproject.hlx.page/email-form.json?nocache=1724407666946';
+// getform(proxyUrl + encodeURIComponent(targetUrl));
 
 
 
+
+
+// document.body.appendChild(divss);
+setTimeout(() => {
+    var form = "<div class=\"form_container\"><form class=\"frm head-redesign-help__form\" action=\"#\" autocomplete=\"off\">" +
+    "<div class=\"formcontainer simpleouter container responsivegrid\">" +
+        "<div class=\"head-redesign-help-right \">" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_FirstName\">" +
+                    "Full Name" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"text\" data-validation=\"name\" data-json=\"C_FirstName\" id=\"form-field__C_FirstName\" placeholder=\"Enter your name\" required=\"true\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_FirstName\">" +
+                    "Full Name" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Name</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Mobile\">" +
+                    "Mobile Number" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"mobileNumber\" data-json=\"C_Mobile\" id=\"form-field__C_Mobile\" placeholder=\"Enter mobile number\" required=\"true\" minlength=\"10\" maxlength=\"10\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Mobile\">" +
+                    "Mobile Number" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Mobile Number</span>" +
+                "<span class=\"country_code\">+91</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Pincode\">" +
+                    "Pincode" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"pincode\" data-json=\"C_Pincode\" id=\"form-field__C_Pincode\" placeholder=\"Enter your Pincode\" required=\"true\" minlength=\"6\" maxlength=\"6\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Pincode\">" +
+                    "Pincode" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Pincode</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Email\">" +
+                    "Email ID" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"email\" data-validation=\"email\" data-json=\"C_Email\" id=\"form-field__C_Email\" placeholder=\"Enter your email\" required=\"true\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Email\">" +
+                    "Email ID" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Email ID</span>" +
+            "</div>" +
+            "<div class=\"form_field_checkbox\">" +
+                "<div class=\"form-checkbox\">" +
+                    "<label class=\"check-container\">Yes, I would like to receive important updates and notifications on WhatsApp" +
+                        "<input type=\"checkbox\" data-json=\"C_WhatsappNotification\" checked=\"false\">" +
+                        "<span class=\"checkmark\"></span>" +
+                    "</label>" +
+                "</div>" +
+            "</div>" +
+            "<div class=\"form_hidden\">" +
+                "<input type=\"hidden\" data-json=\"C_CampaignId\" value=\"DECOR_ORGANIC\">" +
+            "</div>" +
+            "<div class=\"paragraph text\">" +
+                "<div class=\"head-redesign-help__form-description\">" +
+                    "<p>By proceeding, you are authorizing Beautiful Homes and its suggested contractors to get in touch with you through calls, sms, or e-mail.</p>" +
+                "</div>" +
+            "</div>" +
+            "<div class=\"form_button\">" +
+                "<div class=\"head-redesign-help__form-cta\">" +
+                    "<button type=\"button\" class=\"btn btn--primary btn__icon--right black-form-cta-click\" data-redirection=\"/content/asianpaintsbeautifulhomes/us/en/thank-you.html\" onclick=\"sfform(event)\">Submit<span class=\"icon-chevron-right\"></span></button>" +
+                "</div>" +
+            "</div>" +
+        "</div>" +
+    "</div>" +
+    "</form></div>";
+  
+  var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div:nth-child(2)");
+  console.log("this is ", divss);
+  
+  if (divss) {
+    divss.innerHTML = form;
+  } else {
+    console.error("Element not found");
+  }
+  
+  }, 500);
+ 
