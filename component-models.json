@@ -364,7 +364,7 @@
     ]
   },
   {
-    "id": "carousel-video",
+    "id": "video",
     "fields": [
       {
         "component": "text",
