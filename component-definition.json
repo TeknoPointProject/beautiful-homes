@@ -302,7 +302,7 @@
           }
         },
         {
-          "title": "Video",
+          "title": "video",
           "id": "video",
           "plugins": {
             "xwalk": {
