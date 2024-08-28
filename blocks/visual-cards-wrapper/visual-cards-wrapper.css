@@ -117,7 +117,7 @@
     margin-left: auto;
   }
 
-  .visual-cards-wrapper-container .visual-cards-wrapper .visual-cards-wrapper-card-body h5{
+  .visual-cards-wrapper-container .visual-cards-wrapper .visual-cards-wrapper-card-body h5 {
     margin-top: 25px;
   }
 
@@ -134,5 +134,11 @@
 
   .section.visual-cards-wrapper-container {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .visual-cards-wrapper li {
+    padding-bottom: 0px;
   }
 }
