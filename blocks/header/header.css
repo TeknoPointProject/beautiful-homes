@@ -657,7 +657,7 @@ header nav .nav-tools {
 .header__shop-info:last-child{margin-right:0}
 .header__logo{width:142px;position:relative;margin:0 20px}
 .header__logo img.white{display:none}
-.header--sticky{position:fixed;left:0;right:0;top:0}
+.header--sticky{position:fixed;left:0;right:0;top:-7}
 .header--sticky ~ .main-content{margin-top:130.41px}
 .header--sticky__container{padding-top:25px;padding-bottom:25px}
 .header--sticky .header__form{border-color:#26282b;color:#26282b}
