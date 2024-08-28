@@ -314,7 +314,7 @@ header nav .nav-tools {
 .black-header-wrapper .ap-bh-logo-wrapper{position:absolute;top:0;left:50%;transform:translateX(-50%)}
 }
 .primary_new_header_wrapper{background:#fff;position:relative;border:0;box-shadow:0 4px 16px 0 #0000001A}
-.primary_new_header_wrapper .primary_new_header_content{width:100%;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:60px;box-shadow:0 4px 16px 0 #0000001A}
+.primary_new_header_wrapper .primary_new_header_content{width:100%;padding:0 40px;display:flex;justify-content:space-between;align-items:center;height:60px}
 .primary_new_header_wrapper .primary_new_header_logo{width:135px;height:40px;cursor:pointer;flex:1 1 33.33%}
 .primary_new_header_wrapper .primary_new_header_logo a{width:135px;display:inline-block}
 .primary_new_header_wrapper .primary-menu-list{display:flex;align-items:center;gap:24px}
@@ -657,7 +657,7 @@ header nav .nav-tools {
 .header__shop-info:last-child{margin-right:0}
 .header__logo{width:142px;position:relative;margin:0 20px}
 .header__logo img.white{display:none}
-.header--sticky{position:fixed;left:0;right:0;top:0}
+.header--sticky{position:fixed;left:0;right:0;top:-7px}
 .header--sticky ~ .main-content{margin-top:130.41px}
 .header--sticky__container{padding-top:25px;padding-bottom:25px}
 .header--sticky .header__form{border-color:#26282b;color:#26282b}
@@ -1953,3 +1953,11 @@ html {
   max-width: none !important;
   margin: 0 !important;
 } */
+@media (min-width: 767px) {
+  .header--sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -14px;
+  }
+}
