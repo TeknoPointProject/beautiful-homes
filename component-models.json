@@ -364,6 +364,23 @@
     ]
   },
   {
+    "id": "Video",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "videohref",
+        "label": "video url"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "videothumbnail",
+        "label": "video thumbnail"
+      }
+    ]
+  },
+  {
     "id": "visual-cards",
     "fields": [
       {
@@ -436,7 +453,7 @@
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"
-      },
+      } , 
       {
         "id": "sleek-moduler-wrapper-item",
         "fields": [
@@ -535,23 +552,6 @@
             "valueType": "string"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "video",
-    "fields": [
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "videohref",
-        "label": "video url"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "videothumbnail",
-        "label": "video thumbnail"
       }
     ]
   }
