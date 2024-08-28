@@ -43,7 +43,8 @@
 }
 
 .design-gallery .carousel-wrapper-wrapper,
-.fullhome .carousel-wrapper-wrapper {
+.fullhome .carousel-wrapper-wrapper,
+.section.video-container {
     max-width: unset;
     margin: 0;
     padding: 0 0 50px 80px;
@@ -138,7 +139,8 @@
 }
 
 .design-gallery .carousel-wrapper .slick-next,
-.fullhome .carousel-wrapper .slick-next {
+.fullhome .carousel-wrapper .slick-next,
+.video-container .slick-next {
     right: 70px;
     top: unset;
     height: unset;
@@ -150,7 +152,9 @@
 .design-gallery .carousel-wrapper .slick-next:before,
 .design-gallery .carousel-wrapper .slick-prev:before,
 .fullhome .carousel-wrapper .slick-next:before,
-.fullhome .carousel-wrapper .slick-prev:before {
+.fullhome .carousel-wrapper .slick-prev:before,
+.video-container .slick-next:before,
+.video-container .slick-prev:before  {
     line-height: 0;
 }
 
@@ -158,13 +162,16 @@
 .design-gallery .carousel-wrapper .slick-next:before,
 .design-gallery .carousel-wrapper .slick-prev:before,
 .fullhome .carousel-wrapper .slick-next:before,
-.fullhome .carousel-wrapper .slick-prev:before {
+.fullhome .carousel-wrapper .slick-prev:before,
+.video-container .slick-next:before,
+.video-container .slick-prev:before {
     display: block;
     content: url(/content/dam/beautiful-homes/icons/ids-slider-arrow.png)
 }
 
 .design-gallery .carousel-wrapper .slick-prev,
-.fullhome .carousel-wrapper .slick-prev {
+.fullhome .carousel-wrapper .slick-prev,
+.video-container .slick-prev {
     right: 120px;
     bottom: -55px;
     top: unset;
@@ -341,13 +348,15 @@ main .center-slider {
     }
 
     .design-gallery .slick-dots li,
-    .fullhome .slick-dots li {
+    .fullhome .slick-dots li,
+    .video-container .slick-dots li {
         height: 8px;
         width: 8px;
     }
 
     .design-gallery .slick-dots li.slick-active,
-    .fullhome .slick-dots li.slick-active {
+    .fullhome .slick-dots li.slick-active,
+    .video-container .slick-dots li.slick-active {
         width: 30px;
     }
 }
@@ -404,6 +413,10 @@ main .center-slider {
         padding-left: 20px;
     }
 
+    .section.video-container{
+        padding-left: 20px;
+    }
+
     .fullhome .carousel-wrapper .slick-slide {
         margin-right: 10px;
         min-height: 530px;
@@ -435,15 +448,21 @@ main .center-slider {
         height: 8px;
     }
 
-    .design-gallery .slick-dots {
+    .design-gallery .slick-dots,
+    .video-container .slick-dots {
         bottom: -4%;
         left: -35px;
         display: flex;
         justify-content: flex-end;
     }
 
+    .video-container .slick-dots {
+        bottom: 8%;
+    }
+
     .design-gallery .slick-dots li,
-    .fullhome .slick-dots li {
+    .fullhome .slick-dots li,
+    .video-container .slick-dots li {
         border-radius: 50px;
         background-color: #7345b2;
         margin: 0 3px;

@@ -43,3 +43,11 @@ main .testimonials-container picture img {
     font-weight: 700;
     line-height: 42.192px;
 }
+
+@media (max-width: 575.98px) {
+    .testimonials-container .default-content-wrapper #dreams-to-reality-our-happy-customer-stories {
+        font-size: 22px;
+        line-height: 30.8px;
+        padding-bottom: 15px;
+    }
+}

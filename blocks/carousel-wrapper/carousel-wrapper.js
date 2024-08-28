@@ -173,7 +173,7 @@ else {
             settings: {
               arrows: false,
               dots: true,
-              slidesToShow: 1.03,
+              slidesToShow: 1,
             }
           }
         ]
