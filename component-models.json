@@ -424,6 +424,13 @@
             "value": "h6"
           }
         ]
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "titlespan",
+        "value": "",
+        "label": "Title for Span"
       }
     ]
   },
