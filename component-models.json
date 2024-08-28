@@ -402,20 +402,6 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "btn_hrefvideo",
-        "value": "",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "btn_hrefvideoText",
-        "value": "",
-        "label": "Link Video Text"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
         "name": "videotitle",
         "value": "",
         "label": "Video Title"
