@@ -16,8 +16,7 @@
       "image",
       "button",
       "title",
-      "carousel-wrapper",
-      "video"
+      "carousel-wrapper"
     ]
   },
   {
@@ -37,8 +36,7 @@
       "embed",
       "sleek-moduler-wrapper",
       "form",
-      "tabs",
-      "video"
+      "tabs"
     ]
   },
   {
