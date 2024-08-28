@@ -1953,3 +1953,13 @@ html {
   max-width: none !important;
   margin: 0 !important;
 }
+
+@media (min-width: 767px) {
+    .header--sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: -14px;
+    }
+}
+
