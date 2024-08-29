@@ -180,12 +180,8 @@ export default async function decorate(block) {
       console.error('Fetch error: ', error);
     }
   }
-  const proxyUrl = 'https://api.allorigins.win/raw?url=';
-const targetUrl = 'https://betabeautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html';
-fetchData(proxyUrl + encodeURIComponent(targetUrl));
   
-//   fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html");
-// fetchData(proxyUrl + targetUrl)
+  fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html");
   
 }
  
