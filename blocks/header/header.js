@@ -181,8 +181,8 @@ export default async function decorate(block) {
     }
   }
   
-  fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html");
-// fetchData("https://betabeautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html")
+//   fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html");
+fetchData("https://betabeautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html")
   
 }
  
