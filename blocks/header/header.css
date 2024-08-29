@@ -1804,9 +1804,10 @@ html {
   width: 100%;
   padding-right: unset !important;
 }
-@media (max-width: 992px) {
+@media (min-width: 992px) {
   .head-redesign-help-right {
       display: block;
+      padding-right: 40px;
   }
 }
 .new_ids_form .head-redesign-help-right .frm__group {
@@ -1957,24 +1958,7 @@ html {
   display:none;
 }
 
-.form_container .frm.head-redesign-help__form .head-redesign-help-right .form_button{
-  display: flex;
-  justify-content: end;
-}
-
 header.header-wrapper{
 position : relative;
 z-index : 999
-}
-@media(max-width:576px) {
-  .head-redesign-help__form {
-    padding: 30px 47px 50px !important;
-  }
-  .form_container .frm.head-redesign-help__form .head-redesign-help-right .form_button{
-    justify-content: center;
-  }
-  .form_container .frm.head-redesign-help__form .head-redesign-help-right .form_button .head-redesign-help__form-cta,
-  .form_container .frm.head-redesign-help__form .head-redesign-help-right .form_button .head-redesign-help__form-cta .btn--primary{
-    width: 100%;
-  }
 }
