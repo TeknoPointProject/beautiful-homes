@@ -417,13 +417,6 @@
             "value": "h6"
           }
         ]
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "video_desc",
-        "value": "",
-        "label": "desc"
       }
     ]
   },
