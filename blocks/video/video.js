@@ -139,13 +139,13 @@ document.addEventListener('play', function(event) {
 
 export default async function decorate(block) {
 
-  let titletext, titletext2 = "";
+  let titletext1, titletext2 = "";
   const props = Array.from(block.children, (row) => row.firstElementChild);
   let [Videolink , picture , title, title2] = props;
 
   if(block.closest('.video-wrapper')){
-    titletext = title?.textContent.trim();
-    titletext2 = title2?.textContent.trim();
+    titletext1 = title?.textContent.trim();
+    // titletext2 = title2?.textContent.trim();
   }
 
   const placeholder = block.querySelector('picture');
@@ -173,11 +173,11 @@ export default async function decorate(block) {
     block.append(wrapper);
     const textDiv = document.createElement('div');
     textDiv.classList.add('video-title'); 
-    textDiv.innerText = titletext; 
+    textDiv.innerText = titletext1;
     block.querySelector('.video-placeholder').append(textDiv);
     const textDiv2 = document.createElement('div');
     textDiv2.classList.add('video-desc'); 
-    textDiv2.innerText = titletext2; 
+    // textDiv2.innerText = titletext2;
     block.querySelector('.video-placeholder').append(textDiv2);
   }
 
