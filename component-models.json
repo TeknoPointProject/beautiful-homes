@@ -377,6 +377,13 @@
         "valueType": "string",
         "name": "videothumbnail",
         "label": "video thumbnail"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "video_title",
+        "value": "",
+        "label": "Title"
       }
     ]
   },
