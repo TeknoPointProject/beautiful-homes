@@ -149,6 +149,10 @@
     bottom: -75px;
 }
 
+.video-container .slick-next{
+    bottom: 9px;
+}
+
 .design-gallery .carousel-wrapper .slick-next:before,
 .design-gallery .carousel-wrapper .slick-prev:before,
 .fullhome .carousel-wrapper .slick-next:before,
@@ -179,6 +183,10 @@
     width: unset;
     height: unset;
     transform: rotate(182deg);
+}
+
+.video-container .slick-prev{
+    bottom: 30px;
 }
 
 /* center slider CAROUSEL*/
@@ -448,6 +456,7 @@ main .center-slider {
         height: 8px;
     }
 
+    .fullhome .slick-dots,
     .design-gallery .slick-dots,
     .video-container .slick-dots {
         bottom: -4%;
