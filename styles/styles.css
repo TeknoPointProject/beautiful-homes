@@ -245,7 +245,7 @@ source {
 
 /* HEAD REDESIGN CONTAINER */
 .head-redesign-container{
-  margin-top: 70px;
+  margin-top: 80px;
   margin-bottom: 120px;
 }
 .head-redesign-container .columns-img-col{
@@ -550,6 +550,10 @@ label.check-container{
 
 label.check-container{
   width: auto;
+}
+.head-redesign-container{
+  margin-top: 70px;
+  margin-bottom: 120px;
 }
 }
 
