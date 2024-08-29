@@ -575,3 +575,8 @@ main .center-slider {
   position : relative;
 z-index : -1
 }
+button.btn.btn--primary.btn__icon--right.black-form-cta-click{
+    padding: 12px 39px !important;
+    line-height: 23.4px !important;
+    color: #f7f2e7 !important;
+}
