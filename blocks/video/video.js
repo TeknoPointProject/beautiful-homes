@@ -179,7 +179,7 @@ export default async function decorate(block) {
     const textDiv2 = document.createElement('div');
     textDiv2.classList.add('video-desc');
     textDiv2.append(title2);
-    // block.querySelector('.video-placeholder').append(textDiv2);
+    block.querySelector('.video-placeholder').append(textDiv2);
   }
 
   if (!placeholder || autoplay) {
