@@ -14,6 +14,7 @@ export default async function decorate(block) {
   // decorate footer DOM
   block.textContent = '';
   const footer = document.createElement('div');
+
   async function fetchData(url) {
     try {
       const response = await fetch(url);
@@ -27,18 +28,22 @@ export default async function decorate(block) {
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
   
-        // Find the element with class="cmp-container"
-        const cmpContainer = doc.querySelector('.cmp-container');
+      // Find the element with class="cmp-container"
+      const cmpContainer = doc.querySelector('.cmp-container');
   
-      // Check if the element exists and append it
+      // Check if the element exists and modify image elements
       if (cmpContainer) {
-        console.log("Found element:", cmpContainer.outerHTML);
+        // Find all image elements within the cmpContainer
+        const images = cmpContainer.querySelectorAll('img');
+        
+        // Add loading="lazy" to each image
+        images.forEach(img => img.setAttribute('loading', 'lazy'));
         
         // Use innerHTML to properly render the HTML
         footer.innerHTML = cmpContainer.outerHTML;
         block.append(footer);
         
-        footers()
+        footers(); // Assuming this function does additional work
         return cmpContainer.outerHTML;
       } else {
         console.log("Element with class 'cmp-container' not found.");
@@ -50,12 +55,7 @@ export default async function decorate(block) {
   }
   
   fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/new-footer-xf/master.html");
-  
-}
- 
-
-
-
+}  
 
 
 var footer = {
