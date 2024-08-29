@@ -176,7 +176,7 @@ export default async function decorate(block) {
     textDiv.innerText = titletext; 
     block.querySelector('.video-placeholder').append(textDiv);
     const textDiv2 = document.createElement('div');
-    textDiv2.classList.add('video-title2'); 
+    textDiv2.classList.add('video-desc'); 
     textDiv2.innerText = titletext2; 
     block.querySelector('.video-placeholder').append(textDiv2);
   }

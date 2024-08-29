@@ -423,7 +423,7 @@
         "valueType": "string",
         "name": "video_desc",
         "value": "",
-        "label": "Title"
+        "label": "desc"
       }
     ]
   },
