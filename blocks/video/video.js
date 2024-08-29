@@ -139,13 +139,13 @@ document.addEventListener('play', function(event) {
 
 export default async function decorate(block) {
 
-  // const props = Array.from(block.children, (row) => row.firstElementChild);
-  // let [Videolink , picture , title] = props;
+  let titletext = "";
+  const props = Array.from(block.children, (row) => row.firstElementChild);
+  let [Videolink , picture , title] = props;
 
-  // const titletext = "";
-  // if(block.closest('.video-wrapper')){
-  //   titletext = title?.textContent.trim();
-  // }
+  if(block.closest('.video-wrapper')){
+    titletext = title?.outerHTML;
+  }
 
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
@@ -169,11 +169,12 @@ export default async function decorate(block) {
         loadVideoEmbed(block, link, true, false);
       });
     }
+    debugger;
     block.append(wrapper);
-    // const textDiv = document.createElement('div');
-    // textDiv.classList.add('video-title'); 
-    // textDiv.innerText = titletext; 
-    // block.querySelector('.video-placeholder').append(textDiv);
+    const textDiv = document.createElement('div');
+    textDiv.classList.add('video-title'); 
+    textDiv.innerText = titletext; 
+    block.querySelector('.video-placeholder').append(textDiv);
   }
 
   if (!placeholder || autoplay) {

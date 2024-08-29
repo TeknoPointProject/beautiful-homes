@@ -379,11 +379,11 @@
         "label": "video thumbnail"
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "video_title",
+        "component": "richtext",
+        "name": "videotext",
         "value": "",
-        "label": "Title"
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
