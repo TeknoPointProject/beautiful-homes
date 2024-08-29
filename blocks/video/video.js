@@ -138,6 +138,15 @@ document.addEventListener('play', function(event) {
 }, true);
 
 export default async function decorate(block) {
+
+  // const props = Array.from(block.children, (row) => row.firstElementChild);
+  // let [Videolink , picture , title] = props;
+
+  // const titletext = "";
+  // if(block.closest('.video-wrapper')){
+  //   titletext = title?.textContent.trim();
+  // }
+
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
@@ -161,6 +170,10 @@ export default async function decorate(block) {
       });
     }
     block.append(wrapper);
+    // const textDiv = document.createElement('div');
+    // textDiv.classList.add('video-title'); 
+    // textDiv.innerText = titletext; 
+    // block.querySelector('.video-placeholder').append(textDiv);
   }
 
   if (!placeholder || autoplay) {
