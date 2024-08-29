@@ -140,13 +140,13 @@ document.addEventListener('play', function (event) {
 export default async function decorate(block) {
 
   let titletext1 = "";
-  // let titletext2 = "";
+  let desctext = "";
   const props = Array.from(block.children, (row) => row.firstElementChild);
-  let [Videolink, picture, title] = props;
+  let [Videolink, picture, title, title2] = props;
 
   if (block.closest('.video-wrapper')) {
     titletext1 = title?.textContent.trim();
-    // titletext2 = title2?.textContent.trim();
+    desctext = title2?.textContent.trim();
   }
 
   const placeholder = block.querySelector('picture');
@@ -174,12 +174,12 @@ export default async function decorate(block) {
     block.append(wrapper);
     const textDiv = document.createElement('div');
     textDiv.classList.add('video-title');
-    textDiv.innerText = titletext1;
+    textDiv.append(title);
     block.querySelector('.video-placeholder').append(textDiv);
     const textDiv2 = document.createElement('div');
     textDiv2.classList.add('video-desc');
-    // textDiv2.innerText = titletext2;
-    block.querySelector('.video-placeholder').append(textDiv2);
+    textDiv2.append(title2);
+    // block.querySelector('.video-placeholder').append(textDiv2);
   }
 
   if (!placeholder || autoplay) {

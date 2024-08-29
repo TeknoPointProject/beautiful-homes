@@ -381,14 +381,14 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "video_person",
+        "name": "videoperson",
         "value": "",
         "label": "Video Title"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "video_desc",
+        "name": "videodesc",
         "value": "",
         "label": "video desc"
       }
