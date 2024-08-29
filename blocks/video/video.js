@@ -169,7 +169,6 @@ export default async function decorate(block) {
         loadVideoEmbed(block, link, true, false);
       });
     }
-    debugger;
     block.append(wrapper);
     const textDiv = document.createElement('div');
     textDiv.classList.add('video-title'); 
