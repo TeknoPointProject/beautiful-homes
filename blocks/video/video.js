@@ -34,7 +34,7 @@ function embedYoutube(url, autoplay, background) {
       <iframe src="https://www.youtube.com${vid ? `/embed/${vid}?rel=0&v=${vid}${suffix}` : embed}" style="border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;" 
       allow="autoplay; fullscreen; picture-in-picture; encrypted-media; accelerometer; gyroscope; picture-in-picture" allowfullscreen="" scrolling="no" title="Content from Youtube" loading="lazy"></iframe>
     </div>`;
-  
+
   // Add iframe to the allVideoElements set
   const iframe = temp.querySelector('iframe');
   allVideoElements.add(iframe);
@@ -59,7 +59,7 @@ function embedVimeo(url, autoplay, background) {
       frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen  
       title="Content from Vimeo" loading="lazy"></iframe>
     </div>`;
-  
+
   // Add iframe to the allVideoElements set
   const iframe = temp.querySelector('iframe');
   allVideoElements.add(iframe);
@@ -85,7 +85,7 @@ function getVideoElement(source, autoplay, background) {
   sourceEl.setAttribute('src', source);
   sourceEl.setAttribute('type', `video/${source.split('.').pop()}`);
   video.append(sourceEl);
-  
+
   // Add HTML video element to the allVideoElements set
   allVideoElements.add(video);
 
@@ -123,7 +123,7 @@ const loadVideoEmbed = (block, link, autoplay, background) => {
 };
 
 // Add event listeners to pause other videos when one plays
-document.addEventListener('play', function(event) {
+document.addEventListener('play', function (event) {
   allVideoElements.forEach((video) => {
     if (video !== event.target) {
       if (video.tagName === 'IFRAME') {
@@ -139,11 +139,12 @@ document.addEventListener('play', function(event) {
 
 export default async function decorate(block) {
 
-  let titletext1, titletext2 = "";
+  let titletext1 = "";
+  // let titletext2 = "";
   const props = Array.from(block.children, (row) => row.firstElementChild);
-  let [Videolink , picture , title, title2] = props;
+  let [Videolink, picture, title] = props;
 
-  if(block.closest('.video-wrapper')){
+  if (block.closest('.video-wrapper')) {
     titletext1 = title?.textContent.trim();
     // titletext2 = title2?.textContent.trim();
   }
@@ -172,11 +173,11 @@ export default async function decorate(block) {
     }
     block.append(wrapper);
     const textDiv = document.createElement('div');
-    textDiv.classList.add('video-title'); 
+    textDiv.classList.add('video-title');
     textDiv.innerText = titletext1;
     block.querySelector('.video-placeholder').append(textDiv);
     const textDiv2 = document.createElement('div');
-    textDiv2.classList.add('video-desc'); 
+    textDiv2.classList.add('video-desc');
     // textDiv2.innerText = titletext2;
     block.querySelector('.video-placeholder').append(textDiv2);
   }
