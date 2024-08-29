@@ -236,4 +236,7 @@
   .video-container .video-wrapper .video-desc {
     margin-left: 40px;
   }
+  .video-container .slick-dots li button:before{
+    font-size: 0;
+  }
 }
