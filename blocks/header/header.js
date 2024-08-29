@@ -1,3 +1,195 @@
+import { getMetadata } from '../../scripts/aem.js';
+import { loadFragment } from '../fragment/fragment.js';
+
+// media query match that indicates mobile/tablet width
+const isDesktop = window.matchMedia('(min-width: 900px)');
+
+function closeOnEscape(e) {
+  if (e.code === 'Escape') {
+    const nav = document.getElementById('nav');
+    const navSections = nav.querySelector('.nav-sections');
+    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
+    if (navSectionExpanded && isDesktop.matches) {
+      // eslint-disable-next-line no-use-before-define
+      toggleAllNavSections(navSections);
+      navSectionExpanded.focus();
+    } else if (!isDesktop.matches) {
+      // eslint-disable-next-line no-use-before-define
+      toggleMenu(nav, navSections);
+      nav.querySelector('button').focus();
+    }
+  }
+}
+
+function openOnKeydown(e) {
+  const focused = document.activeElement;
+  const isNavDrop = focused.className === 'nav-drop';
+  if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
+    const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
+    // eslint-disable-next-line no-use-before-define
+    toggleAllNavSections(focused.closest('.nav-sections'));
+    focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
+  }
+}
+
+function focusNavSection() {
+  document.activeElement.addEventListener('keydown', openOnKeydown);
+}
+
+/**
+ * Toggles all nav sections
+ * @param {Element} sections The container element
+ * @param {Boolean} expanded Whether the element should be expanded or collapsed
+ */
+function toggleAllNavSections(sections, expanded = false) {
+  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+    section.setAttribute('aria-expanded', expanded);
+  });
+}
+
+/**
+ * Toggles the entire nav
+ * @param {Element} nav The container element
+ * @param {Element} navSections The nav sections within the container element
+ * @param {*} forceExpanded Optional param to force nav expand behavior when not null
+ */
+function toggleMenu(nav, navSections, forceExpanded = null) {
+  const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
+  const button = nav.querySelector('.nav-hamburger button');
+  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
+  button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
+  // enable nav dropdown keyboard accessibility
+  const navDrops = navSections.querySelectorAll('.nav-drop');
+  if (isDesktop.matches) {
+    navDrops.forEach((drop) => {
+      if (!drop.hasAttribute('tabindex')) {
+        drop.setAttribute('role', 'button');
+        drop.setAttribute('tabindex', 0);
+        drop.addEventListener('focus', focusNavSection);
+      }
+    });
+  } else {
+    navDrops.forEach((drop) => {
+      drop.removeAttribute('role');
+      drop.removeAttribute('tabindex');
+      drop.removeEventListener('focus', focusNavSection);
+    });
+  }
+  // enable menu collapse on escape keypress
+  if (!expanded || isDesktop.matches) {
+    // collapse menu on escape press
+    window.addEventListener('keydown', closeOnEscape);
+  } else {
+    window.removeEventListener('keydown', closeOnEscape);
+  }
+}
+
+/**
+ * loads and decorates the header, mainly the nav
+ * @param {Element} block The header block element
+ */
+export default async function decorate(block) {
+  // load nav as fragment
+  const navMeta = getMetadata('nav');
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const fragment = await loadFragment(navPath);
+
+  // decorate nav DOM
+  block.textContent = '';
+  const nav = document.createElement('nav');
+  nav.id = 'nav';
+  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+
+  const classes = ['brand', 'sections', 'tools'];
+  classes.forEach((c, i) => {
+    const section = nav.children[i];
+    if (section) section.classList.add(`nav-${c}`);
+  });
+
+  const navBrand = nav.querySelector('.nav-brand');
+  const brandLink = navBrand.querySelector('.button');
+  if (brandLink) {
+    brandLink.className = '';
+    brandLink.closest('.button-container').className = '';
+  }
+
+  const navSections = nav.querySelector('.nav-sections');
+  if (navSections) {
+    navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+      navSection.addEventListener('click', () => {
+        if (isDesktop.matches) {
+          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          toggleAllNavSections(navSections);
+          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+      });
+    });
+  }
+
+  // hamburger for mobile
+  const hamburger = document.createElement('div');
+  hamburger.classList.add('nav-hamburger');
+  hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
+      <span class="nav-hamburger-icon"></span>
+    </button>`;
+  hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
+  nav.prepend(hamburger);
+  nav.setAttribute('aria-expanded', 'false');
+  // prevent mobile nav behavior on window resize
+  toggleMenu(nav, navSections, isDesktop.matches);
+  isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
+
+
+  var html;
+  const navWrapper = document.createElement('div');
+  navWrapper.className = 'nav-wrapper';
+  block.append(navWrapper);
+  
+  async function fetchData(url) {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+  
+      const html = await response.text();
+  
+      // Create a temporary DOM element to parse the HTML
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+  
+      // Find the element with class="cmp-container"
+      const cmpContainer = doc.querySelector('.cmp-container');
+  
+      // Check if the element exists and append it
+      if (cmpContainer) {
+        // console.log("Found element:", cmpContainer.outerHTML);
+        
+        // Use innerHTML to properly render the HTML
+        navWrapper.innerHTML = cmpContainer.outerHTML;
+        
+        return cmpContainer.outerHTML;
+      } else {
+        console.log("Element with class 'cmp-container' not found.");
+        return null;
+      }
+    } catch (error) {
+      console.error('Fetch error: ', error);
+    }
+  }
+  const proxyUrl = 'https://api.allorigins.win/raw?url=';
+const targetUrl = 'https://betabeautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html';
+fetchData(proxyUrl + encodeURIComponent(targetUrl));
+  
+//   fetchData("https://www.beautifulhomes.asianpaints.com/content/experience-fragments/asianpaintsbeautifulhomes/us/en/experience-fragment/master.html");
+// fetchData(proxyUrl + targetUrl)
+  
+}
+ 
+
 var loginresponse;
 var uid;
 function getLoginData(response) {
@@ -425,8 +617,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Error in header call" + error)
         }
     });
-    var profileIcon = document.querySelector(".location-profile-icon [data-login-redirection]");
-    profileIcon && profileIcon.addEventListener("click", function() {
+    $(".location-profile-icon a[data-login-redirection]").on("click", function() {
         try {
             headerClick("Profile icon", "header")
         } catch (error) {
@@ -463,100 +654,13 @@ window.addEventListener("DOMContentLoaded", function() {
     })
 });
 document.addEventListener("DOMContentLoaded", function() {
-    var mobileHomeIcon = document.querySelector(".header-m__logo-outer");
-    mobileHomeIcon.addEventListener("click", function() {
-        mobileHomeIcon.classList.add("active");
-        setTimeout(function() {
-            mobileHomeIcon.classList.remove("active")
-        }, 500)
-    });
-    var mobileSearchIcon = document.querySelector(".header-m__right.black-header-wrapper .icon-search");
-    mobileSearchIcon.addEventListener("click", function() {
-        mobileSearchIcon.classList.add("background_blink");
-        setTimeout(function() {
-            mobileSearchIcon.classList.remove("background_blink")
-        }, 500)
-    });
-    var mobileCallIcon = document.querySelector(".header-m__right.black-header-wrapper .location-mobile-icon");
-    mobileCallIcon.addEventListener("click", function() {
-        mobileCallIcon.classList.add("background_blink");
-        setTimeout(function() {
-            mobileCallIcon.classList.remove("background_blink")
-        }, 500)
-    });
-    var locationAndProfileWrapper = document.querySelector(".header-m__right.black-header-wrapper .location-profile-icon");
-    locationAndProfileWrapper.addEventListener("click", function(e) {
-        if (e.target.tagName.toLowerCase() === "a" || e.target.tagName.toLowerCase() === "img") {
-            e.target.parentNode.classList.add("background_blink");
-            setTimeout(function() {
-                e.target.parentNode.classList.remove("background_blink")
-            }, 500)
-        }
-    })
-});
-document.addEventListener("DOMContentLoaded", function() {
     var getStartedEle = document.querySelector(".offer-header-redirect-wrapper a");
     getStartedEle.addEventListener("click", function(e) {
         var getStartedVal = getStartedEle.innerHTML;
         headerClick(getStartedVal, "header")
     })
 });
-var bottomNavigationItems = document.querySelectorAll(".bottom_navigation__items");
-var bottomNavIcon = document.querySelectorAll(".bottom_nav__icon");
-var bottomNavigationOverlay = document.querySelector(".bottom_navigation_overlay");
-var navGreyLine = document.querySelectorAll(".nav_grey_line");
-bottomNavIcon.forEach(function(ele) {
-    ele.addEventListener("click", function() {
-        var currentIconDataSet = ele.dataset.navicon;
-        bottomNavigationItems.forEach(function(itemWrap) {
-            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
-            if (currentIconDataSet !== itemWrapperDataSet)
-                itemWrap.classList.remove("showItem")
-        });
-        bottomNavIcon.forEach(function(navicon) {
-            var navIcondSet = navicon.dataset.navicon;
-            if (navIcondSet !== currentIconDataSet)
-                navicon.classList.remove("active")
-        });
-        bottomNavigationItems.forEach(function(itemWrap) {
-            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
-            if (currentIconDataSet == itemWrapperDataSet) {
-                itemWrap.classList.toggle("showItem");
-                ele.classList.toggle("active")
-            }
-        });
-        if (ele.classList.contains("active")) {
-            bottomNavigationOverlay.style.display = "block";
-            document.body.classList.add("hide_overflow")
-        } else {
-            bottomNavigationOverlay.style.display = "none";
-            document.body.classList.remove("hide_overflow")
-        }
-    })
-});
-navGreyLine.forEach(function(ele) {
-    ele.addEventListener("click", function(e) {
-        e.stopPropagation();
-        bottomNavigationOverlay.style.display = "none";
-        document.body.classList.remove("hide_overflow");
-        bottomNavIcon.forEach(function(navicon) {
-            navicon.classList.remove("active")
-        });
-        bottomNavigationItems.forEach(function(itemWrap) {
-            itemWrap.classList.remove("showItem")
-        })
-    })
-});
-bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", function() {
-    bottomNavigationOverlay.style.display = "none";
-    document.body.classList.remove("hide_overflow");
-    bottomNavIcon.forEach(function(navicon) {
-        navicon.classList.remove("active")
-    });
-    bottomNavigationItems.forEach(function(itemWrap) {
-        itemWrap.classList.remove("showItem")
-    })
-});
+
 window.addEventListener("DOMContentLoaded", function() {
     $(".bottomNav-track--event").on("click", function() {
         try {
@@ -568,13 +672,6 @@ window.addEventListener("DOMContentLoaded", function() {
             else
                 menuTitle = bottomNavText;
             menuInteraction(menuText, menuTitle, "header")
-        } catch (error) {
-            console.log(error)
-        }
-    });
-    $(".bottom_nav__icon").on("click", function() {
-        try {
-            menuInteraction("", $(this).find(".menuInt-title--event").text().toLowerCase(), "header")
         } catch (error) {
             console.log(error)
         }
@@ -1102,36 +1199,8 @@ for (var i = 0; i < tabclick.length; i += 1)
         e.currentTarget.parentElement.children[1].parentElement.classList.add("collapse");
         $(".header-m__nav-middle").addClass("collapse-outer")
     });
-document.getElementsByTagName("body")[0].addEventListener("click", function(event) {
-    if (event.target.classList.contains("field-search") == false) {
-        if (document.getElementById("field-search1").value != "")
-            document.getElementById("field-search1").value = "";
-        if (document.getElementById("field-search__m").value != "")
-            document.getElementById("field-search__m").value = "";
-        if (document.querySelector(".header").classList.contains("search--expanded")) {
-            document.querySelector(".header").classList.remove("search--expanded");
-            if (document.querySelector(".searchresult").style.display == "block")
-                document.querySelector(".searchresult").style.display = "none";
-            if (document.querySelector(".searchdynamic").style.display == "block") {
-                document.querySelector(".searchdynamic").style.display = "none";
-                document.querySelector(".searchdynamic").parentElement.parentElement.style.display = "none"
-            }
-        }
-    }
-});
-document.querySelector("#header_sticky_btn").addEventListener("click", function(e) {
-    e.preventDefault();
-    $("#dialog-personal-info").css({
-        "display": "block"
-    });
-    $("#field_email").removeAttr("disabled");
-    if (document.querySelector("#dialog-personal-info").style.display == "block")
-        $("body").css("overflow", "hidden");
-    if ($(".new_thankup_popup .dialog__body").hasClass("dsp-none"))
-        $(".new_thankup_popup .dialog__container").removeClass("new_style");
-    else
-        $(".new_thankup_popup .dialog__container").addClass("new_style")
-});
+
+
 var iconSearch = document.querySelector(".header-m__search-trigger .icon-search");
 var headerMSidebarClose = document.querySelector(".header-m__sidebar-close");
 var bottonNavIconWrapper = document.querySelector(".bottom_navigation__icons_wrapper");
@@ -1141,3 +1210,248 @@ iconSearch && iconSearch.addEventListener("click", function() {
 headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() {
     bottonNavIconWrapper.style.zIndex = "9999"
 });
+// function getform(url) {
+//     console.log(`Fetching data from ${url}`);
+//     fetch(url, {
+//         method: 'GET', 
+//         headers: {
+//             'Content-Type': 'application/json',
+         
+//         }
+//     })
+//     .then(response => {
+//         console.log('Response received');
+//         if (!response.ok) {
+//             throw new Error('Network response was not ok ' + response.statusText);
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log('Data:', data);
+
+    
+//         const fields = data.data; 
+
+//         if (!Array.isArray(fields)) {
+//             console.error('Expected an array but got:', fields);
+//             return;
+//         }
+
+       
+        const div = document.createElement("div");
+        
+      
+        // const form = document.createElement("form");
+        // form.id = "dynamicForm";
+        
+        
+        // fields.forEach(field => {
+        //     let inputElement;
+            
+        //     switch (field.Type) {
+        //         case "text-field":
+        //             inputElement = document.createElement("input");
+        //             inputElement.type = "text";
+        //             inputElement.placeholder = field.Placeholder || "";
+        //             inputElement.name = field.Field; 
+        //             break;
+                
+        //         case "select":
+        //             inputElement = document.createElement("select");
+        //             // Handle options if present
+        //             if (field.Options) {
+        //                 const options = field.Options.split(", ");
+        //                 options.forEach(option => {
+        //                     const optionElement = document.createElement("option");
+        //                     optionElement.value = option;
+        //                     optionElement.textContent = option;
+        //                     inputElement.appendChild(optionElement);
+        //                 });
+        //             }
+        //             inputElement.name = field.Field; 
+        //             break;
+                
+        //         case "submit":
+        //             inputElement = document.createElement("button");
+        //             inputElement.type = "submit";
+        //             inputElement.textContent = field.Label || "Submit";
+        //             inputElement.formAction = field.Extra; 
+        //             break;
+                
+        //         default:
+                    
+        //             break;
+        //     }
+
+        //     if (inputElement) {
+        //         const label = document.createElement("label");
+        //         label.textContent = field.Label || field.Field;
+        //         form.appendChild(label);
+        //         form.appendChild(inputElement);
+        //         form.appendChild(document.createElement("br")); 
+        //     }
+        // });
+
+//     })
+//     .catch(error => {
+//         console.error('Error:', error.message);
+//     });
+// }
+
+// Example URL for fetching data
+// const proxyUrl = 'https://api.allorigins.win/raw?url=';
+// const targetUrl = 'https://main--idfcfirstbank--teknopointproject.hlx.page/email-form.json?nocache=1724407666946';
+// getform(proxyUrl + encodeURIComponent(targetUrl));
+
+
+
+
+
+// document.body.appendChild(divss);
+setTimeout(() => {
+    var form = "<div class=\"form_container\"><form class=\"frm head-redesign-help__form\" action=\"#\" autocomplete=\"off\">" +
+    "<div class=\"formcontainer simpleouter container responsivegrid\">" +
+        "<div class=\"head-redesign-help-right \">" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_FirstName\">" +
+                    "Full Name" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"text\" data-validation=\"name\" data-json=\"C_FirstName\" id=\"form-field__C_FirstName\" placeholder=\"Enter your name\" required=\"true\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_FirstName\">" +
+                    "Full Name" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Name</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Mobile\">" +
+                    "Mobile Number" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"mobileNumber\" data-json=\"C_Mobile\" id=\"form-field__C_Mobile\" placeholder=\"Enter mobile number\" required=\"true\" minlength=\"10\" maxlength=\"10\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Mobile\">" +
+                    "Mobile Number" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Mobile Number</span>" +
+                "<span class=\"country_code\">+91</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Pincode\">" +
+                    "Pincode" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"pincode\" data-json=\"C_Pincode\" id=\"form-field__C_Pincode\" placeholder=\"Enter your Pincode\" required=\"true\" minlength=\"6\" maxlength=\"6\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Pincode\">" +
+                    "Pincode" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Pincode</span>" +
+            "</div>" +
+            "<div class=\"frm__group\">" +
+                "<label class=\"frm__label\" for=\"form-field__C_Email\">" +
+                    "Email ID" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<input class=\"frm__field keyval\" type=\"email\" data-validation=\"email\" data-json=\"C_Email\" id=\"form-field__C_Email\" placeholder=\"Enter your email\" required=\"true\">" +
+                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Email\">" +
+                    "Email ID" +
+                    "<span>*</span>" +
+                "</label>" +
+                "<span class=\"error\">Please enter your Email ID</span>" +
+            "</div>" +
+            "<div class=\"form_field_checkbox\">" +
+                "<div class=\"form-checkbox\">" +
+                    "<label class=\"check-container\">Yes, I would like to receive important updates and notifications on WhatsApp" +
+                        "<input type=\"checkbox\" data-json=\"C_WhatsappNotification\" checked=\"false\">" +
+                        "<span class=\"checkmark\"></span>" +
+                    "</label>" +
+                "</div>" +
+            "</div>" +
+            "<div class=\"form_hidden\">" +
+                "<input type=\"hidden\" data-json=\"C_CampaignId\" value=\"DECOR_ORGANIC\">" +
+            "</div>" +
+            "<div class=\"paragraph text\">" +
+                "<div class=\"head-redesign-help__form-description\">" +
+                    "<p>By proceeding, you are authorizing Beautiful Homes and its suggested contractors to get in touch with you through calls, sms, or e-mail.</p>" +
+                "</div>" +
+            "</div>" +
+            "<div class=\"form_button\">" +
+                "<div class=\"head-redesign-help__form-cta\">" +
+                    "<button type=\"button\" class=\"btn btn--primary btn__icon--right black-form-cta-click\" data-redirection=\"/content/asianpaintsbeautifulhomes/us/en/thank-you.html\" onclick=\"sfform(event)\">Submit<span class=\"icon-chevron-right\"></span></button>" +
+                "</div>" +
+            "</div>" +
+        "</div>" +
+    "</div>" +
+    "</form></div>";
+  
+  var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div:nth-child(2)");
+  console.log("this is ", divss);
+  
+  if (divss) {
+    divss.innerHTML = form;
+  } else {
+    console.error("Element not found");
+  }
+  
+  }, 500);
+ 
+  setTimeout(() => {
+    var bottomNavigationItems = document.querySelectorAll(".bottom_navigation__items");
+var bottomNavIcon = document.querySelectorAll(".bottom_nav__icon");
+var bottomNavigationOverlay = document.querySelector(".bottom_navigation_overlay");
+var navGreyLine = document.querySelectorAll(".nav_grey_line");
+bottomNavIcon.forEach(function(ele) {
+    ele.addEventListener("click", function() {
+        var currentIconDataSet = ele.dataset.navicon;
+        bottomNavigationItems.forEach(function(itemWrap) {
+            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
+            if (currentIconDataSet !== itemWrapperDataSet)
+                itemWrap.classList.remove("showItem")
+        });
+        bottomNavIcon.forEach(function(navicon) {
+            var navIcondSet = navicon.dataset.navicon;
+            if (navIcondSet !== currentIconDataSet)
+                navicon.classList.remove("active")
+        });
+        bottomNavigationItems.forEach(function(itemWrap) {
+            var itemWrapperDataSet = itemWrap.dataset.itemwrapper;
+            if (currentIconDataSet == itemWrapperDataSet) {
+                itemWrap.classList.toggle("showItem");
+                ele.classList.toggle("active")
+            }
+        });
+        if (ele.classList.contains("active")) {
+            bottomNavigationOverlay.style.display = "block";
+            document.body.classList.add("hide_overflow")
+        } else {
+            bottomNavigationOverlay.style.display = "none";
+            document.body.classList.remove("hide_overflow")
+        }
+    })
+});
+navGreyLine.forEach(function(ele) {
+    ele.addEventListener("click", function(e) {
+        e.stopPropagation();
+        bottomNavigationOverlay.style.display = "none";
+        document.body.classList.remove("hide_overflow");
+        bottomNavIcon.forEach(function(navicon) {
+            navicon.classList.remove("active")
+        });
+        bottomNavigationItems.forEach(function(itemWrap) {
+            itemWrap.classList.remove("showItem")
+        })
+    })
+});
+bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", function() {
+    bottomNavigationOverlay.style.display = "none";
+    document.body.classList.remove("hide_overflow");
+    bottomNavIcon.forEach(function(navicon) {
+        navicon.classList.remove("active")
+    });
+    bottomNavigationItems.forEach(function(itemWrap) {
+        itemWrap.classList.remove("showItem")
+    })
+});
+  }, 1000);
