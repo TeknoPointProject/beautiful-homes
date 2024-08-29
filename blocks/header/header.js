@@ -164,10 +164,19 @@ export default async function decorate(block) {
       // Find the element with class="cmp-container"
       const cmpContainer = doc.querySelector('.cmp-container');
   
-      // Check if the element exists and append it
+      // Check if the element exists
       if (cmpContainer) {
-        // console.log("Found element:", cmpContainer.outerHTML);
+        // Find all image elements within the cmpContainer
+        const images = cmpContainer.querySelectorAll('img');
         
+        // Iterate over all images and add loading="lazy" except for the specific one
+        images.forEach(img => {
+          const src = img.getAttribute('src');
+          if (src !== '//static.asianpaints.com/content/dam/asianpaintsbeautifulhomes/bh-new-header/bh-logo-main.png') {
+            img.setAttribute('loading', 'lazy');
+          }
+        });
+  
         // Use innerHTML to properly render the HTML
         navWrapper.innerHTML = cmpContainer.outerHTML;
         
