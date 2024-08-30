@@ -52,7 +52,7 @@
         "valueType": "string",
         "name": "fileReference",
         "label": "Image",
-        "multi": true
+        "multi": false
       },
       {
         "component": "text",
