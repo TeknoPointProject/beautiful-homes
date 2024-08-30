@@ -331,7 +331,6 @@ function createOptimizedPicture(
 
   // webp
   breakpoints.forEach((br) => {
-    debugger
     const source = document.createElement('source');
     if (br.media) source.setAttribute('media', br.media);
     source.setAttribute('type', 'image/webp');
