@@ -25,6 +25,9 @@
 }
 
 @media screen and (max-width: 992.9px) {
+    .form_container {
+        height: unset;
+    }
 
     .head-redesign-container .columns-wrapper .columns>div,
     .head-redesign-container .columns-wrapper .columns-img-col+div {
@@ -47,6 +50,19 @@
     }
 
     .head-redesign-help__form-cta {
+        width: 100%;
+    }
+
+    .head-redesign-container .form-checkbox {
+        margin-bottom: 20px;
+        margin-top: 8px;
+    }
+
+    .head-redesign-help__form-description {
+        margin-bottom: 30px;
+    }
+
+    button.btn.btn--primary.btn__icon--right.black-form-cta-click {
         width: 100%;
     }
 }
