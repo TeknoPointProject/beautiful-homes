@@ -568,7 +568,7 @@ span.checkmark {
 }
 
 label.check-container {
-  /* width: 438px; */
+  width: 438px;
 }
 
 @media (width < 767px) {
