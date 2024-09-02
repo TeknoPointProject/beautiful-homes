@@ -268,12 +268,14 @@ source {
 @media screen and (max-width: 575.98px) {
   .head-redesign-container {
     margin-bottom: 80px;
+    margin-top: 70px;
   }
 
   .head-redesign-container .columns-img-col img {
     height: 400px;
   }
-  .head-redesign-container .columns-img-col{
+
+  .head-redesign-container .columns-img-col {
     width: 100%;
   }
 
