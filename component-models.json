@@ -566,6 +566,25 @@
             "valueType": "string"
           }
         ]
+      },
+      {
+        "id": "imagebanner",
+        "fields": [
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "fileReference",
+            "label": "Image banner",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Banner Alt Text "
+          }
+        ]
       }
     ]
   }
