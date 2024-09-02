@@ -14,10 +14,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    .head-redesign-container .columns-img-col {
+    /* .head-redesign-container .columns-img-col {
         width: 100%;
         min-height: 400px;
-    }
+    } */
 
     .head-redesign-container .columns-img-col img {
         height: 400px;
@@ -25,9 +25,9 @@
 }
 
 @media screen and (max-width: 992.9px) {
-    .head-redesign-container .columns-wrapper .columns div {
+    /* .head-redesign-container .columns-wrapper .columns div {
         display: block;
-    }
+    } */
 
     .head-redesign-container .columns-wrapper .columns-img-col {
         width: 100%;

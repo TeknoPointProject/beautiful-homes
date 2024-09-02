@@ -541,20 +541,20 @@ label.check-container{
   width: 438px;
 }
 @media (width < 767px) {
-  .head-redesign-container .columns-wrapper .columns div .columns-img-col {
+  /* .head-redesign-container .columns-wrapper .columns div .columns-img-col {
     background: unset;
     width: 100.31%;
     position: relative;
     z-index: -1;
-}
+} */
 
 label.check-container{
   width: auto;
 }
-.head-redesign-container{
+/* .head-redesign-container{
   margin-top: 69px;
   margin-bottom: 120px;
-}
+} */
 }
 
 header.primary_new_header_mobile.header-m{
