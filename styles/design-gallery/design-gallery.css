@@ -374,10 +374,6 @@ main .center-slider {
 }
 
 @media (max-width: 575.98px) {
-    .header-m__top.container {
-        background: yellow;
-    }
-
     .center-slider .slick-slide {
         margin: 0 15px;
     }
@@ -496,11 +492,5 @@ main .center-slider {
     .design-gallery .carousel-wrapper .slick-slide div div div:last-child {
         display: flex;
         justify-content: center;
-    }
-}
-
-@media (max-width: 390.9px) {
-    .header-m__top.container {
-        background: green;
     }
 }
