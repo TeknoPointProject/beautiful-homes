@@ -346,11 +346,19 @@ function createOptimizedPicture(
       source.setAttribute('srcset', `${pathname}?width=${br.width}&format=${ext}&optimize=high`);
       picture.appendChild(source);
     } else {
+      
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = `${pathname}?width=${br.width}&format=${ext}&optimize=high`;
+      document.head.appendChild(link);
+
+      // Create the image element as usual
       const img = document.createElement('img');
-      img.setAttribute('loading', eager ? 'eagerss' : 'lazy');
       img.setAttribute('alt', alt);
+
+      // Append the image to the picture element
       picture.appendChild(img);
-      img.setAttribute('src', `${pathname}?width=${br.width}&format=${ext}&optimize=high`);
     }
   });
 
@@ -742,29 +750,24 @@ async function waitForLCP(lcpBlocks) {
   const lcpCandidate = document.querySelector('main img');
   await new Promise((resolve) => {
     if (lcpCandidate && !lcpCandidate.complete) {
-      // Get the source of the lcpCandidate image
+      // Get the source of the image to preload
       const lcpSrc = lcpCandidate.getAttribute('src');
-  
-      // Create a link element to preload the image
+
+      // Create a link element for preloading the image
       const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
       preloadLink.as = 'image';
       preloadLink.href = lcpSrc;
-  
+
       // Append the preload link to the document head
       document.head.appendChild(preloadLink);
-  
-      // Optional: Remove loading attribute if set earlier, since we are preloading
-      lcpCandidate.removeAttribute('loading');
-  
-      // Add event listeners to resolve the promise once the image loads or if an error occurs
+
       lcpCandidate.addEventListener('load', resolve);
       lcpCandidate.addEventListener('error', resolve);
     } else {
       resolve();
     }
   });
-  
 }
 
 init();
