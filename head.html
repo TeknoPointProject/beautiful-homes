@@ -3,7 +3,7 @@
 <script src="/scripts/scripts.js" type="module"></script>
 <link rel="stylesheet" href="/styles/styles.css" />
 <script id="imgloader" type="javascript/worker">
-    // Not race proof or robust. Proof of concept.
+    // Not race proof or robust. Proof of concept
     self.onmessage = function (e) {
         var urls = e.data,
             done = urls.length,
