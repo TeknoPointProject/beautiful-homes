@@ -459,11 +459,10 @@ span.error {
 
 .form_container {
   height: 563px;
-
 }
 
 .form-checkbox {
-  margin-bottom: 10px !important
+  margin-bottom: 10px;
 }
 
 .head-redesign-help-right .check-container {
@@ -543,7 +542,7 @@ span.checkmark {
   /* font-weight: 400 !important; */
   /* line-height: 16.8px !important; */
   color: #323232 !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 15px;
   opacity: .6;
 }
 
@@ -578,10 +577,10 @@ label.check-container {
     position: relative;
     z-index: -1;
 } */
-
+  /* 
   label.check-container {
     width: auto;
-  }
+  } */
 
   /* .head-redesign-container{
   margin-top: 69px;

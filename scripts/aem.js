@@ -748,6 +748,7 @@ async function waitForLCP(lcpBlocks) {
 
   document.body.style.display = null;
   const lcpCandidate = document.querySelector('main img');
+
   await new Promise((resolve) => {
     if (lcpCandidate && !lcpCandidate.complete) {
       // Get the source of the image to preload
