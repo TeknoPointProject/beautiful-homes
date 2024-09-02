@@ -275,13 +275,19 @@ source {
     height: 400px;
   }
 
-  .head-redesign-container .columns-img-col {
+  /* .head-redesign-container .columns-img-col {
     width: 100%;
-  }
+  } */
 
   .head-redesign-container .columns-wrapper .columns-img-col+div {
     width: 100%;
     min-height: 563px;
+  }
+}
+
+@media screen and (max-width: 992.9px) {
+  .head-redesign-container .columns-img-col {
+    width: 100%;
   }
 }
 
@@ -292,7 +298,7 @@ source {
 
 .head-redesign-help__form {
   background: #f7f2e7 !important;
-  padding: 35.5px 70px 30px 66px !important;
+  padding: 35.5px 70px 30px 66px;
 }
 
 .simpleouter {
