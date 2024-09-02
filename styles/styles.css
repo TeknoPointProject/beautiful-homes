@@ -373,8 +373,8 @@ label.frm__label {
   display: none;
 }
 
-/* input#form-field__C_FirstName {
-  padding: 0 16px !important;
+input#form-field__C_FirstName {
+  /* padding: 0 16px !important;
   border: 1px solid #20202033 !important;
   border-radius: 6px;
   color: #202020 !important;
@@ -392,9 +392,8 @@ label.frm__label {
   padding: 8px 40px 8px 8px;
   position: relative;
   width: 100% !important;
-  z-index: 1;
-
-} */
+  z-index: 1; */
+}
 
 span.country_code {
   position: absolute;
@@ -437,6 +436,7 @@ input#form-field__C_Mobile {
 span.error {
   display: inline-block;
   visibility: hidden;
+  min-height: 38px;
 }
 
 /* span.error {
@@ -444,7 +444,6 @@ span.error {
   font-weight: 500;
   line-height: unset !important;
   color: #ee4137 !important;
-  min-height: 38px;
   margin-top: unset !important;
   padding-top: 3px !important;
 } */
@@ -486,16 +485,16 @@ span.checkmark {
   position: relative;
   /* padding-left: 35px; */
   cursor: pointer;
-  /* font-size: 22px; */
-  /* user-select: none; */
-  /* font-family: 'Lato'; */
-  /* font-style: normal; */
-  /* font-weight: 500; */
-  /* font-size: 16px;
+  /* font-size: 22px;
+  user-select: none;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
   line-height: 120%; */
   display: flex;
-  /* align-items: center; */
-  /* color: #343336; */
+  /* align-items: center;
+  color: #343336; */
 }
 
 .check-container input {
@@ -541,8 +540,8 @@ span.checkmark {
 
 .head-redesign-help__form-description {
   font-size: 14px !important;
-  /* font-weight: 400 !important;
-  line-height: 16.8px !important; */
+  /* font-weight: 400 !important; */
+  /* line-height: 16.8px !important; */
   color: #323232 !important;
   margin-bottom: 15px !important;
   opacity: .6;
@@ -568,9 +567,9 @@ span.checkmark {
   margin-left: 3px;
 }
 
-/* label.check-container {
-  width: 438px;
-} */
+label.check-container {
+  /* width: 438px; */
+}
 
 @media (width < 767px) {
   /* .head-redesign-container .columns-wrapper .columns div .columns-img-col {
