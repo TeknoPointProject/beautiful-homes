@@ -345,7 +345,7 @@ source {
   border: 1px solid #20202033 !important;
   border-radius: 6px;
   color: #202020 !important;
-  font-weight: 400 !important;
+  /* font-weight: 400 !important; */
   /* font-size: 16px !important;
   line-height: 20px !important; */
   min-height: 52px;
@@ -374,7 +374,7 @@ label.frm__label {
 }
 
 input#form-field__C_FirstName {
-  padding: 0 16px !important;
+  /* padding: 0 16px !important;
   border: 1px solid #20202033 !important;
   border-radius: 6px;
   color: #202020 !important;
@@ -392,8 +392,7 @@ input#form-field__C_FirstName {
   padding: 8px 40px 8px 8px;
   position: relative;
   width: 100% !important;
-  z-index: 1;
-
+  z-index: 1; */
 }
 
 span.country_code {
@@ -435,15 +434,19 @@ input#form-field__C_Mobile {
 }
 
 span.error {
+  display: inline-block;
+  visibility: hidden;
+  min-height: 38px;
+}
+
+/* span.error {
   font-size: 14px !important;
   font-weight: 500;
   line-height: unset !important;
   color: #ee4137 !important;
-  min-height: 38px;
   margin-top: unset !important;
   padding-top: 3px !important;
-  visibility: hidden;
-}
+} */
 
 /* .head-redesign-help-right .frm__group {
   width: 100%;
@@ -465,9 +468,9 @@ span.error {
 
 .head-redesign-help-right .check-container {
   padding-left: 34px !important;
-  font-weight: 400 !important;
+  /* font-weight: 400 !important; */
   line-height: 18.2px !important;
-  color: #323232 !important;
+  /* color: #323232 !important; */
   font-size: 14px !important;
 
 }
@@ -480,21 +483,18 @@ span.checkmark {
 .check-container {
 
   position: relative;
-  padding-left: 35px;
+  /* padding-left: 35px; */
   cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  /* font-size: 22px;
   user-select: none;
   font-family: 'Lato';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 120%;
+  line-height: 120%; */
   display: flex;
-  align-items: center;
-  color: #343336;
+  /* align-items: center;
+  color: #343336; */
 }
 
 .check-container input {
@@ -508,16 +508,14 @@ span.checkmark {
 .check-container input:checked~.checkmark:after {
   display: block;
   box-sizing: unset;
-  left: 5px;
-  left: 6px !important;
-  left: 5.5px;
+  /* left: 5px; */
+  left: 6px;
+  /* left: 5.5px; */
   top: 1px;
   width: 4px;
   height: 10px;
   border: solid #f7f2e7;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 
 }
@@ -542,8 +540,8 @@ span.checkmark {
 
 .head-redesign-help__form-description {
   font-size: 14px !important;
-  font-weight: 400 !important;
-  line-height: 16.8px !important;
+  /* font-weight: 400 !important; */
+  /* line-height: 16.8px !important; */
   color: #323232 !important;
   margin-bottom: 15px !important;
   opacity: .6;
