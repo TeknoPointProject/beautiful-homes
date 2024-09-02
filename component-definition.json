@@ -315,18 +315,6 @@
               }
             }
           }
-        },
-        {
-          "title": "Image Banner",
-          "id": "imagebanner",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/image/v1/image",
-                "template": {}
-              }
-            }
-          }
         }
       ]
     }
