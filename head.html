@@ -1,3 +1,85 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script src="/scripts/aem.js" type="module"></script>
+<link rel="stylesheet" href="/styles/styles.css" />
 <script src="/scripts/scripts.js" type="module"></script>
+<script id="imgloader" type="javascript/worker">
+    // Not race proof or robust. Proof of concept
+    self.onmessage = function (e) {
+        var urls = e.data,
+            done = urls.length,
+            onload = function () {
+                if (--done === 0) {
+                    self.postMessage('Done!');
+                    self.close();
+                }
+            };
+
+        urls.forEach(function (url) {
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = 'blob';
+            xhr.onload = xhr.onerror = onload;
+            xhr.open('GET', url, true);
+            xhr.send();
+        });
+    };
+</script>
+<script>
+    // Server must expose CORS headers for XHR preload.
+    var imgs = [
+        'https://author-p48457-e1275402.adobeaemcloud.com/ui#/aem/assetdetails.html/content/dam/beautiful-homes/sleek-kitchen/new-banner-desktop.png'
+    ],
+    URL = window.URL || window.webkitURL,
+    url = URL.createObjectURL(
+        new Blob(
+            [document.getElementById('imgloader').textContent],
+            { type: "text/javascript" }
+        )
+    ),
+    worker = new Worker(url);
+
+    worker.onmessage = function (e) {
+        var frag = document.createDocumentFragment(),
+            count = imgs.length,
+            onload = function () {
+                delete this.onload;
+                frag.appendChild(this.parentNode); // Append picture instead of img
+                if (--count === 0) {
+                    console.log('done');
+                    var targetElement = document.querySelector('.preload .default-content-wrapper');
+                    if (targetElement) {
+                        targetElement.appendChild(frag);
+                    } else {
+                        console.error('Element with classes "preload .default-content-wrapper" not found.');
+                    }
+                }
+            };
+
+        // These will come immediately from cache.
+        // Ensure cache is not disabled by dev tools.
+        imgs.forEach(function (img) {
+            var picture = document.createElement('picture');
+            var source = document.createElement('source');
+            var imgEl = document.createElement('img');
+
+            // Customize source attributes if needed
+            source.srcset = img;
+            source.type = 'image/jpeg'; // Change type if necessary
+
+            imgEl.onload = onload;
+            imgEl.src = img;
+
+            picture.appendChild(source);
+            picture.appendChild(imgEl);
+            frag.appendChild(picture);
+        });
+
+        URL.revokeObjectURL(url);
+    };
+
+    // Mix in a cache-bust on every run.
+    imgs = imgs.map(function (img) {
+        return img + '?ts=' + Date.now();
+    });
+
+    worker.postMessage(imgs);
+</script>
