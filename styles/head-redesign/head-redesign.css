@@ -1,1 +1,206 @@
-.head-redesign-container .columns>div { align-items: unset; gap: unset; width: 100%; } .head-redesign-container .columns-img-col { position: relative; height: 100%; } .head-redesign-container .columns-img-col img { position: absolute; } .head-redesign-container .head-redesign-help__form-cta span { display: none; } .frm__group input::placeholder { color: #9ea4aa; opacity: 1; font-weight: 400; } .head-redesign-container .head-redesign-help-right { max-width: 438px; margin: 0 auto; } .head-redesign-container .frm__group:nth-child(4) span { min-height: 32px; } @media screen and (max-width: 576px) { label.check-container { width: unset; } .head-redesign-container .head-redesign-help__form { padding: 30px 25px 50px; } } @media screen and (max-width: 992.9px) { .form_container { height: unset; } .head-redesign-container .columns-wrapper .columns>div, .head-redesign-container .columns-wrapper .columns-img-col+div { display: block; width: 100%; } .head-redesign-container .columns-wrapper .columns-img-col { min-height: 400px; } .head-redesign-help__form { padding: 30px 20px 50px; } .head-redesign-help-right { max-width: 438px; margin: 0 auto; } .head-redesign-help__form-cta { width: 100%; } .head-redesign-container .form-checkbox { margin-bottom: 20px; margin-top: 8px; } .head-redesign-help__form-description { margin-bottom: 30px; } button.btn.btn--primary.btn__icon--right.black-form-cta-click { width: 100%; } }
+.head-redesign-container .columns>div {
+    align-items: unset;
+    gap: unset;
+    width: 100%;
+}
+
+.head-redesign-container .columns-img-col {
+    position: relative;
+    height: 100%;
+}
+
+.head-redesign-container .columns-img-col img {
+    position: absolute;
+}
+
+.head-redesign-container .head-redesign-help__form-cta span {
+    display: none;
+}
+
+.frm__group input::placeholder {
+    color: #9ea4aa;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.head-redesign-container .head-redesign-help-right {
+    max-width: 438px;
+    margin: 0 auto;
+}
+
+.head-redesign-container .frm__group:nth-child(4) span {
+    min-height: 32px;
+}
+
+.head-redesign-help__form {
+    background: #f7f2e7;
+    padding: 35.5px 70px 30px 66px;
+    height: 100%;
+}
+
+.head-redesign-help-right input {
+    padding: 0 16px;
+    border: 1px solid #20202033;
+    border-radius: 6px;
+    color: #202020;
+    min-height: 52px;
+}
+
+label.frm__label {
+    display: none;
+}
+
+span.country_code {
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    color: #202020;
+}
+
+input#form-field__C_Mobile {
+    text-indent: 75px;
+}
+
+span.error {
+    display: inline-block;
+    visibility: hidden;
+    min-height: 38px;
+}
+
+.frm__group {
+    position: relative;
+}
+
+.form_container {
+    height: 563px;
+}
+
+.form-checkbox {
+    margin-bottom: 10px;
+}
+
+.head-redesign-help-right .check-container {
+    padding-left: 34px;
+    line-height: 18.2px;
+    font-size: 14px;
+    width: 438px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+
+.check-container input {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.check-container input:checked~.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: unset;
+    left: 6px;
+    top: 1px;
+    width: 4px;
+    height: 10px;
+    border: solid #f7f2e7;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+span.checkmark {
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #7345b2;
+    background-color: #7345b2;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.head-redesign-help__form-description {
+    font-size: 14px;
+    color: #323232;
+    margin-bottom: 15px;
+    opacity: .6;
+}
+
+.frm__group .country_code::before {
+    content: '';
+    background-image: url("https://www.beautifulhomes.asianpaints.com/content/dam/asianpaintsbeautifulhomes/icons/ids_icons/india.png");
+    background-position: center;
+    background-size: cover;
+    width: 18px;
+    height: 12px;
+    display: block;
+}
+
+.frm__group .country_code::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: black;
+    opacity: .2;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+
+@media screen and (max-width: 576px) {
+    .head-redesign-help-right label.check-container {
+        width: unset;
+    }
+
+    .head-redesign-container .head-redesign-help__form {
+        padding: 30px 25px 50px;
+    }
+}
+
+@media screen and (max-width: 992.9px) {
+    .form_container {
+        height: unset;
+    }
+
+    .head-redesign-container .columns-wrapper .columns>div,
+    .head-redesign-container .columns-wrapper .columns-img-col+div {
+        display: block;
+        width: 100%;
+    }
+
+    .head-redesign-container .columns-wrapper .columns-img-col {
+        min-height: 400px;
+    }
+
+    .head-redesign-help__form {
+        padding: 30px 20px 50px;
+    }
+
+    .head-redesign-help-right {
+        max-width: 438px;
+        margin: 0 auto;
+    }
+
+    .head-redesign-help__form-cta {
+        width: 100%;
+    }
+
+    .head-redesign-container .form-checkbox {
+        margin-bottom: 20px;
+        margin-top: 8px;
+    }
+
+    .head-redesign-help__form-description {
+        margin-bottom: 30px;
+    }
+
+    button.btn.btn--primary.btn__icon--right.black-form-cta-click {
+        width: 100%;
+    }
+}
