@@ -297,3 +297,10 @@ button.btn.btn--primary.btn__icon--right.black-form-cta-click {
   line-height: 23.4px !important;
   color: #f7f2e7 !important;
 }
+
+.section.legacy-container {
+  max-width: 1148px;
+  margin: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}

@@ -1,9 +1,9 @@
-.section.legacy-container {
+/* .section.legacy-container {
     max-width: 1148px;
     margin: auto;
     padding: 0 20px;
     box-sizing: border-box;
-}
+} */
 
 main .legacy-container h1 {
     font-family: BioRhyme;
