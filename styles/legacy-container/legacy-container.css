@@ -5,16 +5,16 @@
     box-sizing: border-box;
 } */
 
-main .legacy-container h1 {
+/* main .legacy-container h1 {
     font-family: BioRhyme;
     font-weight: 700;
     font-size: 42px;
     line-height: 49px;
     color: #323232;
     margin: 0;
-}
+} */
 
-main .legacy-container p {
+/* main .legacy-container p {
     font-family: Lato;
     font-size: 16px;
     font-weight: 400;
@@ -22,7 +22,7 @@ main .legacy-container p {
     color: #323232;
     padding: 20px 62px 0 62px;
     margin: 0;
-}
+} */
 
 main .legacy-container .default-content-wrapper {
     padding-bottom: 30px;
