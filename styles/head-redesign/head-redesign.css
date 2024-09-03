@@ -13,11 +13,29 @@
     position: absolute;
 }
 
+.head-redesign-container .head-redesign-help__form-cta span {
+    display: none;
+}
+
+.frm__group input::placeholder {
+    color: #9ea4aa;
+    opacity: 1;
+    font-weight: 400;
+}
+
+.head-redesign-container .head-redesign-help-right {
+    max-width: 438px;
+    margin: 0 auto;
+}
+
+.head-redesign-container .frm__group:nth-child(4) span {
+    min-height: 32px;
+}
+
 @media screen and (max-width: 576px) {
-    /* .head-redesign-container .columns-img-col {
-        width: 100%;
-        min-height: 400px;
-    } */
+    label.check-container {
+        width: unset;
+    }
 
     .head-redesign-container .head-redesign-help__form {
         padding: 30px 25px 50px;
@@ -36,7 +54,6 @@
     }
 
     .head-redesign-container .columns-wrapper .columns-img-col {
-        /* width: 100%; */
         min-height: 400px;
     }
 
