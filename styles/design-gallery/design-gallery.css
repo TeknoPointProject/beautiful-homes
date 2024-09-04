@@ -192,9 +192,9 @@
 /* center slider CAROUSEL*/
 main .center-slider {
     position: relative;
-    margin-bottom: 120px;
     max-width: 1440px;
     margin: auto;
+    margin-bottom: 120px;
 }
 
 .center-slider .default-content-wrapper {
@@ -218,8 +218,11 @@ main .center-slider {
 
 .center-slider .carousel-wrapper-wrapper {
     max-width: 1440px;
-    margin-bottom: 50px;
     padding: 35px 0;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 100%
 }
 
 .center-slider img {
@@ -249,14 +252,6 @@ main .center-slider {
     color: #f0f0f0;
     margin-bottom: 15px;
 }
-
-.center-slider .carousel-wrapper-wrapper {
-    margin-bottom: 50px;
-    overflow: hidden;
-    position: relative;
-    width: 100%
-}
-
 .center-slider .slick-slide {
     cursor: pointer;
     display: inline-block;

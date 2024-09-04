@@ -282,10 +282,10 @@ header.primary_new_header_mobile.header-m {
   z-index: 1000;
 }
 
-main .center-slider {
+/* main .center-slider {
   position: relative;
   margin-bottom: 120px;
-}
+} */
 
 .visual-cards-wrapper-wrapper {
   position: relative;
