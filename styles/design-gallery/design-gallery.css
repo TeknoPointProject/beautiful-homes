@@ -2,11 +2,6 @@
     padding: 0 0 53px 80px;
 }
 
-.design-gallery .default-content-wrapper,
-.fullhome .default-content-wrapper {
-    max-width: unset;
-}
-
 .design-gallery .default-content-wrapper h2,
 .fullhome .default-content-wrapper h2 {
     color: #323232;
