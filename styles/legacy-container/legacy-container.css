@@ -33,11 +33,6 @@ main .sleek-legacy-container {
     margin: auto;
 }
 
-main .sleek-legacy-container .cards-wrapper {
-    max-width: unset;
-    margin: 0;
-}
-
 main .sleek-legacy-container ul {
     margin-top: 40px;
     display: flex;
