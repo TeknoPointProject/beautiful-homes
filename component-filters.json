@@ -70,5 +70,11 @@
     "components": [
       "carousel-item"
     ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-wrapper"
+    ]
   }
 ]

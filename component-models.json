@@ -585,6 +585,25 @@
             "label": "Banner Alt Text "
           }
         ]
+      },
+      {
+        "id": "accordion-wrapper",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Accordain Outer Text"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Accordain Inner Text"
+          }
+        ]
       }
     ]
   }
