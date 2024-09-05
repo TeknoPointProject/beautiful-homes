@@ -592,8 +592,15 @@
           {
             "component": "text",
             "valueType": "string",
-            "name": "href",
+            "name": "formhref",
             "label": "url"
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
           }
         ]
       },
