@@ -585,6 +585,18 @@
             "label": "Banner Alt Text "
           }
         ]
+      },
+      {
+        "id": "form",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "href",
+            "value": "",
+            "label": "Link"
+          }
+        ]
       }
     ]
   }
