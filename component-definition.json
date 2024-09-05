@@ -137,6 +137,21 @@
           }
         },
         {
+          "title": "form",
+          "id": "form",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "form",
+                  "model": "form"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Carousel Wrapper",
           "id": "carousel-wrapper",
           "plugins": {
