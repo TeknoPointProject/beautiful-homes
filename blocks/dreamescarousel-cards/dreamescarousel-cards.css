@@ -37,8 +37,8 @@
 }
 
 .dreamescarousel-cards .slick-next {
-    right: 3%;
-    top: 68%;
+    right: 4%;
+    top: 81%;
     width: 66px;
     height: 66px;
     background-color: #fff;
@@ -48,7 +48,7 @@
 .dreamescarousel-cards .slick-prev {
     z-index: 1;
     left: 87%;
-    top: 68%;
+    top: 81%;
     width: 66px;
     height: 66px;
     background-color: #fff;
@@ -58,7 +58,7 @@
 .dreamescarousel-cards .slick-dots {
     display: flex;
     align-items: center;
-    bottom: 30%;
+    bottom: 18%;
     left: 0%;
     margin-left: 60px;
     width: unset;
