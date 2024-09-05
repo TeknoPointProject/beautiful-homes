@@ -467,7 +467,7 @@
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"
-      } , 
+      },
       {
         "id": "sleek-moduler-wrapper-item",
         "fields": [
@@ -583,6 +583,36 @@
             "name": "alt",
             "value": "Default alt",
             "label": "Banner Alt Text "
+          }
+        ]
+      },
+      {
+        "id": "form",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "href",
+            "label": "url"
+          }
+        ]
+      },
+      {
+        "id": "accordion-wrapper",
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Accordain Outer Text"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "alt",
+            "value": "Default alt",
+            "label": "Accordain Inner Text"
           }
         ]
       }
