@@ -610,16 +610,16 @@
           {
             "component": "text",
             "valueType": "string",
-            "name": "alt",
-            "value": "Default alt",
-            "label": "Accordain Outer Text"
+            "name": "accordion_title",
+            "value": "",
+            "label": "Title"
           },
           {
             "component": "text",
             "valueType": "string",
-            "name": "alt",
-            "value": "Default alt",
-            "label": "Accordain Inner Text"
+            "name": "accordion_inner_title",
+            "value": "",
+            "label": "Title"
           }
         ]
       }
