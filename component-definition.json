@@ -302,15 +302,15 @@
           }
         },
         {
-          "title": "accordion-wrapper",
-          "id": "accordion-wrapper",
+          "title": "accordion-item",
+          "id": "accordion-item",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
-                  "name": "accordion-wrapper",
-                  "model": "accordion-wrapper"
+                  "name": "accordion-item",
+                  "model": "accordion-item"
                 }
               }
             }

@@ -75,7 +75,7 @@
   {
     "id": "accordion",
     "components": [
-      "accordion-wrapper"
+      "accordion-item"
     ]
   }
 ]
