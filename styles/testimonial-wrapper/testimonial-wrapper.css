@@ -2,8 +2,9 @@ main .testimonials-container {
     background-color: #f5f4ef;
 }
 
-main .video-container {
+main .section.video-container {
     background-color: #f5f4ef;
+    margin-bottom: 120px;
 }
 
 .testimonials-container .default-content-wrapper #dreams-to-reality-our-happy-customer-stories {
@@ -11,7 +12,7 @@ main .video-container {
     margin-top: 0;
     margin-inline: unset;
     padding-top: 57px;
-    padding-bottom: 55px;
+    padding-bottom: 24px;
     text-align: center;
     color: #323232;
     font-family: BioRhyme;
