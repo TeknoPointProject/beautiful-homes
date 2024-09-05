@@ -592,7 +592,7 @@
           {
             "component": "text",
             "valueType": "string",
-            "name": "href",
+            "name": "formhref",
             "label": "url"
           }
         ]
