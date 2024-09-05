@@ -467,7 +467,7 @@
         "valueType": "string",
         "name": "thumbnail",
         "label": "thumbnail"
-      } , 
+      },
       {
         "id": "sleek-moduler-wrapper-item",
         "fields": [
@@ -595,6 +595,13 @@
             "name": "href",
             "value": "",
             "label": "Link"
+          },
+          {
+            "component": "richtext",
+            "name": "text",
+            "value": "",
+            "label": "Text",
+            "valueType": "string"
           }
         ]
       }
