@@ -36,22 +36,7 @@ width : 100%;
     margin-right: 25px;
 }
 
-@media (width < 767px){
-    .black-header-wrapper .brand-logo-wrapper {
-        width: 129px;
-    }
-    .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(1) {
-        margin-right: 10px;
-    }
-  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(1) {
-        display: none;
-       }
-  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(2) {
-        
-width: 129px;
-    height: 55px;
-       }
-}
+
 @media (min-width: 320px) and (max-width: 768px) {
     .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(3) {
         width: 55px;
@@ -79,7 +64,24 @@ img.header-m__logo.header-m__logo--color{
 .header-m__left .header-m__nav, .header-m__right .header-m__nav {
  padding: unset;
 }
-  .black-header-wrapper .location-profile-icon-wrapper {
+  
+}
+@media (width < 767px){
+    .black-header-wrapper .brand-logo-wrapper {
+        width: 129px;
+    }
+    .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(1) {
+        margin-right: 10px;
+    }
+  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(1) {
+        display: none;
+       }
+  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(2) {
+        
+width: 129px;
+    height: 55px;
+       }
+.black-header-wrapper .location-profile-icon-wrapper {
        display: flex;
        margin-left: 12px;
        
