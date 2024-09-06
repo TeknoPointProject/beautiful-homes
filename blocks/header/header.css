@@ -35,3 +35,15 @@ width : 100%;
 .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(1) {
     margin-right: 25px;
 }
+
+@media (width < 767px){
+    .black-header-wrapper .brand-logo-wrapper {
+        width: 129px;
+    }
+    .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(1) {
+        margin-right: 10px;
+    }
+  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(1) {
+        display: none;
+       }
+}
