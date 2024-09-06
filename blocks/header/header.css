@@ -90,7 +90,7 @@ width: 129px;
         width: 22px;
         height: 22px;
     }
-.header-m__right .black-header-wrapper{
+.header-m__right {
    background: unset;
 }
 .location-profile-icon-wrapper .location-mobile-icon a img {
