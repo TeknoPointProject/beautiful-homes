@@ -13,7 +13,7 @@ position: relative;
     padding: 7px 10px
 }
 
-img.white-ap-bh-logo{
+.black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(2) img {
     filter: invert(1);
     padding: 0;
     object-fit: contain;
