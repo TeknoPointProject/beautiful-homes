@@ -93,4 +93,8 @@ width: 129px;
 .header-m__right .black-header-wrapper{
    background: unset;
 }
+.location-profile-icon-wrapper .location-mobile-icon a img {
+    width: 32px;
+    height: 32px;
+}
 }
