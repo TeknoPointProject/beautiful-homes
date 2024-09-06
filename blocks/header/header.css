@@ -73,4 +73,7 @@ img.new_mob_logo{
     margin-bottom: 80px;
     margin-top: 74px;
 }
+img.header-m__logo.header-m__logo--color{
+    display: none;
+}
 }
