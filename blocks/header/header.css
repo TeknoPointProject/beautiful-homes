@@ -81,11 +81,7 @@ img.header-m__logo.header-m__logo--color{
 width: 129px;
     height: 55px;
        }
-.black-header-wrapper .location-profile-icon-wrapper {
-       display: flex;
-       margin-left: 12px;
-       
-    }
+
     .location-mobile-icon .mobile-phone-icon{
         width: 22px;
         height: 22px;
@@ -104,5 +100,10 @@ width: 129px;
 .location-profile-icon-wrapper{
     display:none ;
 }
+.primary_new_header_mobile .header-m__top .header-m__right .header-m.black-header-wrapper .location-profile-icon-wrapper {
+       display: flex;
+       margin-left: 12px;
+       
+    }
 }
 
