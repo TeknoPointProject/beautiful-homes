@@ -57,3 +57,10 @@ width: 129px;
         width: 55px;
     }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+    .black-header-wrapper .location-profile-icon-wrapper {
+        display: none;
+        align-items: center;
+        gap: 12px;
+    }
+}
