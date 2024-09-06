@@ -52,4 +52,8 @@ width: 129px;
     height: 55px;
        }
 }
-
+@media (min-width: 320px) and (max-width: 768px) {
+    .ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(3) {
+        width: 55px;
+    }
+}
