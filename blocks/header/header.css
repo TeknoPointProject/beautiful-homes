@@ -32,3 +32,6 @@ width : 100%;
        }
 }
 
+.ap-bh-logo-wrapper a.brand-logo-wrapper:nth-of-type(1) {
+    margin-right: 25px;
+}
