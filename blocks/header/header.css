@@ -97,7 +97,7 @@ width: 129px;
     width: 32px;
     height: 32px;
 }
-.location-profile-icon a img {
+.location-profile-icon-wrapper .location-profile-icon a img {
     width: 32px;
     height: 32px;
 }
