@@ -79,4 +79,13 @@ img.header-m__logo.header-m__logo--color{
 .header-m__left .header-m__nav, .header-m__right .header-m__nav {
  padding: unset;
 }
+  .black-header-wrapper .location-profile-icon-wrapper {
+       display: flex;
+       margin-left: 12px;
+       
+    }
+    .location-mobile-icon .mobile-phone-icon{
+        width: 22px;
+        height: 22px;
+    }
 }
