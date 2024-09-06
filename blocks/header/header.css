@@ -46,4 +46,10 @@ width : 100%;
   .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(1) {
         display: none;
        }
+  .black-header-wrapper .black-header-content-wrapper .ap-bh-logo-wrapper :nth-child(3) :nth-child(2) {
+        
+width: 129px;
+    height: 55px;
+       }
 }
+
