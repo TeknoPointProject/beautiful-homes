@@ -89,6 +89,7 @@ width: 129px;
     }
     .header-m__right.black-header-wrapper {
    background: unset;
+   display: flex;
 }
 .location-profile-icon-wrapper .location-mobile-icon a img {
     width: 32px;
@@ -105,5 +106,11 @@ width: 129px;
        display: flex;
        margin-left: 12px;
        
+    }
+    span.icon-search{
+        height: 16px;
+        width: 16px;
+        /* padding-left: 8px; */
+        margin-left: -30px;
     }
 }
