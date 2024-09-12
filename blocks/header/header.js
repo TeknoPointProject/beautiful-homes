@@ -1511,6 +1511,13 @@ function analyticsearch(a, b, d) {
     "undefined" == a && (a = "");
     trendingsearchClick(a, b)
 }
+var domainmain=document.getElementById("domainmain").value;
+domainmain=domainmain.split("|");
+
+function replacepagedomain(path){
+    path=path.replace(domainmain[0],domainmain[1]);
+    return path;
+}
 function rendersearchresults(a) {
     if ("" != document.getElementById("field-search1").value)
         var b = document.getElementById("field-search1").value;
