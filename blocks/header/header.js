@@ -1310,7 +1310,13 @@ headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() 
 
 
 
+var domainmain=document.getElementById("domainmain").value;
+domainmain=domainmain.split("|");
 
+function replacepagedomain(path){
+    path=path.replace(domainmain[0],domainmain[1]);
+    return path;
+}
 
 // document.body.appendChild(divss);
 setTimeout(() => {
@@ -1557,7 +1563,16 @@ function searchpage(a) {
             window.location.href = "https://betabeautifulhomes.asianpaints.com/search.html?searchterm\x3d" + a;
         else if (3 < a.length || 50 >= a.length)
             window.location.href = replacepagedomain(b) + "/search.html?searchterm\x3d" + a
-}
+        var domainmain=document.getElementById("domainmain").value;
+        domainmain=domainmain.split("|");
+    
+        function replacepagedomain(path){
+            path=path.replace(domainmain[0],domainmain[1]);
+            return path;
+        }
+
+
+    }
 $("#field-search1").on("input", function() {
     var searchTerm = ($("#field-search1").val(),
     $("#field-search1").val().trim());
@@ -1594,6 +1609,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Error in searchInit call" + a)
         }
     })
+    
 });
 
   }, 2000);
