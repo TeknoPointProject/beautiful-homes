@@ -219,7 +219,8 @@ function getLoginData(response) {
         var iconredirection = document.querySelectorAll("[data-login-redirection]")[0].getAttribute("data-login-redirection");
         window.location.href = replacepagedomain(iconredirection)
     }
-    
+
+
 var domainmain=document.getElementById("domainmain").value;
 domainmain=domainmain.split("|");
 
@@ -1511,13 +1512,7 @@ function analyticsearch(a, b, d) {
     "undefined" == a && (a = "");
     trendingsearchClick(a, b)
 }
-var domainmain=document.getElementById("domainmain").value;
-domainmain=domainmain.split("|");
 
-function replacepagedomain(path){
-    path=path.replace(domainmain[0],domainmain[1]);
-    return path;
-}
 function rendersearchresults(a) {
     if ("" != document.getElementById("field-search1").value)
         var b = document.getElementById("field-search1").value;
@@ -1532,6 +1527,13 @@ function rendersearchresults(a) {
     if (a.hasOwnProperty("products"))
         for (c = 0; c < a.products.length; c++)
             if (3 > c) {
+                var domainmain=document.getElementById("domainmain").value;
+domainmain=domainmain.split("|");
+
+function replacepagedomain(path){
+    path=path.replace(domainmain[0],domainmain[1]);
+    return path;
+}
                 var f = a.products[c].featuredImg + "/" + a.products[c].sku_code + "_PLP.jpg";
                 var g = replacepagedomain(a.products[c].url.replaceAll(/-+/g, "-"))
                   , h = '"' + b + "','" + a.products[c].title + "','" + a.products[c].url + '"';
@@ -1540,6 +1542,7 @@ function rendersearchresults(a) {
     if (a.hasOwnProperty("article"))
         for (c = 0; c < a.article.length; c++)
             c < e && (f = a.article[c].featuredImg,
+        
             g = replacepagedomain(a.article[c].url.replaceAll(/-+/g, "-")),
             h = '"' + b + "','" + a.article[c].articleTitle + "','" + a.article[c].url + '"',
             d += '\x3cli\x3e \x3ca href\x3d"' + g + '" onclick\x3d"analyticsearch(' + h + ')"\x3e \x3cdiv class\x3d"header-m__search-section__thumb"\x3e\x3cimg class\x3d"lozad" data-src\x3d"' + f + '" alt\x3d"Beautifulhomes"\x3e\x3c/div\x3e\x3cdiv class\x3d"header-m__search-section__desc"\x3e' + a.article[c].articleTitle + "\x3c/div\x3e \x3c/a\x3e\x3c/li\x3e");
@@ -1573,11 +1576,14 @@ function searchpage(a) {
             window.location.href = replacepagedomain(b) + "/search.html?searchterm\x3d" + a
         var domainmain=document.getElementById("domainmain").value;
         domainmain=domainmain.split("|");
+        var domainmain=document.getElementById("domainmain").value;
+domainmain=domainmain.split("|");
+
+function replacepagedomain(path){
+    path=path.replace(domainmain[0],domainmain[1]);
+    return path;
+}
     
-        function replacepagedomain(path){
-            path=path.replace(domainmain[0],domainmain[1]);
-            return path;
-        }
 
 
     }
