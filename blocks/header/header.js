@@ -1458,10 +1458,6 @@ bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", fun
     bottomNavigationItems.forEach(function(itemWrap) {
         itemWrap.classList.remove("showItem")
     })
-});
-  }, 1000);
-
-
 var searchquerys, domainpath;
 function debounce(a, b) {
     var d;
@@ -1653,4 +1649,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 });
+
+});
+  }, 1000);
+
+
 
