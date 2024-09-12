@@ -219,6 +219,15 @@ function getLoginData(response) {
         var iconredirection = document.querySelectorAll("[data-login-redirection]")[0].getAttribute("data-login-redirection");
         window.location.href = replacepagedomain(iconredirection)
     }
+    
+var domainmain=document.getElementById("domainmain").value;
+domainmain=domainmain.split("|");
+
+function replacepagedomain(path){
+    path=path.replace(domainmain[0],domainmain[1]);
+    return path;
+}
+
     emailid = JSON.parse(loginresponse);
     emailid = emailid.user.email;
     smartech("identify", emailid);
@@ -1309,14 +1318,6 @@ headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() 
 // getform(proxyUrl + encodeURIComponent(targetUrl));
 
 
-
-var domainmain=document.getElementById("domainmain").value;
-domainmain=domainmain.split("|");
-
-function replacepagedomain(path){
-    path=path.replace(domainmain[0],domainmain[1]);
-    return path;
-}
 
 // document.body.appendChild(divss);
 setTimeout(() => {
