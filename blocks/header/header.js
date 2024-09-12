@@ -1559,12 +1559,12 @@ function searchpage(a) {
             window.location.href = replacepagedomain(b) + "/search.html?searchterm\x3d" + a
 }
 $("#field-search1").on("input", function() {
-    searchTerm = ($("#field-search1").val(),
+    var searchTerm = ($("#field-search1").val(),
     $("#field-search1").val().trim());
     /^[A-Za-z0-9\s]+$/.test(searchTerm) || $(this).val("")
 });
 $("#field-search__m").on("input", function() {
-    searchTerm = ($("#field-search__m").val(),
+    var searchTerm = ($("#field-search__m").val(),
     $("#field-search__m").val().trim());
     /^[A-Za-z0-9\s]+$/.test(searchTerm) || $(this).val("")
 });
