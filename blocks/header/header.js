@@ -903,6 +903,8 @@ var header = {
                       , searchFld = _header$primaryMenu$r.searchFld
                       , closeTrigger = _header$primaryMenu$r.closeTrigger;
                     searchFld.on("click", function(e) {
+                        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+                        observer.observe();
                         listItems.filter(":not('.header__logo')").hide();
                         headerEl.addClass("search--expanded");
                         if (document.querySelector(".searchdynamic").childElementCount != 0 && document.getElementById("field-search1").value != "" || document.getElementById("field-search__m").value != "") {
@@ -1404,6 +1406,7 @@ setTimeout(() => {
   
   if (divss) {
     divss.innerHTML = form;
+
   } else {
     console.error("Element not found");
   }
@@ -2200,6 +2203,8 @@ setTimeout(() => {
                           , searchFld = _header$primaryMenu$r.searchFld
                           , closeTrigger = _header$primaryMenu$r.closeTrigger;
                         searchFld.on("click", function(e) {
+                            const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+                            observer.observe();
                             listItems.filter(":not('.header__logo')").hide();
                             headerEl.addClass("search--expanded");
                             if (document.querySelector(".searchdynamic").childElementCount != 0 && document.getElementById("field-search1").value != "" || document.getElementById("field-search__m").value != "") {
@@ -3964,6 +3969,8 @@ bottomNavigationOverlay && bottomNavigationOverlay.addEventListener("click", fun
     bottomNavigationItems.forEach(function(itemWrap) {
         itemWrap.classList.remove("showItem")
     })
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
 });
   }, 1000);
 
