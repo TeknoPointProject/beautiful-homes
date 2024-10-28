@@ -1336,7 +1336,7 @@ setTimeout(() => {
           C_WhatsappNotification: document.querySelector("input[data-json='C_WhatsappNotification']").checked,
           C_CampaignId: document.querySelector("input[data-json='C_CampaignId']").value,
         };
-        fetch("http://localhost:8001//api/user/showdata", {
+        fetch("http://localhost:8001/api/user/showdata", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
