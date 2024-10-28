@@ -1323,43 +1323,44 @@ headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() 
 
 
 // document.body.appendChild(divss);
-setTimeout(() => {
-    function sfform(event) {
-        event.preventDefault(); // Prevent the default form submission
-      
-        // Get data from form fields
-        const formData = {
-          C_FirstName: document.getElementById("form-field__C_FirstName").value,
-          C_Mobile: document.getElementById("form-field__C_Mobile").value,
-          C_Pincode: document.getElementById("form-field__C_Pincode").value,
-          C_Email: document.getElementById("form-field__C_Email").value,
-          C_WhatsappNotification: document.querySelector("input[data-json='C_WhatsappNotification']").checked,
-          C_CampaignId: document.querySelector("input[data-json='C_CampaignId']").value,
-        };
-        fetch("http://localhost:8001//api/user/showdata", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-          })
-          .then(response => {
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error("Failed to submit data");
-          })
-          .then(data => {
-            console.log("Success:", data);
-            alert("Form submitted successfully!");
-            // Redirect if needed
-            window.location.href = "/content/asianpaintsbeautifulhomes/us/en/thank-you.html";
-          })
-          .catch(error => {
-            console.error("Error:", error);
-            alert("There was an error submitting the form.");
-          });
+function sfform(event) {
+    event.preventDefault(); // Prevent the default form submission
+  
+    // Get data from form fields
+    const formData = {
+      C_FirstName: document.getElementById("form-field__C_FirstName").value,
+      C_Mobile: document.getElementById("form-field__C_Mobile").value,
+      C_Pincode: document.getElementById("form-field__C_Pincode").value,
+      C_Email: document.getElementById("form-field__C_Email").value,
+      C_WhatsappNotification: document.querySelector("input[data-json='C_WhatsappNotification']").checked,
+      C_CampaignId: document.querySelector("input[data-json='C_CampaignId']").value,
+    };
+    fetch("http://localhost:8001//api/user/showdata", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => {
+        if (response.ok) {
+          return response.json();
         }
+        throw new Error("Failed to submit data");
+      })
+      .then(data => {
+        console.log("Success:", data);
+        alert("Form submitted successfully!");
+        // Redirect if needed
+        window.location.href = "/content/asianpaintsbeautifulhomes/us/en/thank-you.html";
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("There was an error submitting the form.");
+      });
+    }
+setTimeout(() => {
+   
     var form = "<div class=\"form_container\"><form class=\"frm head-redesign-help__form\" action=\"#\" autocomplete=\"off\">" +
     "<div class=\"formcontainer simpleouter container responsivegrid\">" +
         "<div class=\"head-redesign-help-right \">" +
