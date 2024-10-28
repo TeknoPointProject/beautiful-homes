@@ -1325,130 +1325,112 @@ headerMSidebarClose && headerMSidebarClose.addEventListener("click", function() 
 // document.body.appendChild(divss);
 function sfform(event) {
     event.preventDefault(); // Prevent the default form submission
-  
+
     // Get data from form fields
     const formData = {
-      C_FirstName: document.getElementById("form-field__C_FirstName").value,
-      C_Mobile: document.getElementById("form-field__C_Mobile").value,
-      C_Pincode: document.getElementById("form-field__C_Pincode").value,
-      C_Email: document.getElementById("form-field__C_Email").value,
-      C_WhatsappNotification: document.querySelector("input[data-json='C_WhatsappNotification']").checked,
-      C_CampaignId: document.querySelector("input[data-json='C_CampaignId']").value,
+        C_FirstName: document.getElementById("form-field__C_FirstName").value,
+        C_Mobile: document.getElementById("form-field__C_Mobile").value,
+        C_Pincode: document.getElementById("form-field__C_Pincode").value,
+        C_Email: document.getElementById("form-field__C_Email").value,
+        C_WhatsappNotification: document.querySelector("input[data-json='C_WhatsappNotification']").checked,
+        C_CampaignId: document.querySelector("input[data-json='C_CampaignId']").value,
     };
-    fetch("http://localhost:8001//api/user/showdata", {
+
+    fetch("http://localhost:8001/api/user/showdata", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(formData)
-      })
-      .then(response => {
+    })
+    .then(response => {
         if (response.ok) {
-          return response.json();
+            return response.json();
         }
         throw new Error("Failed to submit data");
-      })
-      .then(data => {
+    })
+    .then(data => {
         console.log("Success:", data);
         alert("Form submitted successfully!");
-        // Redirect if needed
         window.location.href = "/content/asianpaintsbeautifulhomes/us/en/thank-you.html";
-      })
-      .catch(error => {
+    })
+    .catch(error => {
         console.error("Error:", error);
         alert("There was an error submitting the form.");
-      });
-    }
+    });
+}
+
 setTimeout(() => {
-   
     var form = "<div class=\"form_container\"><form class=\"frm head-redesign-help__form\" action=\"#\" autocomplete=\"off\">" +
-    "<div class=\"formcontainer simpleouter container responsivegrid\">" +
-        "<div class=\"head-redesign-help-right \">" +
-            "<div class=\"frm__group\">" +
-                "<label class=\"frm__label\" for=\"form-field__C_FirstName\">" +
-                    "Full Name" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<input class=\"frm__field keyval\" type=\"text\" data-validation=\"name\" data-json=\"C_FirstName\" id=\"form-field__C_FirstName\" placeholder=\"Enter your name\" required=\"true\">" +
-                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_FirstName\">" +
-                    "Full Name" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<span class=\"error\">Please enter your Name</span>" +
-            "</div>" +
-            "<div class=\"frm__group\">" +
-                "<label class=\"frm__label\" for=\"form-field__C_Mobile\">" +
-                    "Mobile Number" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"mobileNumber\" data-json=\"C_Mobile\" id=\"form-field__C_Mobile\" placeholder=\"Enter mobile number\" required=\"true\" minlength=\"10\" maxlength=\"10\">" +
-                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Mobile\">" +
-                    "Mobile Number" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<span class=\"error\">Please enter your Mobile Number</span>" +
-                "<span class=\"country_code\">+91</span>" +
-            "</div>" +
-            "<div class=\"frm__group\">" +
-                "<label class=\"frm__label\" for=\"form-field__C_Pincode\">" +
-                    "Pincode" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"pincode\" data-json=\"C_Pincode\" id=\"form-field__C_Pincode\" placeholder=\"Enter your Pincode\" required=\"true\" minlength=\"6\" maxlength=\"6\">" +
-                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Pincode\">" +
-                    "Pincode" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<span class=\"error\">Please enter your Pincode</span>" +
-            "</div>" +
-            "<div class=\"frm__group\">" +
-                "<label class=\"frm__label\" for=\"form-field__C_Email\">" +
-                    "Email ID" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<input class=\"frm__field keyval\" type=\"email\" data-validation=\"email\" data-json=\"C_Email\" id=\"form-field__C_Email\" placeholder=\"Enter your email\" required=\"true\">" +
-                "<label style=\"display: none;\" class=\"frm__label ids-form-label\" for=\"form-field__C_Email\">" +
-                    "Email ID" +
-                    "<span>*</span>" +
-                "</label>" +
-                "<span class=\"error\">Please enter your Email ID</span>" +
-            "</div>" +
-            "<div class=\"form_field_checkbox\">" +
-                "<div class=\"form-checkbox\">" +
-                    "<label class=\"check-container\">Yes, I would like to receive important updates and notifications on WhatsApp" +
-                        "<input type=\"checkbox\" data-json=\"C_WhatsappNotification\" checked=\"false\">" +
-                        "<span class=\"checkmark\"></span>" +
+        "<div class=\"formcontainer simpleouter container responsivegrid\">" +
+            "<div class=\"head-redesign-help-right \">" +
+                "<div class=\"frm__group\">" +
+                    "<label class=\"frm__label\" for=\"form-field__C_FirstName\">" +
+                        "Full Name" +
+                        "<span>*</span>" +
                     "</label>" +
+                    "<input class=\"frm__field keyval\" type=\"text\" data-validation=\"name\" data-json=\"C_FirstName\" id=\"form-field__C_FirstName\" placeholder=\"Enter your name\" required=\"true\">" +
                 "</div>" +
-            "</div>" +
-            "<div class=\"form_hidden\">" +
-                "<input type=\"hidden\" data-json=\"C_CampaignId\" value=\"DECOR_ORGANIC\">" +
-            "</div>" +
-            "<div class=\"paragraph text\">" +
-                "<div class=\"head-redesign-help__form-description\">" +
-                    "<p>By proceeding, you are authorizing Beautiful Homes and its suggested contractors to get in touch with you through calls, sms, or e-mail.</p>" +
+                "<div class=\"frm__group\">" +
+                    "<label class=\"frm__label\" for=\"form-field__C_Mobile\">" +
+                        "Mobile Number" +
+                        "<span>*</span>" +
+                    "</label>" +
+                    "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"mobileNumber\" data-json=\"C_Mobile\" id=\"form-field__C_Mobile\" placeholder=\"Enter mobile number\" required=\"true\" minlength=\"10\" maxlength=\"10\">" +
+                    "<span class=\"country_code\">+91</span>" +
                 "</div>" +
-            "</div>" +
-            "<div class=\"form_button\">" +
-                "<div class=\"head-redesign-help__form-cta\">" +
-                    "<button type=\"button\" class=\"btn btn--primary btn__icon--right black-form-cta-click\" data-redirection=\"/content/asianpaintsbeautifulhomes/us/en/thank-you.html\" onclick=\"sfform(event)\">Submit<span class=\"icon-chevron-right\"></span></button>" +
+                "<div class=\"frm__group\">" +
+                    "<label class=\"frm__label\" for=\"form-field__C_Pincode\">" +
+                        "Pincode" +
+                        "<span>*</span>" +
+                    "</label>" +
+                    "<input class=\"frm__field keyval\" type=\"tel\" data-validation=\"pincode\" data-json=\"C_Pincode\" id=\"form-field__C_Pincode\" placeholder=\"Enter your Pincode\" required=\"true\" minlength=\"6\" maxlength=\"6\">" +
+                "</div>" +
+                "<div class=\"frm__group\">" +
+                    "<label class=\"frm__label\" for=\"form-field__C_Email\">" +
+                        "Email ID" +
+                        "<span>*</span>" +
+                    "</label>" +
+                    "<input class=\"frm__field keyval\" type=\"email\" data-validation=\"email\" data-json=\"C_Email\" id=\"form-field__C_Email\" placeholder=\"Enter your email\" required=\"true\">" +
+                "</div>" +
+                "<div class=\"form_field_checkbox\">" +
+                    "<div class=\"form-checkbox\">" +
+                        "<label class=\"check-container\">Yes, I would like to receive important updates and notifications on WhatsApp" +
+                            "<input type=\"checkbox\" data-json=\"C_WhatsappNotification\">" +
+                            "<span class=\"checkmark\"></span>" +
+                        "</label>" +
+                    "</div>" +
+                "</div>" +
+                "<div class=\"form_hidden\">" +
+                    "<input type=\"hidden\" data-json=\"C_CampaignId\" value=\"DECOR_ORGANIC\">" +
+                "</div>" +
+                "<div class=\"paragraph text\">" +
+                    "<div class=\"head-redesign-help__form-description\">" +
+                        "<p>By proceeding, you are authorizing Beautiful Homes and its suggested contractors to get in touch with you through calls, sms, or e-mail.</p>" +
+                    "</div>" +
+                "</div>" +
+                "<div class=\"form_button\">" +
+                    "<div class=\"head-redesign-help__form-cta\">" +
+                        "<button type=\"button\" class=\"btn btn--primary btn__icon--right black-form-cta-click\">Submit<span class=\"icon-chevron-right\"></span></button>" +
+                    "</div>" +
                 "</div>" +
             "</div>" +
         "</div>" +
-    "</div>" +
-    "</form></div>";
-  
-  var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div:nth-child(2)");
-  console.log("this is ", divss);
-  
-  if (divss) {
-    divss.innerHTML = form;
+        "</form></div>";
 
-  } else {
-    console.error("Element not found");
-  }
-  
-  }, 500);
+    var divss = document.querySelector(".head-redesign-container .columns-wrapper .columns div:nth-child(2)");
+
+    if (divss) {
+        divss.innerHTML = form;
+
+        // Attach event listener to the submit button
+        const submitButton = divss.querySelector(".black-form-cta-click");
+        submitButton.addEventListener("click", sfform);
+    } else {
+        console.error("Element not found");
+    }
+}, 500);
+
 
 
   setTimeout(() => {
