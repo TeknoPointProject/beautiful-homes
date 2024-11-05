@@ -1,0 +1,316 @@
+@import '../../styles/responsive';
+
+footer {
+    &.footer-wrapper {
+        background-color: #f1efe8;
+        padding: 0 40px 35px 40px;
+
+        @include mobile {
+            padding: 20px 20px 40px 20px;
+        }
+
+        .footer {
+            max-width: 100%;
+            margin: 0;
+
+            .section {
+                &.columns-container.accordion-container {
+                    .columns-wrapper {
+                        max-width: 100%;
+                        margin: 0;
+                        padding: 83px 0px 64px 0px;
+
+                        @include mobile {
+                            padding: 15px 0px 30px 0px;
+                        }
+
+                        .columns-3-cols {
+                            >div {
+                                >div {
+                                    &:nth-child(1) {
+                                        span {
+                                            &.icon-images-beautifulhomes-footer-logo-png {
+                                                width: 201px;
+                                                height: 59px;
+
+                                                @include mobile {
+                                                    width: 153px;
+                                                    height: 45px;
+                                                    margin-bottom: 26px;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:nth-child(3) {
+                                        p {
+                                            margin-bottom: 20px;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            line-height: 19px;
+                                            margin-top: -3px;
+                                            color: #222;
+                                        }
+
+                                        ul {
+                                            display: flex;
+                                            align-items: center;
+                                            gap: 20px;
+
+                                            @include mobile{
+                                                gap: 29px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .default-content-wrapper {
+                        max-width: 100%;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding-top: 24px;
+                        border-top: 1px solid #9c9c9c;
+
+                        @include mobile {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding-bottom: 40px;
+                        }
+
+                        ul {
+                            display: flex;
+                            gap: 30px;
+
+                            li {
+                                font-size: 16px;
+                                font-weight: 700;
+                                line-height: 21px;
+                                color: #000;
+
+                                @include mobile {
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    line-height: 18px;
+                                }
+
+                                a {
+                                    color: #000;
+                                    text-decoration: none;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    line-height: 29px;
+                                    border-bottom: 1px solid #000;
+                                    padding-bottom: .5px;
+
+                                    @include mobile {
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        line-height: 29px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .accordion-container {
+                .accordion-wrapper {
+                    max-width: 100%;
+                    margin: 0;
+
+                    .accordion {
+                        display: flex;
+                        width: 100%;
+
+                        @include mobile {
+                            flex-direction: column;
+
+                            details {
+                                &:nth-child(4) {
+                                    .accordion-item-body {
+                                        h3 {
+                                            @include mobile {
+                                                display: none;
+
+                                                +ul {
+                                                    display: none;
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+
+                                +details {
+                                    @include mobile {
+                                        margin-top: 0;
+                                    }
+                                }
+
+                                &[open] {
+                                    .accordion-item-body {
+                                        @include mobile {
+                                            background-color: transparent;
+                                            padding: 0;
+                                            border-top: none;
+                                            border-bottom: 1px solid #20202033;
+                                            display: flex;
+
+                                            ul {
+                                                column-count: 1;
+                                                display: flex;
+                                                flex-direction: column;
+                                                flex-wrap: wrap;
+                                                width: 100%;
+
+                                                li {
+                                                    padding-bottom: 19px;
+
+                                                    a {
+                                                        font-size: 16px;
+                                                        font-weight: 400;
+                                                        line-height: 19px;
+                                                        color: #1d1d1f;
+                                                    }
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    summary {
+                                        @include mobile {
+                                            background-color: transparent;
+                                            overflow: hidden;
+
+                                            h3 {
+                                                border-bottom: none;
+
+                                                &:after {
+                                                    @include mobile {
+                                                        transform: rotate(134deg);
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                }
+                            }
+
+                            summary {
+                                @include mobile {
+                                    padding: 0;
+                                }
+
+                                h3 {
+                                    @include mobile {
+                                        &:after {
+                                            content: "+";
+                                            font-size: 24px;
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    @include mobile {
+                                        background-color: transparent;
+                                    }
+
+                                }
+
+                                &::after {
+                                    @include mobile {
+                                        content: "+";
+                                        font-size: 24px;
+                                        width: 0;
+                                        height: 0;
+                                        border: unset;
+                                        transform: unset;
+                                        display: none;
+                                    }
+                                }
+
+                                &.accordion-item-label {
+                                    h3 {
+                                        @include mobile {
+                                            border-bottom: 1px solid #20202033;
+                                            padding-bottom: 16px;
+                                            margin-top: 20px;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            line-height: 20.8px;
+                                            color: #1d1d1f;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+
+                        >div {
+                            width: 20%;
+
+                            &:nth-of-type(5) {
+                                display: none;
+                            }
+
+                            &:nth-of-type(4) {
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+
+                            div {
+                                display: flex;
+
+                                h3 {
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    line-height: 19.2px;
+                                    color: #222;
+                                }
+
+                                ul {
+                                    margin-top: 22px;
+                                    width: 100%;
+
+                                    @include mobile {
+                                        margin: 0;
+                                    }
+
+                                    li {
+                                        padding-bottom: 19px;
+
+                                        a {
+                                            font-size: 16px;
+                                            font-weight: 400;
+                                            line-height: 19px;
+                                            color: #1d1d1f;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    details {
+                        border: unset;
+                    }
+                }
+            }
+        }
+    }
+}

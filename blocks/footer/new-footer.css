@@ -1,0 +1,296 @@
+footer.footer-wrapper {
+  background-color: #f1efe8;
+  padding: 0 40px 35px;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper {
+    padding: 20px 20px 40px;
+  }
+}
+
+footer.footer-wrapper .footer {
+  max-width: 100%;
+  margin: 0;
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper {
+  max-width: 100%;
+  margin: 0;
+  padding: 83px 0 64px;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper {
+    padding: 15px 0 30px;
+  }
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper .columns-3-cols > div > div:nth-child(1) span.icon-images-beautifulhomes-footer-logo-png {
+  width: 201px;
+  height: 59px;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper .columns-3-cols > div > div:nth-child(1) span.icon-images-beautifulhomes-footer-logo-png {
+    width: 153px;
+    height: 45px;
+    margin-bottom: 26px;
+  }
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper .columns-3-cols > div > div:nth-child(3) p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin-top: -3px;
+  color: #222;
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper .columns-3-cols > div > div:nth-child(3) ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .columns-wrapper .columns-3-cols > div > div:nth-child(3) ul {
+    gap: 29px;
+  }
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper {
+  max-width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: 1px solid #9c9c9c;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 40px;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper ul {
+  display: flex;
+  gap: 30px;
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper ul li {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #000;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper ul li {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+  }
+}
+
+footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 29px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5px;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .section.columns-container.accordion-container .default-content-wrapper ul li a {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 29px;
+  }
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper {
+  max-width: 100%;
+  margin: 0;
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion {
+  display: flex;
+  width: 100%;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion {
+    flex-direction: column;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details:nth-child(4) .accordion-item-body h3 {
+    display: none;
+  }
+
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details:nth-child(4) .accordion-item-body h3 + ul {
+    display: none;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details + details {
+    margin-top: 0;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body {
+    background-color: transparent;
+    padding: 0;
+    border-top: none;
+    border-bottom: 1px solid rgb(32 32 32 / 20%);
+    display: flex;
+  }
+
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body ul {
+         column-count: 1;
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+  }
+
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body ul li {
+    padding-bottom: 19px;
+  }
+
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] .accordion-item-body ul li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #1d1d1f;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] summary {
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] summary h3 {
+    border-bottom: none;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion details[open] summary h3::after {
+    transform: rotate(134deg);
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion summary {
+    padding: 0;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion summary h3::after {
+    content: "+";
+    font-size: 24px;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion summary:hover {
+    background-color: transparent;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion summary::after {
+    content: "+";
+    font-size: 24px;
+    width: 0;
+    height: 0;
+    border: unset;
+    transform: unset;
+    display: none;
+  }
+}
+
+@media (width <= 767px) and (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion summary.accordion-item-label h3 {
+    border-bottom: 1px solid rgb(32 32 32 / 20%);
+    padding-bottom: 16px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20.8px;
+    color: #1d1d1f;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div {
+  width: 20%;
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div:nth-of-type(5) {
+  display: none;
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div:nth-of-type(4) div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div {
+  display: flex;
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div h3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  color: #222;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div ul {
+  margin-top: 22px;
+  width: 100%;
+}
+
+@media (width <= 767px) {
+  footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div ul {
+    margin: 0;
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div ul li {
+  padding-bottom: 19px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper .accordion > div div ul li a {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #1d1d1f;
+  text-decoration: none;
+}
+
+footer.footer-wrapper .footer .accordion-container .accordion-wrapper details {
+  border: unset;
+}
