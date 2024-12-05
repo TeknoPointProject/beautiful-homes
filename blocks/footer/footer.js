@@ -272,10 +272,7 @@ function loadScript(src, isModule = false) {
 (async function loadFooterScripts() {
     try {
         // Load jQuery
-        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js");
-
-        // Load slick-carousel
-        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js");
+       
 
         // Load lozad
         await loadScript("https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js");
