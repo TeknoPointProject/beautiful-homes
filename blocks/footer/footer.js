@@ -254,3 +254,97 @@ function footers(){
     })
 })
 }
+
+// Load external scripts with defer behavior
+function loadScript(src, isModule = false) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.defer = true;
+        if (isModule) script.type = "module";
+        script.onload = () => resolve(src);
+        script.onerror = () => reject(new Error(`Failed to load script: ${src}`));
+        document.body.appendChild(script);
+    });
+}
+
+// Load scripts sequentially
+(async function loadFooterScripts() {
+    try {
+        // Load jQuery
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js");
+
+        // Load slick-carousel
+        await loadScript("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js");
+
+        // Load lozad
+        await loadScript("https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js");
+
+        // Load Gigya
+        await loadScript("https://cdns.gigya.com/js/gigya.js?apiKey=4_UKIyeX1jmFBsLNa48j4dIQ");
+
+        // Add the chat script on mouseover
+        document.addEventListener("mouseover", function loadChatScriptOnce() {
+            if (window.sprChatSettings && window.sprChat) return;
+
+            window.sprChatSettings = {
+                appId: "66b078a596c2f63802a1990d_app_600028585",
+                skin: "MODERN",
+            };
+
+            (function () {
+                var t = window,
+                    e = t.sprChat,
+                    a = e && !!e.loaded,
+                    n = document,
+                    r = function () {
+                        r.m(arguments);
+                    };
+                (r.q = []),
+                    (r.m = function (t) {
+                        r.q.push(t);
+                    }),
+                    (t.sprChat = a ? e : r);
+
+                var o = function () {
+                    var e = n.createElement("script");
+                    (e.type = "text/javascript"),
+                        (e.async = !0),
+                        (e.src =
+                            "https://prod4-live-chat.sprinklr.com/api/livechat/handshake/widget/" +
+                            t.sprChatSettings.appId);
+
+                    (e.onerror = function () {
+                        t.sprChat.loaded = !1;
+                        console.error("Failed to load the chat script.");
+                    }),
+                        (e.onload = function () {
+                            t.sprChat.loaded = !0;
+                            console.log("Chat script loaded successfully.");
+                        });
+
+                    var a = n.getElementsByTagName("script")[0];
+                    a.parentNode.insertBefore(e, a);
+                };
+
+                "function" == typeof e
+                    ? a
+                        ? e("update", t.sprChatSettings)
+                        : o()
+                    : "loading" !== n.readyState
+                        ? o()
+                        : n.addEventListener("DOMContentLoaded", o);
+            })();
+
+            document.removeEventListener("mouseover", loadChatScriptOnce);
+        });
+
+        // Load local module script
+        await loadScript("/scripts/scripts.js", true);
+
+        console.log("All scripts loaded successfully.");
+    } catch (error) {
+        console.error(error.message);
+    }
+})();
+
