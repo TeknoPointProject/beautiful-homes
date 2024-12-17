@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     $videocarousel.slick({
         infinite: true,
-        slidesToShow: 3.11,
+        slidesToShow: 3.5,
         slidesToScroll: 1,
         dots: true,
         arrows: true,
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
       $designgallery.slick({
         infinite: true,
-        slidesToShow: 3.11,
+        slidesToShow: 3.5,
         slidesToScroll: 1,
         dots: true,
         arrows: true,
