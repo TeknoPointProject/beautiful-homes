@@ -16,23 +16,42 @@ $(document).ready(function () {
 
 
     $videocarousel.slick({
-        infinite: true,
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        dots: true,
+        infinite: false,
         arrows: true,
+        slidesToShow: 3.14,
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              arrows: false,
+              dots: true,
+              slidesToShow: 1.03,
+            },
+          },
+        ],
         
       });
 
 
       $designgallery.slick({
-        infinite: true,
-        slidesToShow: 3.5,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
+        infinite: false,
+      arrows: true,
+      slidesToShow: 3.14,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            arrows: false,
+            dots: true,
+            slidesToShow: 1.03,
+          },
+        },
+      ],
         
       });
+     
 
 
 
