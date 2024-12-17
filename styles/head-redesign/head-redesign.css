@@ -168,6 +168,10 @@ span.checkmark {
         height: unset;
     }
 
+.check-container input{
+display:none
+}
+
     .head-redesign-container .columns-wrapper .columns>div,
     .head-redesign-container .columns-wrapper .columns-img-col+div {
         display: block;
