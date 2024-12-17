@@ -19,7 +19,6 @@ $(document).ready(function () {
         slidesToScroll: 1,
         dots: true,
         arrows: true,
-        autoplay: true,
-        autoplaySpeed: 2000
+        
       });
   });
