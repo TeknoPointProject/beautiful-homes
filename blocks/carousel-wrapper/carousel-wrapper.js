@@ -127,7 +127,7 @@ if (screen.width <= 786) {
 }
 
 // Run pre-initialization on page load
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("ready", function () {
     preInitSlick();
     // Add your event listeners or other initialization logic here
 });
